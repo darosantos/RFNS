@@ -14,6 +14,8 @@ class ClassifierEnginneringForest(BaseEnginnering):
 		self.presort=False
 
 	def make_base_estimator(self):
+		from sklearn.tree import DecisionTreeClassifier
+		
 		clf = DecisionTreeClassifier(self.criterion)
 		return clf
 
