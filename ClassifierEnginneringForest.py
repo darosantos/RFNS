@@ -10,8 +10,6 @@ class ClassifierEnginneringForest(BaseEnginnering):
 		self.max_features=None
 		self.random_state = 200
 		self.max_leaf_nodes=None
-		#min_impurity_decrease=0,
-		#min_impurity_split=1e-7,
 		self.class_weight=None
 		self.presort=False
 

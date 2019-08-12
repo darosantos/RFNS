@@ -1,7 +1,6 @@
 class EnginneringForest(ClassifierEnginneringForest):
 
 	def __init__(self, select_features):
-		# Global variables
 		self.estimators_ = []
 		self.select_features_ = select_features
 		self.group_features = []
@@ -9,11 +8,7 @@ class EnginneringForest(ClassifierEnginneringForest):
 		super().__init__()
 
 	def build(self, features_set):
-		# Aqui vai o código para criar a floresta
-		# cria o vetor dos subconjuntos
-		# cria as instâncias das arvores
 		self.group_features = self.arrangement_features(features=features_set, n_selected=self.select_features_)
-		#self.estimators_ = [self.make_base_estimator() for item_set in self.group_features]
 		for i in self.group_features:
 			self.estimators_.append(self.make_base_estimator())
 
@@ -31,7 +26,6 @@ class EnginneringForest(ClassifierEnginneringForest):
 
 
 	def fit(self, X, y):
-		# Determine output settings
 		n_samples, self.n_features_ = X.shape
 		name_features = X.columns
 
@@ -42,16 +36,6 @@ class EnginneringForest(ClassifierEnginneringForest):
 		for subset_feature, estimators in zip(self.group_features, self.estimators_):
 			subset_xdata, subset_ydata = self.get_subset(X, y, subset_feature)
 			estimators = estimators.fit(subset_xdata, subset_ydata)
-
-		# Treina a floresta
-		#for item_set, clf in zip(self.group_features, self.estimators_):
-		#	subset_xdata, subset_ydata = self.get_subset(X, y, item_set)
-		#	clf = clf.fit(subset_xdata, subset_ydata)
-		#for subset_feature in subsets_features:
-		#	subset_xdata, subset_ydata = self.get_subset(X, y, subset_feature)
-		#	clf = self.build()
-		#	clf = clf.fit(subset_xdata, subset_ydata)
-		#	self.estimators_.append(clf)
 
 	def predict(self, X):
 		for subset_feature, estimators in zip(self.group_features, self.estimators_):
