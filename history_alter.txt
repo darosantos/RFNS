@@ -1,0 +1,3 @@
+Histórico de Alterações
+COD	DESCRIÇÃO
+#d1001	Validação dos parâmetros de tipos de dados primitivo; Mudança na forma de selecionar um subconjunto do dataset, eliminando as cópias intermediárias pelo acesso direto ao dataframe
