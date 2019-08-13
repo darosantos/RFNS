@@ -2,3 +2,6 @@ Histórico de Alterações
 COD	DESCRIÇÃO
 #d1001	Validação dos parâmetros de tipos de dados primitivo; Mudança na forma de selecionar um subconjunto do dataset, eliminando as cópias intermediárias pelo acesso direto ao dataframe
 #d1002	Correção de bug na divisão do dataset
+#d2001	
+#d2002	
+#d2003	Altera a classe EnginneringForest; Retorna a classe para trabalhar somente com um select_features
