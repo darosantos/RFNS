@@ -3,18 +3,19 @@ class BaseEnginnering(object):
 		pass
 
 	def get_subset(self, X, y, columns: list) -> tuple:
-		from pandas import DataFrame
+		from pandas import DataFrame, Series
 
 		if not isinstance(X, DataFrame):
 			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-		if not isinstance(y, DataFrame):
+		if not isinstance(y, Series):
 			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
 		if type(columns) != list:
 			raise TypeError('Expectd value list in columns')
-			
-		df_subset = (X.loc[:, columns], y.loc[:,:])
+		
+		df_subset_x = X.loc[:, columns]
+		df_subset_y = y.loc[df_subset_x.index]
 
-		return df_subset
+		return (df_subset_x, df_subset_y)
 
 	def arrangement_features(self, features: list,  n_selected: int) -> list:
 		from itertools import combinations
