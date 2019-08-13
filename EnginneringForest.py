@@ -3,7 +3,10 @@ class EnginneringForest(ClassifierEnginneringForest):
 	__slots__ = [estimators_, select_features_, group_features_, df_predict_, 
 				 n_features_, n_samples_, n_samples_, name_features_]
 	
-	def __init__(self, select_features):
+	def __init__(self, select_features: int):
+		if type(select_features) != int:
+			raise TypeError('Expectd value int in select_features')
+			
 		self.estimators_ = []
 		self.select_features_ = select_features
 		self.group_features_ = []
@@ -22,16 +25,21 @@ class EnginneringForest(ClassifierEnginneringForest):
 		del self.n_samples_
 		del self.name_features_
 
-	def build(self, features_set):
+	def build(self, features_set: list) -> None:
 		""" Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
 		self.group_features_ = self.arrangement_features(features=features_set, n_selected=self.select_features_)
 		self.estimators_ = [self.make_base_estimator() for gf in self.group_features_]
 
-	def train(self, X, y, group_feature, estimator):
+	def train(self, X, y, group_feature: list, estimator: list):
 		subset_xdata, subset_ydata = self.get_subset(X, y, group_feature)
 		return estimator.fit(subset_xdata, subset_ydata)
 
-	def fit(self, X, y):
+	def fit(self, X, y) -> None:
+		if not isinstance(X, DataFrame):
+			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
+		if not isinstance(y, Series):
+			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
+			
 		self.n_samples_, self.n_features_ = X.shape
 		self.name_features_ = X.columns
 
@@ -42,7 +50,7 @@ class EnginneringForest(ClassifierEnginneringForest):
 		self.estimators_ = [self.train(X, y, subset_feature, estimator) 
 							for subset_feature, estimator in zip(self.group_features_, self.estimators_)]
 
-	def voting(self):
+	def voting(self) -> list:
 		final_predict = []
 		for i in range(self.df_predict_.shape[0]):
 			class_one = list(self.df_predict_.loc[i]).count(1)
@@ -53,7 +61,10 @@ class EnginneringForest(ClassifierEnginneringForest):
 			final_predict.append(0)
 		return final_predict 
 
-	def predict(self, X):
+	def predict(self, X) -> list:
+		if not isinstance(X, DataFrame):
+			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
+			
 		# É aqui que monto a (matriz nº de amostras x nº de classificadores)
 		for subset_feature, estimator in zip(self.group_features_, self.estimators_):
 			subset_test = X.loc[:, subset_feature]

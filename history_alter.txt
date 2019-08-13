@@ -1,10 +1,12 @@
-Histórico de Alterações
-COD	DESCRIÇÃO
-#d1001	Validação dos parâmetros de tipos de dados primitivo; Mudança na forma de selecionar um subconjunto do dataset, eliminando as cópias intermediárias pelo acesso direto ao dataframe
+History Review
+COD		Title		DESCRIÇÃO
+#d1001	Validação dos parâmetros de tipos de dados primitivo	Mudança na forma de selecionar um subconjunto do dataset, eliminando as cópias intermediárias pelo acesso direto ao dataframe
 #d1002	Correção de bug na divisão do dataset
 #d2001	
 #d2002	
-#d2003	Altera a classe EnginneringForest; Retorna a classe para trabalhar somente com um select_features
-#d2004	Altera a classe EnginneringForest; Cria novos métodos; Otimiza o código para lidar com vetores
-#d2005	Altera a classe EnginneringForest; Adiciona um destrutor a classe
-#d2006	Altera a classe EnginneringForest; Adiciona o uso de __slots__
+#d2003	Altera a classe EnginneringForest	Retorna a classe para trabalhar somente com um select_features
+#d2004	Altera a classe EnginneringForest	Cria novos métodos; Otimiza o código para lidar com vetores
+#d2005	Altera a classe EnginneringForest	Adiciona um destrutor a classe
+#d2006	Altera a classe EnginneringForest	Adiciona o uso de __slots__
+#d2007	Cria o script cache_compile			Adiciona o uso do py_compile para criar o cache bytecode das classes
+#d2008	Altera a classe EnginneringForest	Adiciona a especificação do tipo de dados de entrada e retorno; Valida as entradas fornecidas pelo usuário
