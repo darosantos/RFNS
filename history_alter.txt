@@ -7,3 +7,4 @@ COD	DESCRIÇÃO
 #d2003	Altera a classe EnginneringForest; Retorna a classe para trabalhar somente com um select_features
 #d2004	Altera a classe EnginneringForest; Cria novos métodos; Otimiza o código para lidar com vetores
 #d2005	Altera a classe EnginneringForest; Adiciona um destrutor a classe
+#d2006	Altera a classe EnginneringForest; Adiciona o uso de __slots__

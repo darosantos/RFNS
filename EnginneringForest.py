@@ -1,5 +1,8 @@
 class EnginneringForest(ClassifierEnginneringForest):
 
+	__slots__ = [estimators_, select_features_, group_features_, df_predict_, 
+				 n_features_, n_samples_, n_samples_, name_features_]
+	
 	def __init__(self, select_features):
 		self.estimators_ = []
 		self.select_features_ = select_features
