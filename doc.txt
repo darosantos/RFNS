@@ -1,1 +1,11 @@
 https://docs.python.org/3/library/py_compile.html#py_compile.compile
+
+del
+
+xrange
+
+newZipcodes = map(str.strip, oldZipcodes)
+
+And lastly, the fastest approach would be to convert the for loop into a generator expression.
+
+itertools.chain(Zipcodes, (iter.strip() for iter in newZipcodes))
