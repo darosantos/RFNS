@@ -5,3 +5,4 @@ COD	DESCRIÇÃO
 #d2001	
 #d2002	
 #d2003	Altera a classe EnginneringForest; Retorna a classe para trabalhar somente com um select_features
+#d2004	Altera a classe EnginneringForest; Cria novos métodos; Otimiza o código para lidar com vetores
