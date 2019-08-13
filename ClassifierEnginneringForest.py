@@ -1,9 +1,11 @@
+from BaseEnginnering import BaseEnginnering
+
 class ClassifierEnginneringForest(BaseEnginnering):
 
 	# Permite a redução de 40 a 50% do consumo de RAM
-	__slots__ = [criterion, splitter, max_depth, min_samples_split, min_samples_leaf,
-				 min_weight_fraction_leaf, max_features, random_state, max_leaf_nodes,
-				 class_weight, presort]
+	__slots__ = ('criterion', 'splitter', 'max_depth', 'min_samples_split', 'min_samples_leaf',
+				 'min_weight_fraction_leaf', 'max_features', 'random_state', 'max_leaf_nodes',
+				 'class_weight', 'presort')
 	
 	def __init__(self):
 		self.criterion = 'entropy'

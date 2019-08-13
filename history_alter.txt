@@ -13,3 +13,5 @@ COD		Title		DESCRIÇÃO
 #d2009	Altera a classe EnginneringForest	Modifica o método build para que os estimators sejam gerados uma generator expressions
 #d2010	Altera a classe EnginneringForest	Modifica o método fit para que os estimators sejam gerados uma generator expressions
 #d2011	Altera a classe EnginneringForest	Cria o método classifier; Altera o método predict para usar generator expressions; Adiciona o atributo self.df_prefix_column_predict
+#d2012	Altera a classe EnginneringForest	Correções de bugs em sintaxe
+#d2013	Altera a classe EnginneringForest	Correções de bus em sintaxe; Exclusão de métodos; Alterações do código para funcionar corretamente

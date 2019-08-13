@@ -1,6 +1,7 @@
 import py_compile as pyc
 
-pyc.compile('BaseEnginnering')
-pyc.compile('ClassifierEnginneringForest')
-pyc.compile('EnginneringForest')
+def my_compile:
+	pyc.compile('BaseEnginnering.py')
+	pyc.compile('ClassifierEnginneringForest.py')
+	pyc.compile('EnginneringForest.py')
 
