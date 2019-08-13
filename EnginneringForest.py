@@ -14,6 +14,7 @@ class EnginneringForest(ClassifierEnginneringForest):
 		self.n_features_ = 0
 		self.n_samples_ = 0
 		self.name_features_ = []
+		self.df_prefix_column_predict = 'cls'
 		super().__init__()
 		
 	def __del__(self):
@@ -61,16 +62,25 @@ class EnginneringForest(ClassifierEnginneringForest):
 			final_predict.append(0)
 		return final_predict 
 
+	def classifier(self, group_feature: list, estimator):
+			subset_test = X.loc[:, group_feature]
+			num_columns = len(self.df_predict_.columns)
+			pattern_name_column = "{1}{2}".format(self.df_prefix_column_predict, num_columns)
+			cls_predict = estimator.predict(subset_test)
+			self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
+			
 	def predict(self, X) -> list:
 		if not isinstance(X, DataFrame):
 			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
 			
 		# É aqui que monto a (matriz nº de amostras x nº de classificadores)
-		for subset_feature, estimator in zip(self.group_features_, self.estimators_):
-			subset_test = X.loc[:, subset_feature]
-			num_columns = len(self.df_predict_.columns)
-			pattern_name_column = 'cls_' + str(num_columns)
-			cls_predict = estimator.predict(subset_test)
-			self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
+		(self.classifier(group_feature=subset_feature,estimator=estimator) 
+		 for subset_feature, estimator in zip(self.group_features_, self.estimators_))
+		#for subset_feature, estimator in zip(self.group_features_, self.estimators_):
+		#	subset_test = X.loc[:, subset_feature]
+		#	num_columns = len(self.df_predict_.columns)
+		#	pattern_name_column = 'cls_' + str(num_columns)
+		#	cls_predict = estimator.predict(subset_test)
+		#	self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
 
 		return self.voting()
