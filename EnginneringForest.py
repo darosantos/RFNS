@@ -9,6 +9,15 @@ class EnginneringForest(ClassifierEnginneringForest):
 		self.n_samples_ = 0
 		self.name_features_ = []
 		super().__init__()
+		
+	def __del__(self):
+		del self.estimators_
+		del self.select_features_
+		del self.group_features_
+		del self.df_predict_
+		del self.n_features_
+		del self.n_samples_
+		del self.name_features_
 
 	def build(self, features_set):
 		""" Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
