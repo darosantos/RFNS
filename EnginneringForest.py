@@ -47,8 +47,8 @@ class EnginneringForest(ClassifierEnginneringForest):
 		self.build(features_set=self.name_features_)
 
 		# Treina as arvores individualmente
-		self.estimators_ = [self.train(X, y, subset_feature, estimator) 
-							for subset_feature, estimator in zip(self.group_features_, self.estimators_)]
+		self.estimators_ = (self.train(X, y, subset_feature, estimator) 
+							for subset_feature, estimator in zip(self.group_features_, self.estimators_))
 
 	def voting(self) -> list:
 		final_predict = []
