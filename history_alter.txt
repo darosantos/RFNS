@@ -10,3 +10,4 @@ COD		Title		DESCRIÇÃO
 #d2006	Altera a classe EnginneringForest	Adiciona o uso de __slots__
 #d2007	Cria o script cache_compile			Adiciona o uso do py_compile para criar o cache bytecode das classes
 #d2008	Altera a classe EnginneringForest	Adiciona a especificação do tipo de dados de entrada e retorno; Valida as entradas fornecidas pelo usuário
+#d2009	Altera a classe EnginneringForest	Modifica o método build para que os estimators sejam gerados uma generator expressions

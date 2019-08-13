@@ -9,3 +9,5 @@ newZipcodes = map(str.strip, oldZipcodes)
 And lastly, the fastest approach would be to convert the for loop into a generator expression.
 
 itertools.chain(Zipcodes, (iter.strip() for iter in newZipcodes))
+
+nums_letters = [[n, l] for n in nums for l in letters]

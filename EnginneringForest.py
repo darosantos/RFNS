@@ -28,7 +28,7 @@ class EnginneringForest(ClassifierEnginneringForest):
 	def build(self, features_set: list) -> None:
 		""" Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
 		self.group_features_ = self.arrangement_features(features=features_set, n_selected=self.select_features_)
-		self.estimators_ = [self.make_base_estimator() for gf in self.group_features_]
+		self.estimators_ = (self.make_base_estimator() for gf in self.group_features_)
 
 	def train(self, X, y, group_feature: list, estimator: list):
 		subset_xdata, subset_ydata = self.get_subset(X, y, group_feature)
