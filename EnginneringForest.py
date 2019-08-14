@@ -1,4 +1,6 @@
 from ClassifierEnginneringForest import ClassifierEnginneringForest
+from pandas import DataFrame, Series
+import numpy as np
 
 class EnginneringForest(ClassifierEnginneringForest):
 
@@ -6,8 +8,6 @@ class EnginneringForest(ClassifierEnginneringForest):
 				 'n_features_', 'n_samples_', 'n_samples_', 'name_features_')
 	
 	def __init__(self, select_features: int):
-		from pandas import DataFrame
-		
 		if type(select_features) != int:
 			raise TypeError('Expectd value int in select_features')
 			
@@ -32,16 +32,17 @@ class EnginneringForest(ClassifierEnginneringForest):
 
 	def build(self, features_set: list) -> None:
 		""" Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
-		self.group_features_ = self.arrangement_features(features=features_set, n_selected=self.select_features_)
-		self.estimators_ = [self.make_base_estimator() for gf in self.group_features_]
+		self.group_features_ = np.array(self.arrangement_features(features=features_set, n_selected=self.select_features_), dtype=np.object)
+		self.estimators_ = np.array([self.make_base_estimator() for gf in self.group_features_], dtype=np.object)
 
 	def train(self, X, y, group_feature: list, estimator):
 		subset_xdata, subset_ydata = self.get_subset(X, y, list(group_feature))
-		return estimator.fit(subset_xdata, subset_ydata)
+		fit_ = estimator.fit(subset_xdata, subset_ydata)
+		del subset_xdata
+		del subset_ydata
+		return fit_
 
 	def fit(self, X, y) -> None:
-		from pandas import DataFrame, Series
-		
 		if not isinstance(X, DataFrame):
 			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
 		if not isinstance(y, Series):
@@ -54,8 +55,11 @@ class EnginneringForest(ClassifierEnginneringForest):
 		self.build(features_set=self.name_features_)
 
 		# Treina as arvores individualmente
-		self.estimators_ = [self.train(X, y, subset_feature, estimator) 
-							for subset_feature, estimator in zip(self.group_features_, self.estimators_)]
+		self.estimators_ = np.array([self.train(X, y, subset_feature, estimator) 
+							for subset_feature, estimator in zip(self.group_features_, self.estimators_)], dtype=np.object)
+							
+		del X
+		del y
 
 	def voting(self) -> list:
 		final_predict = []
@@ -69,8 +73,6 @@ class EnginneringForest(ClassifierEnginneringForest):
 		return final_predict 
 			
 	def predict(self, X) -> list:
-		from pandas import DataFrame
-		
 		if not isinstance(X, DataFrame):
 			raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
 			
@@ -82,4 +84,5 @@ class EnginneringForest(ClassifierEnginneringForest):
 			cls_predict = estimator.predict(subset_test)
 			self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
 
+		del X
 		return self.voting()
