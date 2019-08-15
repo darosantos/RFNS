@@ -28,10 +28,7 @@ COD		Title		DESCRIÇÃO
 #d4010   Atualizações da classe EnginneringForest   Resolvido problemas com indentação do código
 #d4011   Atualizações da classe EnginneringForest   Adiciona o uso de __slots__
 #d4012   Atualizações da classe EnginneringForest   Corrigido o método __init__
-<<<<<<< HEAD
 #d4013   Atualizações da classe EnginneringForest   Corrigido o método __del__
 #d4014   Atualizações da classe BaseEnginnering   Criação do método get_pack_nparray
 #d4015   Atualizações da classe EnginneringForest   Reescrito o método build
-=======
-#d4013  Atualizações da classe EnginneringForest   Corrigido o método __del__
->>>>>>> master
+#d4016   Atualizações do projeto   Resolvido problemas com o merge do git
