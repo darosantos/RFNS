@@ -30,6 +30,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.n_features_
         del self.n_samples_
         del self.name_features_
+        del self.prefix_column_predict
 
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
