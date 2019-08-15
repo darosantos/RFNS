@@ -16,7 +16,15 @@ class BaseEnginnering(object):
         
         return (df_subset_x, df_subset_y)
     
-    def arrangement_features(self, features: list,  n_selected: int) -> list:
+    def get_param_value(self, param_name: str):
+        if param_name in self.__slots__:
+            return self.__slots__[param_name]
+        elif param_name in self.__dict__:
+            return self.__dict__[param_name]
+        else:
+            raise TypeError('Access property is invalid')
+    
+    def get_arrangement_features(self, features: list,  n_selected: int) -> list:
         from itertools import combinations
         
         if type(n_selected) != int:
