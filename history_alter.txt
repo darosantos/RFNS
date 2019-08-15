@@ -27,3 +27,4 @@ COD		Title		DESCRIÇÃO
 #d4009   Atualizações da classe BaseEnginnering   Padroniza os métodos para usarem o prefixo get_; Implementa o método get_param_value
 #d4010   Atualizações da classe EnginneringForest   Resolvido problemas com indentação do código
 #d4011   Atualizações da classe EnginneringForest   Adiciona o uso de __slots__
+#d4012   Atualizações da classe EnginneringForest   Corrigido o método __init__
