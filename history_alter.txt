@@ -35,3 +35,4 @@ COD		Title		DESCRIÇÃO
 #d4017   Atualizações da classe EnginneringForest   Corrigido o método train
 #d4018   Atualizações da classe EnginneringForest   Corrigido o método fit
 #d4019   Atualizações gerais   Correção de código para execução
+#d4020   Altera a classe BaseEnginnering   Adiciona o método get_df_split

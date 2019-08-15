@@ -37,3 +37,12 @@ class BaseEnginnering(object):
     def get_pack_nparray(self, elements: list):
         import numpy as np
         return np.array(elements, np.object)
+    
+    def get_df_split(self, df, chunck):
+        # pagina de memória tamanho padrão é 4 kb
+        # pegar o tamanho do dataset
+        # dividir o tamanho do dataset pelo número de registros
+        # multiplicar o número de registro por 4k para descborir quantos precisa
+        # com o número de registros implementar um interador
+        # retornar bloco a bloco com loc do dataframe
+        pass
