@@ -1,4 +1,7 @@
 class BaseEnginnering(object):
+    
+    __slots__ = ('train_X', 'train_y')
+    
     def __init__(self):
         self.train_X = []
         self.train_y = []
