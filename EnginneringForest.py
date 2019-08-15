@@ -42,8 +42,8 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.estimators_ = self.make_lote_base_estimator(n_estimator)
         self.estimators_ = self.get_pack_nparray(self.estimators_)
 
-    def train(self, X, y, group_feature: list, estimator):
-        subset_xdata, subset_ydata = self.get_subset(X, y, list(group_feature))
+    def train(self, group_feature: list, estimator):
+        subset_xdata, subset_ydata = self.get_subset(group_feature)
         fit_ = estimator.fit(subset_xdata, subset_ydata)
         del subset_xdata
         del subset_ydata

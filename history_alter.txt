@@ -32,3 +32,4 @@ COD		Title		DESCRIÇÃO
 #d4014   Atualizações da classe BaseEnginnering   Criação do método get_pack_nparray
 #d4015   Atualizações da classe EnginneringForest   Reescrito o método build
 #d4016   Atualizações do projeto   Resolvido problemas com o merge do git
+#d4017   Atualizações da classe EnginneringForest   Corrigido o método train
