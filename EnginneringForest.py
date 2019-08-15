@@ -33,6 +33,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.prefix_column_predict
 
     def build(self, features_set: list) -> None:
+<<<<<<< HEAD
         """ Cria um vetor com o número de árvores igual ao número de 
             subconjuntos possíveis """
         self.group_features_ = self.arrangement_features(features_set,
@@ -41,6 +42,11 @@ class EnginneringForest(ClassifierEnginneringForest):
         n_estimator = len(self.group_features_)
         self.estimators_ = self.make_lote_base_estimator(n_estimator)
         self.estimators_ = self.get_pack_nparray(self.estimators_)
+=======
+        """ Cria um vetor com o número de árvores igual ao número de subconjuntos possíveis"""
+        self.group_features_ = np.array(self.arrangement_features(features=features_set, n_selected=self.select_features_), dtype=np.object)
+        self.estimators_ = np.array([self.make_base_estimator() for gf in self.group_features_], dtype=np.object)
+>>>>>>> master
 
     def train(self, X, y, group_feature: list, estimator):
         subset_xdata, subset_ydata = self.get_subset(X, y, list(group_feature))
