@@ -57,16 +57,20 @@ class EnginneringForest(ClassifierEnginneringForest):
             
         self.n_samples_, self.n_features_ = X.shape
         self.name_features_ = X.columns
-
+        
+        self.train_X = X
+        self.train_y = y
+        
         # Cria a floresta
         self.build(features_set=self.name_features_)
 
         # Treina as arvores individualmente
-        self.estimators_ = np.array([self.train(X, y, subset_feature, estimator) 
-                            for subset_feature, estimator in zip(self.group_features_, self.estimators_)], dtype=np.object)
-                            
-        del X
-        del y
+        self.estimators_ = [self.train(subset_feature, estimator) 
+                            for subset_feature, estimator in zip(self.group_features_, self.estimators_)]
+        self.estimators_ = self.get_pack_nparray(self.estimators_)
+        
+        del self.train_X
+        del self.train_y
 
     def voting(self) -> list:
         final_predict = []
