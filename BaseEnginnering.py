@@ -10,10 +10,7 @@ class BaseEnginnering(object):
         del self.train_X
         del self.train_y
 
-    def get_subset(self, columns: list) -> tuple:
-        if type(columns) != list:
-            raise TypeError('Expectd value list in columns')
-        
+    def get_subset(self, columns) -> tuple:
         df_subset_x = self.train_X.loc[:, columns]
         df_subset_y = self.train_y.loc[df_subset_x.index]
 
