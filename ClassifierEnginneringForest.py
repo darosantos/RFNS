@@ -2,7 +2,7 @@ from BaseEnginnering import BaseEnginnering
 import numpy as np
 
 class ClassifierEnginneringForest(BaseEnginnering):
-
+    
     # Permite a redução de 40 a 50% do consumo de RAM
     __slots__ = ('criterion', 'splitter', 'max_depth', 'min_samples_split', 
                  'min_samples_leaf', 'min_weight_fraction_leaf', 
@@ -35,14 +35,14 @@ class ClassifierEnginneringForest(BaseEnginnering):
         del self.max_leaf_nodes
         del self.class_weight
         del self.presort
-
+        
     # Permitir a escolha de outros classificadores e os hiperparametros de cada
     def make_base_estimator(self):
         from sklearn.tree import DecisionTreeClassifier
         
         clf = DecisionTreeClassifier(self.criterion)
         return clf
-
+    
     def make_lote_base_estimator(self, n_estimators):
         estimators_ = [self.make_base_estimator() for i in n_estimators]
         estimators_ = np.array(estimators_, np.object)
