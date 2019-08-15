@@ -21,6 +21,7 @@ class ClassifierEnginneringForest(BaseEnginnering):
         self.max_leaf_nodes=None
         self.class_weight=None
         self.presort=False
+        super().__init__()
         
     def __del__(self):
         del self.criterion
