@@ -28,3 +28,4 @@ COD		Title		DESCRIÇÃO
 #d4010   Atualizações da classe EnginneringForest   Resolvido problemas com indentação do código
 #d4011   Atualizações da classe EnginneringForest   Adiciona o uso de __slots__
 #d4012   Atualizações da classe EnginneringForest   Corrigido o método __init__
+#d4013  Atualizações da classe EnginneringForest   Corrigido o método __del__
