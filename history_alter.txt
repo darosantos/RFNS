@@ -30,3 +30,4 @@ COD		Title		DESCRIÇÃO
 #d4012   Atualizações da classe EnginneringForest   Corrigido o método __init__
 #d4013   Atualizações da classe EnginneringForest   Corrigido o método __del__
 #d4014   Atualizações da classe BaseEnginnering   Criação do método get_pack_nparray
+#d4015   Atualizações da classe EnginneringForest   Reescrito o método build
