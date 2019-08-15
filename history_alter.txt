@@ -24,3 +24,4 @@ COD		Title		DESCRIÇÃO
 #d4006   Atualizações da classe ClassifierEnginneringForest   Implementado o método make_lote_base_estimator
 #d4007   Atualizações da classe ClassifierEnginneringForest   Adicionado a chamado ao construtor da classe pai
 #d4008   Atualizações gerais   Correção de identação no código
+#d4009   Atualizações da classe BaseEnginnering   Padroniza os métodos para usarem o prefixo get_; Implementa o método get_param_value
