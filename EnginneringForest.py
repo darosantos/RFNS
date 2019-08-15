@@ -5,8 +5,8 @@ import numpy as np
 class EnginneringForest(ClassifierEnginneringForest):
     
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
-                 'df_predict_', 'n_features_', 'n_samples_', 'n_samples_', 
-                 'name_features_')
+                 'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
+                 'prefix_column_predict')
     
     def __init__(self, select_features: int):
         if type(select_features) != int:
@@ -19,7 +19,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
-        self.df_prefix_column_predict = 'cls'
+        self.prefix_column_predict = 'cls'
         super().__init__()
         
     def __del__(self):
