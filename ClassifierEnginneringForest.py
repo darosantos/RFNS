@@ -44,6 +44,6 @@ class ClassifierEnginneringForest(BaseEnginnering):
         return clf
     
     def make_lote_base_estimator(self, n_estimators):
-        estimators_ = [self.make_base_estimator() for i in n_estimators]
+        estimators_ = [self.make_base_estimator() for i in range(n_estimators)]
         estimators_ = np.array(estimators_, np.object)
         return estimators_

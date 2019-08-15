@@ -35,8 +35,8 @@ class EnginneringForest(ClassifierEnginneringForest):
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de 
             subconjuntos possíveis """
-        self.group_features_ = self.arrangement_features(features_set,
-                                                         self.select_features_)
+        self.group_features_ = self.get_arrangement_features(features_set,
+                                                             self.select_features_)
         self.group_features_ = self.get_pack_nparray(self.group_features_)
         n_estimator = len(self.group_features_)
         self.estimators_ = self.make_lote_base_estimator(n_estimator)
@@ -66,7 +66,9 @@ class EnginneringForest(ClassifierEnginneringForest):
 
         # Treina as arvores individualmente
         self.estimators_ = [self.train(subset_feature, estimator) 
-                            for subset_feature, estimator in zip(self.group_features_, self.estimators_)]
+                            for subset_feature, 
+                                estimator in zip(self.group_features_, 
+                                                 self.estimators_)]
         self.estimators_ = self.get_pack_nparray(self.estimators_)
         
         del self.train_X
@@ -91,7 +93,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         for subset_feature, estimator in zip(self.group_features_, self.estimators_):
             subset_test = X.loc[:, subset_feature]
             num_columns = len(self.df_predict_.columns)
-            pattern_name_column = "{0}{1}".format(self.df_prefix_column_predict, num_columns)
+            pattern_name_column = "{0}{1}".format(self.prefix_column_predict, num_columns)
             cls_predict = estimator.predict(subset_test)
             self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
 
