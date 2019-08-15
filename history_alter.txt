@@ -20,4 +20,5 @@ COD		Title		DESCRIÇÃO
 #d4002   Atualizações da classe BaseEnginnering   Add __slots__
 #d4003   Atualizações da classe BaseEnginnering   Removido a restrição do tipo lista
 #d4004   Atualizações da classe ClassifierEnginneringForest   Resolvendo problemas com indentação do código
-#d4005   Atualizações da classe ClassifierEnginneringForest   REsolvendo problemas com __slots__
+#d4005   Atualizações da classe ClassifierEnginneringForest   Resolvendo problemas com __slots__
+#d4006   Atualizações da classe ClassifierEnginneringForest   Implementado o método make_lote_base_estimator
