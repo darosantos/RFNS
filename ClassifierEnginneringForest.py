@@ -1,4 +1,5 @@
 from BaseEnginnering import BaseEnginnering
+import numpy as np
 
 class ClassifierEnginneringForest(BaseEnginnering):
 
@@ -34,11 +35,14 @@ class ClassifierEnginneringForest(BaseEnginnering):
         del self.class_weight
         del self.presort
 
+    # Permitir a escolha de outros classificadores e os hiperparametros de cada
     def make_base_estimator(self):
         from sklearn.tree import DecisionTreeClassifier
         
         clf = DecisionTreeClassifier(self.criterion)
         return clf
 
-    def make_lote_base_estimator(self):
-        pass
+    def make_lote_base_estimator(self, n_estimators):
+        estimators_ = [self.make_base_estimator() for i in n_estimators]
+        estimators_ = np.array(estimators_, np.object)
+        return estimators_
