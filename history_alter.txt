@@ -15,3 +15,5 @@ COD		Title		DESCRIÇÃO
 #d2011	Altera a classe EnginneringForest	Cria o método classifier; Altera o método predict para usar generator expressions; Adiciona o atributo self.df_prefix_column_predict
 #d2012	Altera a classe EnginneringForest	Correções de bugs em sintaxe
 #d2013	Altera a classe EnginneringForest	Correções de bus em sintaxe; Exclusão de métodos; Alterações do código para funcionar corretamente
+#derror  Perda do histórico de atualizações do repositório, o código do projeto teve de ser reescrito
+#d4001   Atualizações da classe BaseEnginnering   Criação de atributos; Alteração nos métodos implementados
