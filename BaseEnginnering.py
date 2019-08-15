@@ -33,3 +33,7 @@ class BaseEnginnering(object):
         permsList = list(combinations(features, r=n_selected))
         
         return permsList
+    
+    def get_pack_nparray(self, elements: list):
+        import numpy as np
+        return np.array(elements, np.object)
