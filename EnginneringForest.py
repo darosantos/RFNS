@@ -3,9 +3,10 @@ from pandas import DataFrame, Series
 import numpy as np
 
 class EnginneringForest(ClassifierEnginneringForest):
-
-    __slots__ = ('estimators_', 'select_features_', 'group_features_', 'df_predict_', 
-                 'n_features_', 'n_samples_', 'n_samples_', 'name_features_')
+    
+    __slots__ = ('estimators_', 'select_features_', 'group_features_', 
+                 'df_predict_', 'n_features_', 'n_samples_', 'n_samples_', 
+                 'name_features_')
     
     def __init__(self, select_features: int):
         if type(select_features) != int:
