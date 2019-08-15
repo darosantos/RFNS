@@ -25,3 +25,4 @@ COD		Title		DESCRIÇÃO
 #d4007   Atualizações da classe ClassifierEnginneringForest   Adicionado a chamado ao construtor da classe pai
 #d4008   Atualizações gerais   Correção de identação no código
 #d4009   Atualizações da classe BaseEnginnering   Padroniza os métodos para usarem o prefixo get_; Implementa o método get_param_value
+#d4010   Atualizações da classe EnginneringForest   Resolvido problemas com indentação do código
