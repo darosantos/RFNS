@@ -1,6 +1,6 @@
 from ClassifierEnginneringForest import ClassifierEnginneringForest
 from pandas import DataFrame, Series
-import numpy as np
+import time
 
 class EnginneringForest(ClassifierEnginneringForest):
     
@@ -104,13 +104,21 @@ class EnginneringForest(ClassifierEnginneringForest):
             num_columns = len(self.df_predict_.columns)
             pattern_name_column = "{0}{1}".format(self.prefix_column_predict, num_columns)
             
+            print('>>> Predicting subset = {0}'.format(subset_feature))
+            start_train = time.time()
             # Prepara para o treinamento com o subconjunto
             subset_test = self.predict_X.loc[:, subset_feature]
             cls_predict = []
             for item in self.get_df_split():
-                block_instances = subset_test.loc[item[0]:item[ '1],:]
+                
+                print('>>>> Block instances for subset = {0}'.format(item))
+                
+                block_instances = subset_test.loc[item[0]:item[1],:]
                 cls_predict.append(estimator.predict(block_instances))
-               
+            
+            end_train = time.time()
+            print('>>>> Time predicting = {0}'.format((end_train - start_train)))
+            
             # Adiciona o vetor de predições como uma coluna no dataframe de predições
             self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
 
