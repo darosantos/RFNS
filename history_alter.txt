@@ -38,3 +38,4 @@ COD		Title		DESCRIÇÃO
 #d4020   Altera a classe BaseEnginnering   Adiciona o método get_df_split
 #d5001   Altera a classe BaseEnginnering   Finaliza a primeira versão de get_df_split,ainda nao retorna o dataframe, mas retorna as posições a serem fatiadas
 #d5002   Altera a classe BaseEnginnering   Remove os comentários desnecessários de get_df_split
+#d5003   Altera a classe BaseEnginnering   Adiciona a propriedade predict_X

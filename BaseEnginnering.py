@@ -1,14 +1,16 @@
 class BaseEnginnering(object):
     
-    __slots__ = ('train_X', 'train_y')
+    __slots__ = ('train_X', 'train_y', 'predict_X')
     
     def __init__(self):
         self.train_X = []
         self.train_y = []
+        self.predict_X = []
         
     def __del__(self):
         del self.train_X
         del self.train_y
+        del self.predict_X
         
     def get_subset(self, columns) -> tuple:
         df_subset_x = self.train_X.loc[:, columns]
@@ -39,20 +41,8 @@ class BaseEnginnering(object):
         return np.array(elements, np.object)
     
     def get_df_split(self, df, chunck=1):
-        # pagina de memória tamanho padrão é 4 kb
-        # pegar o tamanho do dataset
-        # dividir o tamanho do dataset pelo número de registros
-        # multiplicar o número de registro por 4k para descborir quantos precisa
-        # com o número de registros implementar um interador
-        # retornar bloco a bloco com loc do dataframe
-        #chunck
         from sys import getsizeof
         from math import ceil
-        
-        #df_sizeof = int((getsizeof(df) / 1024) + 1) # in kb , arredonda para cima
-        #df_instances = df.shape[0]
-        #n_blocks = int(df_instances / df_sizeof)
-        #pair_blocks = [(x, y+n_blocks) for x in range(n_interators) for y in range(n_interators)]
         
         # in bytes
         df_sizeof = getsizeof(df)
