@@ -38,15 +38,60 @@ class BaseEnginnering(object):
         import numpy as np
         return np.array(elements, np.object)
     
-    def get_df_split(self, df, chunck):
+    def get_df_split(self, df, chunck=1):
         # pagina de memória tamanho padrão é 4 kb
         # pegar o tamanho do dataset
         # dividir o tamanho do dataset pelo número de registros
         # multiplicar o número de registro por 4k para descborir quantos precisa
         # com o número de registros implementar um interador
         # retornar bloco a bloco com loc do dataframe
+        #chunck
         from sys import getsizeof
-		
-		df_sizeof = int((getsizeof(df) / 1024) + 1) # in kb , arredonda para cima
-		df_instances = df.shape[0]
-		n_blocks = int(df_instances / df_sizeof)
+        from math import ceil
+        
+        #df_sizeof = int((getsizeof(df) / 1024) + 1) # in kb , arredonda para cima
+        #df_instances = df.shape[0]
+        #n_blocks = int(df_instances / df_sizeof)
+        #pair_blocks = [(x, y+n_blocks) for x in range(n_interators) for y in range(n_interators)]
+        
+        # in bytes
+        df_sizeof = getsizeof(df)
+        # number of instances
+        n_instances = df.shape[0]
+        # size in bytes of instances
+        instance_sizeof = df_sizeof / n_instances
+        # number of intance per block
+        n_blocks = ceil((1024 * chunck) / instance_sizeof)
+        # mount list blocks
+        pair_blocks = []
+        x = 0
+        for y in range(n_blocks, n_instances, n_blocks):
+            pair_blocks.append((x, y))
+            x = y+1
+        # add diff
+        if ( (n_instances % n_blocks) > 0 ):
+            y = (x + (n_instances % n_blocks)) - 2
+            pair_blocks.append((x, y))
+        
+        return pair_blocks
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
