@@ -39,3 +39,4 @@ COD		Title		DESCRIÇÃO
 #d5001   Altera a classe BaseEnginnering   Finaliza a primeira versão de get_df_split,ainda nao retorna o dataframe, mas retorna as posições a serem fatiadas
 #d5002   Altera a classe BaseEnginnering   Remove os comentários desnecessários de get_df_split
 #d5003   Altera a classe BaseEnginnering   Adiciona a propriedade predict_X
+#d5004   Altera a classe BaseEnginnering   Altera o método get_df_split para ser um método gerador (generate) retornando a cada iteração uma tupla com o limite inferior e superior para cortar o dataframe

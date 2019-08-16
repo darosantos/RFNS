@@ -63,25 +63,7 @@ class BaseEnginnering(object):
             y = (x + (n_instances % n_blocks)) - 2
             pair_blocks.append((x, y))
         
-        return pair_blocks
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        for item in pair_blocks:
+            (yield item)
 
 
