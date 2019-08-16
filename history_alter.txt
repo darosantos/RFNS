@@ -41,3 +41,4 @@ COD		Title		DESCRIÇÃO
 #d5003   Altera a classe BaseEnginnering   Adiciona a propriedade predict_X
 #d5004   Altera a classe BaseEnginnering   Altera o método get_df_split para ser um método gerador (generate) retornando a cada iteração uma tupla com o limite inferior e superior para cortar o dataframe
 #d5005   Atualizações da classe EnginneringForest   Alterado o método predict, agora além de cortar o subconjunto de atributos, o treinamento é feito separando as instancias em pequenos conjuntos
+#d5006   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método train
