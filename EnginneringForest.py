@@ -111,7 +111,7 @@ class EnginneringForest(ClassifierEnginneringForest):
             # Prepara para o treinamento com o subconjunto
             subset_test = self.predict_X.loc[:, subset_feature]
             cls_predict = []
-            for item in self.get_df_split():
+            for item in self.get_df_split(chunck=3):
                 
                 print('>>>> Block instances for subset = {0}'.format(item))
                 print(item[0], item[1])

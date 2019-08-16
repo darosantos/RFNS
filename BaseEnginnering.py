@@ -59,7 +59,7 @@ class BaseEnginnering(object):
             pair_blocks.append((x, y))
             x = y+1
         # add diff
-        if ( (n_instances % n_blocks) > 0 ):
+        if ( (n_instances % n_blocks) > 1 ):
             y = (x + (n_instances % n_blocks)) - 2
             pair_blocks.append((x, y))
         
