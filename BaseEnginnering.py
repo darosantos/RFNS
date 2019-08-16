@@ -40,14 +40,14 @@ class BaseEnginnering(object):
         import numpy as np
         return np.array(elements, np.object)
     
-    def get_df_split(self, df, chunck=1):
+    def get_df_split(self, chunck=1):
         from sys import getsizeof
         from math import ceil
         
         # in bytes
-        df_sizeof = getsizeof(df)
+        df_sizeof = getsizeof(self.predict_X)
         # number of instances
-        n_instances = df.shape[0]
+        n_instances = self.predict_X.shape[0]
         # size in bytes of instances
         instance_sizeof = df_sizeof / n_instances
         # number of intance per block

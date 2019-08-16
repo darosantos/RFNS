@@ -4,3 +4,6 @@
 	Usar o conceito e entropia
 	Calcular o quantitativo propocional de exemplos a serem usados por frequência
 	Selecionar apenas o percentual definido e passar para o código
+	
+2 - Testar a função get_df_split
+    Verificar se ao aumentar o valor de chunck o vetor gerado cobre todas a instâncias do dataframe
