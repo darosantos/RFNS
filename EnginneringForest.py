@@ -111,19 +111,22 @@ class EnginneringForest(ClassifierEnginneringForest):
             # Prepara para o treinamento com o subconjunto
             subset_test = self.predict_X.loc[:, subset_feature]
             cls_predict = []
-            for item in self.get_df_split(chunck=3):
+            for item in self.get_df_split():
                 
                 print('>>>> Block instances for subset = {0}'.format(item))
-                print(item[0], item[1])
                 
                 block_instances = subset_test.loc[item[0]:item[1]]
-                cls_predict.append(estimator.predict(block_instances))
+                cls_predict.extend(estimator.predict(block_instances))
+                
             
             end_train = time.time()
             print('>>>> Time predicting = {0}'.format((end_train - start_train)))
             
             # Adiciona o vetor de predições como uma coluna no dataframe de predições
-            self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
+            self.df_predict_.insert(loc=num_columns, 
+                                    column=pattern_name_column, 
+                                    value=cls_predict)
+            del cls_predict
 
         del X
         del self.predict_X
