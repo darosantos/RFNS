@@ -88,14 +88,26 @@ class EnginneringForest(ClassifierEnginneringForest):
     def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-            
+        
+        self.predict_X = X
+        
         # É aqui que monto a (matriz nº de amostras x nº de classificadores)
         for subset_feature, estimator in zip(self.group_features_, self.estimators_):
-            subset_test = X.loc[:, subset_feature]
+            # monta o nome da coluna do dataframe de predições
             num_columns = len(self.df_predict_.columns)
             pattern_name_column = "{0}{1}".format(self.prefix_column_predict, num_columns)
-            cls_predict = estimator.predict(subset_test)
+            
+            # Prepara para o treinamento com o subconjunto
+            subset_test = self.predict_X.loc[:, subset_feature]
+            cls_predict = []
+            for item in self.get_df_split():
+                block_instances = subset_test.loc[item[0]:item[ '1],:]
+                cls_predict.append(estimator.predict(block_instances))
+               
+            # Adiciona o vetor de predições como uma coluna no dataframe de predições
             self.df_predict_.insert(loc=num_columns, column=pattern_name_column, value=cls_predict)
 
         del X
+        del self.predict_X
+        
         return self.voting()
