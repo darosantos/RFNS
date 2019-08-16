@@ -1,0 +1,6 @@
+1 - Método para otimizar o treino das arvores
+	Analisar as colunas
+	Definir um percentual dos dados a serem usados
+	Usar o conceito e entropia
+	Calcular o quantitativo propocional de exemplos a serem usados por frequência
+	Selecionar apenas o percentual definido e passar para o código

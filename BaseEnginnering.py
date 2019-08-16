@@ -45,4 +45,8 @@ class BaseEnginnering(object):
         # multiplicar o número de registro por 4k para descborir quantos precisa
         # com o número de registros implementar um interador
         # retornar bloco a bloco com loc do dataframe
-        pass
+        from sys import getsizeof
+		
+		df_sizeof = int((getsizeof(df) / 1024) + 1) # in kb , arredonda para cima
+		df_instances = df.shape[0]
+		n_blocks = int(df_instances / df_sizeof)
