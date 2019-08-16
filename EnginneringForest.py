@@ -96,7 +96,9 @@ class EnginneringForest(ClassifierEnginneringForest):
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         
-        self.predict_X = X
+        self.predict_X = X.reset_index()
+        
+        print('Size predict = {}'.format(self.predict_X.shape))
         
         # É aqui que monto a (matriz nº de amostras x nº de classificadores)
         for subset_feature, estimator in zip(self.group_features_, self.estimators_):
@@ -112,8 +114,9 @@ class EnginneringForest(ClassifierEnginneringForest):
             for item in self.get_df_split():
                 
                 print('>>>> Block instances for subset = {0}'.format(item))
+                print(item[0], item[1])
                 
-                block_instances = subset_test.loc[item[0]:item[1],:]
+                block_instances = subset_test.loc[item[0]:item[1]]
                 cls_predict.append(estimator.predict(block_instances))
             
             end_train = time.time()
