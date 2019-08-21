@@ -22,7 +22,7 @@ columns_name = ['target', 'lepton_1_pT', 'lepton_1_eta', 'lepton_1_phi', 'lepton
 
 columns_dtype = {name: np.float64 for name in columns_name}
 
-df_susy = pd.read_csv('susy_scaled.csv', 
+df_susy = pd.read_csv('SUSY.csv', 
                       names=[name.lower() for name in columns_name], 
                       engine='c', 
                       memory_map=True, 
@@ -91,8 +91,17 @@ for n_tree in range(18):
     model_eg = EnginneringForest(select_features=n_tree+1)
     print('>> Treina o modelo')
     model_eg.fit(X_train, y_train)
+    
     print('>> Testa p modelo')
-    y_pred = model_eg.predict(X_test)
+    y_pred = []
+    passo = 0
+    for i in range(10000, X_test.shape[0], 10000):
+        print('>> BLoco testado = {0}'.format(i))
+        tmp_pred = model_eg.predict(X_test.loc[passo-1:i])
+        passo = 10000
+        y_pred.extend(tmp_pred)
+   
+    
     print('>> Calcula a acuracia')
     mac = accuracy_score(y_test, y_pred)
     logger_accuracy_eg.info(str(mac))
