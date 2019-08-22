@@ -1,4 +1,5 @@
 from ClassifierEnginneringForest import ClassifierEnginneringForest
+from LoggerEnginnering import LoggerEnginnering
 from pandas import DataFrame, Series
 import time
 
@@ -6,7 +7,7 @@ class EnginneringForest(ClassifierEnginneringForest):
     
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
-                 'prefix_column_predict')
+                 'prefix_column_predict', 'logger')
     
     def __init__(self, select_features: int):
         if type(select_features) != int:
@@ -20,6 +21,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_samples_ = 0
         self.name_features_ = []
         self.prefix_column_predict = 'cls'
+		self.logger = LoggerEnginnering()
         super().__init__()
         
     def __del__(self):

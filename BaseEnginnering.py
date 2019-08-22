@@ -66,5 +66,6 @@ class BaseEnginnering(object):
         
         for item in pair_blocks:
             (yield item)
-
-
+            
+    def get_serialize():
+		# Serializa um objeto para ser salvo no disco
