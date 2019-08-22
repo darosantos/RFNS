@@ -4,6 +4,8 @@ print(">> Iniciando os imports standards")
 
 import pandas as pd
 
+import numpy as np
+
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
 
@@ -18,7 +20,13 @@ columns_name = ['target', 'lepton_1_pT', 'lepton_1_eta', 'lepton_1_phi', 'lepton
         'lepton_2_phi', 'missing_energy_magnitude', 'missing_energy_phi', 'MET_rel', 'axial_MET',
         'M_R', 'M_TR_2', 'R', 'MT2', 'S_R', 'M_Delta_R', 'dPhi_r_b', 'cos_theta_r1']
 
-df_susy = pd.read_csv('SUSY.csv', names=[name.lower() for name in columns_name], engine='c')
+columns_dtype = {name: np.float64 for name in columns_name}
+
+df_susy = pd.read_csv('SUSY.csv', 
+                      names=[name.lower() for name in columns_name], 
+                      engine='c', 
+                      memory_map=True, 
+                      low_memory=True)
 
 print(">> Dataset carregado com sucesso")
 print(">> Imprimindo cabecalho do dataset")
@@ -35,6 +43,7 @@ y=df_susy['target']
 # Split dataset into training set and test set
 # 70% training and 30% test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=100, shuffle=True, stratify=y)
+del df_susy
 
 print(">> Fim da separação dos dados")
 print(">> Dimensoes de treino")
@@ -67,22 +76,32 @@ print(">> Ambiente de log criado com sucesso")
 print(">> Declara a classe BaseEnginnering")
 print(">> Cria o ambiente de log para salvar os dados de acuracia e matriz de confusao")
 
-reset_logger('logger_accuracy_dataset_susy.log')
-reset_logger('logger_matrix_confusion_dataset_susy.log')
-logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_dataset_susy.log')
-logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_dataset_susy.log')
+reset_logger('logger_accuracy_dataset_susy2.log')
+reset_logger('logger_matrix_confusion_dataset_susy2.log')
+logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_dataset_susy2.log')
+logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_dataset_susy2.log')
 
 print(">> Ambiente dos logs criados com sucesso")
 print(">> Inicia o treinamento de cada conjunto de arvores")
 
-for n_tree in range(df_susy.shape[1]-1):
+for n_tree in range(18):
+    #n_tree = 1
     print('>>> Iniciando execucao - ', n_tree)
     print('>> Cria o modelo')
     model_eg = EnginneringForest(select_features=n_tree+1)
     print('>> Treina o modelo')
     model_eg.fit(X_train, y_train)
+    
     print('>> Testa p modelo')
-    y_pred = model_eg.predict(X_test)
+    y_pred = []
+    passo = 0
+    for i in range(10000, X_test.shape[0], 10000):
+        print('>> BLoco testado = {0}'.format(i))
+        tmp_pred = model_eg.predict(X_test.loc[passo-1:i])
+        passo = 10000
+        y_pred.extend(tmp_pred)
+   
+    
     print('>> Calcula a acuracia')
     mac = accuracy_score(y_test, y_pred)
     logger_accuracy_eg.info(str(mac))
@@ -91,6 +110,7 @@ for n_tree in range(df_susy.shape[1]-1):
     logger_matrix_confusion_eg.info(str(mcm))
     print(">> N. de atributos {0}, Acuracia = {1}, N. de Arvores = {2}".format((n_tree+1), mac, len(model_eg.estimators_)))
     print('>>> Fim da execucao')
+    del model_eg
 
 print("Fim do treinamento de cada conjunto de arvores")
 print(">>>> Fim do script")

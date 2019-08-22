@@ -1,12 +1,11 @@
 class BaseEnginnering(object):
     
-    __slots__ = ('train_X', 'train_y', 'predict_X', 'chunck')
+    __slots__ = ('train_X', 'train_y', 'predict_X')
     
     def __init__(self):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
-        self.chunck = 1
         
     def __del__(self):
         del self.train_X
@@ -41,7 +40,7 @@ class BaseEnginnering(object):
         import numpy as np
         return np.array(elements, np.object)
     
-    def get_df_split(self):
+    def get_df_split(self, chunck):
         from sys import getsizeof
         from math import ceil
         
@@ -52,7 +51,7 @@ class BaseEnginnering(object):
         # size in bytes of instances
         instance_sizeof = df_sizeof / n_instances
         # number of intance per block
-        n_blocks = ceil((1024 * self.chunck) / instance_sizeof)
+        n_blocks = ceil((1024 * chunck) / instance_sizeof)
         # mount list blocks
         pair_blocks = []
         x = 0
