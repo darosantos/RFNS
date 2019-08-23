@@ -46,3 +46,4 @@ COD		Title		DESCRIÇÃO
 #d6001	Atualizações da classe BaseEnginnering	Implementdo o método get_block_fit para substituir o método get_df_split
 #d6002	Atualizações da classe BaseEnginnering	Refatorado o método get_block_fit
 #d6003	Atualizações da classe BaseEnginnering	Removido o método get_df_split
+#d6004	Atualizações da classe EnginneringForest	Continuação da implementação do método predict

@@ -109,8 +109,16 @@ class EnginneringForest(ClassifierEnginneringForest):
         # cada tabela contém todos os atributos
         # depois cada árvoreé usada com a minitabela
         #self.chunck = 128
+		num_columns = len(self.df_predict_.columns)
+        pattern_name_column = "{0}{1}".format(self.prefix_column_predict, 
+											  num_columns)
+			
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
+			
+			dfsub = self.predict_X.loc[x_, y_]
+			for subset_feature, estimator in zip(self.group_features_, self.estimators_):
+				estimator.predict(block_instances)
         
     # Código antigo para predição
     def predict_old(self, X) -> list:
