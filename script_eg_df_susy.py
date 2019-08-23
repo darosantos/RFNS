@@ -8,6 +8,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.preprocessing import RobustScaler
 
 import logging
 
@@ -35,6 +36,14 @@ print(">> Tamanho do dataset")
 print(df_susy.shape)
 print(">> Informações do dataset")
 print(df_susy.info())
+
+print(">> Colcoa os dados em escala")
+transformer = RobustScaler(copy=True, quantile_range=(30.0, 70.0), 
+                           with_centering=True, with_scaling=True)
+df_susy = transformer.fit_transform(df_susy)
+print(">> Dados em escala")
+
+
 print(">> Inicia a separacao dos dados de treino e teste")
 
 X=df_susy[[name.lower() for name in columns_name[1:]]]
@@ -97,7 +106,8 @@ for n_tree in range(18):
     passo = 0
     for i in range(10000, X_test.shape[0], 10000):
         print('>> BLoco testado = {0}'.format(i))
-        tmp_pred = model_eg.predict(X_test.loc[passo-1:i])
+        inicio = passo - 1
+        tmp_pred = model_eg.predict(X_test.loc[inicio:i])
         passo = 10000
         y_pred.extend(tmp_pred)
    
