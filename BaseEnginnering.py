@@ -6,7 +6,7 @@ class BaseEnginnering(object):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
-        self.chunck = 1
+        self.chunck = 32
         
     def __del__(self):
         del self.train_X
@@ -54,11 +54,31 @@ class BaseEnginnering(object):
         instance_sizeof = df_sizeof / n_instances
         # number of instance per block
         n_per_block = ceil((1024 * self.chunck) / instance_sizeof)
-        if n_per_block > n_instances:
+        print('N instances = ', n_instances)
+        print('N per block = ', n_per_block)
+        
+        if n_per_block >= n_instances:
             (yield (0,(n_instances-1)))
         else:
-            for item in range(n_instances):
-                (yield (0, item))
+            # mount list blocks
+            #pair_blocks = []
+            #x = 0
+            #for y in range(n_per_block, n_instances, n_per_block):
+            #    pair_blocks.append((x, y))
+            #    x = y+1
+            pair_blocks = [((y - n_per_block), (y-1)) 
+                           for y in range(n_per_block, 
+                                          n_instances, 
+                                          n_per_block)]
+            
+            print('Y = ', pair_blocks[-1])
+            
+            if (pair_blocks[-1][1] < n_instances):
+                e = ((pair_blocks[-1][1] + 1), (n_instances-1))
+                pair_blocks.append(e)
+                
+            for item in pair_blocks:
+                (yield (item))
 
     #@deprecated
     def get_df_split(self):

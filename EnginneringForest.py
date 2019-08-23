@@ -108,7 +108,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         # A ideia e dividir o dataset em pequenas tabelas
         # cada tabela contém todos os atributos
         # depois cada árvoreé usada com a minitabela
-        self.chunck = 32
+        #self.chunck = 128
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
         

@@ -43,3 +43,4 @@ COD		Title		DESCRIÇÃO
 #d5005   Atualizações da classe EnginneringForest   Alterado o método predict, agora além de cortar o subconjunto de atributos, o treinamento é feito separando as instancias em pequenos conjuntos
 #d5006   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método train
 #d5007   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método predict
+#d6001	Atualizações da classe BaseEnginnering	Implementdo o método get_block_fit para substituir o método get_df_split

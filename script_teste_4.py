@@ -8,11 +8,20 @@ from EnginneringForest import EnginneringForest
 
 print(">> Carregando o dataset")
 
-df_heart = pd.read_csv('heart.csv', engine='c')
+columns_name = ['target', 'lepton_1_pT', 'lepton_1_eta', 'lepton_1_phi', 'lepton_2_pT', 'lepton_2_eta', 
+        'lepton_2_phi', 'missing_energy_magnitude', 'missing_energy_phi', 'MET_rel', 'axial_MET',
+        'M_R', 'M_TR_2', 'R', 'MT2', 'S_R', 'M_Delta_R', 'dPhi_r_b', 'cos_theta_r1']
 
-X=df_heart[['age', 'sex', 'cp', 'trestbps',  'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']]
-# Labels
-y=df_heart['target']
+# columns_dtype = {name: np.float64 for name in columns_name}
+
+df_susy = pd.read_csv('SUSY.csv', 
+                      names=[name.lower() for name in columns_name], 
+                      engine='c', 
+                      memory_map=True, 
+                      low_memory=True)
+                      
+X=df_susy[[name.lower() for name in columns_name[1:]]]
+y=df_susy['target']
 
 # Split dataset into training set and test set
 # 70% training and 30% test
@@ -22,8 +31,8 @@ print(">> Dataset carregado com sucesso")
 print(">> Simula o código do modelo")
 
 model_eg = EnginneringForest(select_features=2)
-model_eg.fit(X_train, y_train)
-model_eg.chunck = 10
+model_eg.chunck = 128
+# model_eg.fit(X_train, y_train)
 y_pred = model_eg.predict(X_test)
 
 print(">> Fim da simulacao")
