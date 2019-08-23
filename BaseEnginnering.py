@@ -1,16 +1,18 @@
 class BaseEnginnering(object):
     
-    __slots__ = ('train_X', 'train_y', 'predict_X')
+    __slots__ = ('train_X', 'train_y', 'predict_X', 'chunck')
     
     def __init__(self):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
+        self.chunck = 1
         
     def __del__(self):
         del self.train_X
         del self.train_y
         del self.predict_X
+        del self.chunck
         
     def get_subset(self, columns) -> tuple:
         df_subset_x = self.train_X.loc[:, columns]
@@ -40,7 +42,26 @@ class BaseEnginnering(object):
         import numpy as np
         return np.array(elements, np.object)
     
-    def get_df_split(self, chunck):
+    def get_block_fit(self):
+        from sys import getsizeof
+        from math import ceil
+        
+        # in bytes
+        df_sizeof = getsizeof(self.predict_X)
+        # number of instances
+        n_instances = self.predict_X.shape[0]
+        # size in bytes of instances
+        instance_sizeof = df_sizeof / n_instances
+        # number of instance per block
+        n_per_block = ceil((1024 * self.chunck) / instance_sizeof)
+        if n_per_block > n_instances:
+            (yield (0,(n_instances-1)))
+        else:
+            for item in range(n_instances):
+                (yield (0, item))
+
+    #@deprecated
+    def get_df_split(self):
         from sys import getsizeof
         from math import ceil
         
@@ -51,7 +72,7 @@ class BaseEnginnering(object):
         # size in bytes of instances
         instance_sizeof = df_sizeof / n_instances
         # number of intance per block
-        n_blocks = ceil((1024 * chunck) / instance_sizeof)
+        n_blocks = ceil((1024 * self.chunck) / instance_sizeof)
         # mount list blocks
         pair_blocks = []
         x = 0
@@ -65,6 +86,3 @@ class BaseEnginnering(object):
         
         for item in pair_blocks:
             (yield item)
-            
-    def get_serialize():
-		# Serializa um objeto para ser salvo no disco

@@ -16,3 +16,5 @@ class CacheEnginnering(object):
 		pass
 		
 	# Busca cada classificador individualmente e treina eles
+	def get_serialize():
+		# Serializa um objeto para ser salvo no disco

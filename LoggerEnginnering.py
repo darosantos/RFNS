@@ -5,7 +5,8 @@ class LoggerEnginnering:
     __slots__ = ('name', 'level', 'path', 'log_file', 
                  'default_extension', 'formatter', 'logger')
     
-    def __init__(self, name, level=logging.INFO, path, log_file, drop_old):
+    def __init__(self, name, log_file, path='', 
+                 level=logging.DEBUG, drop_old=True):
         self.name = name
         self.level = level
         self.path = path
@@ -36,7 +37,7 @@ class LoggerEnginnering:
         
     def get_log_name(self):
         log_name = ''
-        if (self.path != None):
+        if (self.path != ''):
             log_name = self.path 
         if (self.log_file != None):
             log_name = log_name + self.log_file
@@ -44,6 +45,7 @@ class LoggerEnginnering:
             log_name = log_name + self.name + self.default_extension
         else:
             raise TypeError('Log name not empty')
+        return log_name
         
     def reset(self):
         from os import remove
@@ -59,7 +61,7 @@ class LoggerEnginnering:
         self.logger = logging.getLogger(self.name)
         self.logger.setLevel(self.level)
         self.logger.addHandler(handler)
-        
+    
     def add(self, type, msg):
         msg = str(msg)
         if type == 'info':

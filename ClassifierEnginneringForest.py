@@ -1,5 +1,4 @@
 from BaseEnginnering import BaseEnginnering
-import numpy as np
 
 class ClassifierEnginneringForest(BaseEnginnering):
     
@@ -45,5 +44,5 @@ class ClassifierEnginneringForest(BaseEnginnering):
     
     def make_lote_base_estimator(self, n_estimators):
         estimators_ = [self.make_base_estimator() for i in range(n_estimators)]
-        estimators_ = np.array(estimators_, np.object)
+        estimators_ = self.get_pack_nparray(estimators_)
         return estimators_
