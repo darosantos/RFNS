@@ -53,25 +53,15 @@ class BaseEnginnering(object):
         # size in bytes of instances
         instance_sizeof = df_sizeof / n_instances
         # number of instance per block
-        n_per_block = ceil((1024 * self.chunck) / instance_sizeof)
-        print('N instances = ', n_instances)
-        print('N per block = ', n_per_block)
+        n_per_block = ceil((1024 * 4 * self.chunck) / instance_sizeof)
         
         if n_per_block >= n_instances:
             (yield (0,(n_instances-1)))
         else:
-            # mount list blocks
-            #pair_blocks = []
-            #x = 0
-            #for y in range(n_per_block, n_instances, n_per_block):
-            #    pair_blocks.append((x, y))
-            #    x = y+1
             pair_blocks = [((y - n_per_block), (y-1)) 
                            for y in range(n_per_block, 
                                           n_instances, 
                                           n_per_block)]
-            
-            print('Y = ', pair_blocks[-1])
             
             if (pair_blocks[-1][1] < n_instances):
                 e = ((pair_blocks[-1][1] + 1), (n_instances-1))

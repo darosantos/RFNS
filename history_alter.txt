@@ -44,3 +44,4 @@ COD		Title		DESCRIÇÃO
 #d5006   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método train
 #d5007   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método predict
 #d6001	Atualizações da classe BaseEnginnering	Implementdo o método get_block_fit para substituir o método get_df_split
+#d6002	Atualizações da classe BaseEnginnering	Refatorado o método get_block_fit
