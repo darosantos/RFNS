@@ -1,4 +1,5 @@
 from ClassifierEnginneringForest import ClassifierEnginneringForest
+from LoggerEnginnering import LoggerEnginnering
 from pandas import DataFrame, Series
 import time
 
@@ -6,20 +7,21 @@ class EnginneringForest(ClassifierEnginneringForest):
     
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
-                 'prefix_column_predict')
+                 'prefix_column_predict', 'logger')
     
     def __init__(self, select_features: int):
         if type(select_features) != int:
             raise TypeError('Expectd value int in select_features')
-            
+        
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
-        self.df_predict_ = DataFrame()
+        self.df_predict_ = DataFrame() # substituir por np.matrix
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
         self.prefix_column_predict = 'cls'
+        self.logger = LoggerEnginnering(name='enginnering', log_file='enginnering.log')
         super().__init__()
         
     def __del__(self):
@@ -31,6 +33,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.n_samples_
         del self.name_features_
         del self.prefix_column_predict
+        # del self.logger
 
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de 
@@ -43,7 +46,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.estimators_ = self.get_pack_nparray(self.estimators_)
 
     def train(self, group_feature: list, estimator):
-        print('>>> Training subset = {0}'.format(group_feature))
+        msg = 'Training subset = {0}, Timing = {1}'
         start_train = time.time()
         
         subset_xdata, subset_ydata = self.get_subset(group_feature)
@@ -52,7 +55,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del subset_ydata
         
         end_train = time.time()
-        print('>>>> Time training = {0}'.format((end_train - start_train)))
+        self.logger.add('debug',msg.format(group_feature, (end_train - start_train)))
         
         return fit_
 
@@ -91,8 +94,26 @@ class EnginneringForest(ClassifierEnginneringForest):
             else:
                 final_predict.append(0)
         return final_predict 
-            
-    def predict(self, X) -> list:
+        
+    def predict (self, X) -> list:
+        if not isinstance(X, DataFrame):
+            raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
+        # Este novo código se baseia em lidar com um volume muito grande para predição
+        self.predict_X = X.reset_index()
+        del X
+        self.logger.add('debug','Size predict = {}'.format(self.predict_X.shape))
+        
+        # Determina se o dataset é muito grande para escolher qual estratégia usar
+        # Percorre o dataset em pequenas linhas
+        # A ideia e dividir o dataset em pequenas tabelas
+        # cada tabela contém todos os atributos
+        # depois cada árvoreé usada com a minitabela
+        self.chunck = 32
+        for x_, y_ in self.get_block_fit():
+            self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
+        
+    # Código antigo para predição
+    def predict_old(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         
