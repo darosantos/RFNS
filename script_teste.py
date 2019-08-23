@@ -54,7 +54,7 @@ reset_logger('logger_matrix_confusion_eg.log')
 logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_eg.log')
 logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_eg.log')
 
-for n_tree in [1,2,3,4,5,6,7]:
+for n_tree in range(7):
     model_eg = EnginneringForest(select_features=n_tree+1)
     model_eg.fit(X_train, y_train)
     # model_eg.chunck = 32

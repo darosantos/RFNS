@@ -6,7 +6,7 @@ class LoggerEnginnering:
                  'default_extension', 'formatter', 'logger')
     
     def __init__(self, name, log_file, path='', 
-                 level=logging.DEBUG, drop_old=True):
+                 level=logging.DEBUG, drop_old=False):
         self.name = name
         self.level = level
         self.path = path

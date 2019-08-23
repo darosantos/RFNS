@@ -1,6 +1,7 @@
 from ClassifierEnginneringForest import ClassifierEnginneringForest
 from LoggerEnginnering import LoggerEnginnering
 from pandas import DataFrame, Series
+import numpy as np
 import time
 
 class EnginneringForest(ClassifierEnginneringForest):
@@ -16,7 +17,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
-        self.df_predict_ = DataFrame() # substituir por np.matrix
+        self.df_predict_ = DataFrame()
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
@@ -95,7 +96,7 @@ class EnginneringForest(ClassifierEnginneringForest):
                 final_predict.append(0)
         return final_predict 
         
-    def predict (self, X) -> list:
+    def predict_old(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         # Este novo código se baseia em lidar com um volume muito grande para predição
@@ -109,25 +110,25 @@ class EnginneringForest(ClassifierEnginneringForest):
         # cada tabela contém todos os atributos
         # depois cada árvoreé usada com a minitabela
         #self.chunck = 128
-		num_columns = len(self.df_predict_.columns)
+        num_columns = len(self.df_predict_.columns)
         pattern_name_column = "{0}{1}".format(self.prefix_column_predict, 
-											  num_columns)
-			
+                                              num_columns)
+            
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
-			
-			dfsub = self.predict_X.loc[x_, y_]
-			for subset_feature, estimator in zip(self.group_features_, self.estimators_):
-				estimator.predict(block_instances)
+            
+            dfsub = self.predict_X.loc[x_, y_]
+            for subset_feature, estimator in zip(self.group_features_, self.estimators_):
+                estimator.predict(block_instances)
         
     # Código antigo para predição
-    def predict_old(self, X) -> list:
+    def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         
         self.predict_X = X.reset_index()
         
-        print('Size predict = {}'.format(self.predict_X.shape))
+        self.logger.add('debug','Size predict = {}'.format(self.predict_X.shape))
         
         # É aqui que monto a (matriz nº de amostras x nº de classificadores)
         for subset_feature, estimator in zip(self.group_features_, self.estimators_):
@@ -135,21 +136,21 @@ class EnginneringForest(ClassifierEnginneringForest):
             num_columns = len(self.df_predict_.columns)
             pattern_name_column = "{0}{1}".format(self.prefix_column_predict, num_columns)
             
-            print('>>> Predicting subset = {0}'.format(subset_feature))
+            self.logger.add('debug','>>> Predicting subset = {0}'.format(subset_feature))
             start_train = time.time()
             # Prepara para o treinamento com o subconjunto
             subset_test = self.predict_X.loc[:, subset_feature]
             cls_predict = []
-            for item in self.get_df_split(chunck=256):
+            for item in self.get_block_fit():
                 
-                print('>>>> Block instances for subset = {0}'.format(item))
+                self.logger.add('debug','>>>> Block instances for subset = {0}'.format(item))
                 
                 block_instances = subset_test.loc[item[0]:item[1]]
                 cls_predict.extend(estimator.predict(block_instances))
                 
             
             end_train = time.time()
-            print('>>>> Time predicting = {0}'.format((end_train - start_train)))
+            self.logger.add('debug','>>>> Time predicting = {0}'.format((end_train - start_train)))
             
             # Adiciona o vetor de predições como uma coluna no dataframe de predições
             self.df_predict_.insert(loc=num_columns, 
