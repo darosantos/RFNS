@@ -69,30 +69,3 @@ class BaseEnginnering(object):
                 
             for item in pair_blocks:
                 (yield (item))
-
-    #@deprecated
-    def get_df_split(self):
-        from sys import getsizeof
-        from math import ceil
-        
-        # in bytes
-        df_sizeof = getsizeof(self.predict_X)
-        # number of instances
-        n_instances = self.predict_X.shape[0]
-        # size in bytes of instances
-        instance_sizeof = df_sizeof / n_instances
-        # number of intance per block
-        n_blocks = ceil((1024 * self.chunck) / instance_sizeof)
-        # mount list blocks
-        pair_blocks = []
-        x = 0
-        for y in range(n_blocks, n_instances, n_blocks):
-            pair_blocks.append((x, y))
-            x = y+1
-        # add diff
-        if ( (n_instances % n_blocks) > 1 ):
-            y = (x + (n_instances % n_blocks)) - 2
-            pair_blocks.append((x, y))
-        
-        for item in pair_blocks:
-            (yield item)

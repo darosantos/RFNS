@@ -45,3 +45,4 @@ COD		Title		DESCRIÇÃO
 #d5007   Atualizações da classe EnginneringForest   Adicionado mensagens de depuração no método predict
 #d6001	Atualizações da classe BaseEnginnering	Implementdo o método get_block_fit para substituir o método get_df_split
 #d6002	Atualizações da classe BaseEnginnering	Refatorado o método get_block_fit
+#d6003	Atualizações da classe BaseEnginnering	Removido o método get_df_split
