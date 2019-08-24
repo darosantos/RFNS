@@ -47,14 +47,14 @@ y=df_heart['target']
 
 # Split dataset into training set and test set
 # 70% training and 30% test
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=100, shuffle=True, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=100, shuffle=True, stratify=y)
 
 reset_logger('logger_accuracy_eg.log')
 reset_logger('logger_matrix_confusion_eg.log')
 logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_eg.log')
 logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_eg.log')
 
-for n_tree in range(7):
+for n_tree in range(6):
     model_eg = EnginneringForest(select_features=n_tree+1)
     model_eg.fit(X_train, y_train)
     # model_eg.chunck = 32
@@ -65,6 +65,9 @@ for n_tree in range(7):
 
     mcm = confusion_matrix(y_test,y_pred)
     logger_matrix_confusion_eg.info(str(mcm))
+    
+    print('Acuracia = {0}'.format(mac))
+    print("Matriz de confusao \n{0}".format(str(mcm)))
 
     del model_eg
     

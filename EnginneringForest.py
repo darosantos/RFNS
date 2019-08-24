@@ -10,19 +10,22 @@ class EnginneringForest(ClassifierEnginneringForest):
                  'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
                  'prefix_column_predict', 'logger')
     
-    def __init__(self, select_features: int):
+    def __init__(self, select_features: int, reset_log=False):
         if type(select_features) != int:
             raise TypeError('Expectd value int in select_features')
         
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
-        self.df_predict_ = DataFrame()
+        #self.df_predict_ = DataFrame()
+        self.df_predict_ = []
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
         self.prefix_column_predict = 'cls'
-        self.logger = LoggerEnginnering(name='enginnering', log_file='enginnering.log')
+        self.logger = LoggerEnginnering(name='enginnering', 
+                                        log_file='enginnering.log',
+                                        drop_old=reset_log)
         super().__init__()
         
     def __del__(self):
@@ -85,7 +88,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.train_X
         del self.train_y
 
-    def voting(self) -> list:
+    def voting_old(self) -> list:
         final_predict = []
         for i in range(self.df_predict_.shape[0]):
             class_one = list(self.df_predict_.loc[i]).count(1)
@@ -95,8 +98,15 @@ class EnginneringForest(ClassifierEnginneringForest):
             else:
                 final_predict.append(0)
         return final_predict 
+    
+    def voting(self, data) -> list:
+        final_predict = []
+        for instance in data:
+            marjotiry = (instance.sum() >= (instance.shape[1] / 2)) and 1 or 0
+            final_predict.append(marjotiry)
+        return final_predict
         
-    def predict_old(self, X) -> list:
+    def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         # Este novo código se baseia em lidar com um volume muito grande para predição
@@ -110,19 +120,36 @@ class EnginneringForest(ClassifierEnginneringForest):
         # cada tabela contém todos os atributos
         # depois cada árvoreé usada com a minitabela
         #self.chunck = 128
-        num_columns = len(self.df_predict_.columns)
-        pattern_name_column = "{0}{1}".format(self.prefix_column_predict, 
-                                              num_columns)
-            
+        #num_columns = len(self.df_predict_.columns)
+        #pattern_name_column = "{0}{1}".format(self.prefix_column_predict, 
+        #                                      num_columns)
+                                              
+        self.logger.add('debug','N estimators = {}'.format(len(self.estimators_)))
+        
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
             
-            dfsub = self.predict_X.loc[x_, y_]
+            dfsub = self.predict_X.loc[x_:y_]
+            block_predict = []
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
-                estimator.predict(block_instances)
+                self.logger.add('debug', 'Subset predict = {0}'.format(subset_feature))
+                subset_test = self.predict_X.loc[:, subset_feature]
+                block_predict.append(estimator.predict(subset_test))
+            block_predict = np.matrix(block_predict)
+            self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
+            block_predict = block_predict.T
+            self.logger.add('debug', "Shape Two = {0}".format(block_predict.shape))
+            self.logger.add('debug', "Block predict \n{0}".format(block_predict))
+            # chama o voting na matriz de predições
+            block_voting = self.voting(block_predict)
+            self.logger.add('debug', "Block voting data \n{0}".format(str(block_voting)))
+            self.logger.add('debug', "Block voting len {0}".format(len(block_voting)))
+            self.df_predict_.extend(block_voting)
+        
+        return self.df_predict_
         
     # Código antigo para predição
-    def predict(self, X) -> list:
+    def predict_old(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         
