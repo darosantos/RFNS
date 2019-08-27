@@ -10,7 +10,7 @@ class EnginneringForest(ClassifierEnginneringForest):
                  'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
                  'prefix_column_predict', 'logger')
     
-    def __init__(self, select_features: int, reset_log=False):
+    def __init__(self, select_features: int, reset_log=False, name_log='enginnering.log'):
         if type(select_features) != int:
             raise TypeError('Expectd value int in select_features')
         
@@ -24,7 +24,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.name_features_ = []
         self.prefix_column_predict = 'cls'
         self.logger = LoggerEnginnering(name='enginnering', 
-                                        log_file='enginnering.log',
+                                        log_file=name_log,
                                         drop_old=reset_log)
         super().__init__()
         
@@ -133,7 +133,7 @@ class EnginneringForest(ClassifierEnginneringForest):
             block_predict = []
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
                 self.logger.add('debug', 'Subset predict = {0}'.format(subset_feature))
-                subset_test = self.predict_X.loc[:, subset_feature]
+                subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
             block_predict = np.matrix(block_predict)
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))

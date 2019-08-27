@@ -8,7 +8,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
-from sklearn.preprocessing import RobustScaler
+#from sklearn.preprocessing import RobustScaler
 
 import logging
 
@@ -37,11 +37,11 @@ print(df_susy.shape)
 print(">> Informações do dataset")
 print(df_susy.info())
 
-print(">> Colcoa os dados em escala")
-transformer = RobustScaler(copy=True, quantile_range=(30.0, 70.0), 
-                           with_centering=True, with_scaling=True)
-df_susy = transformer.fit_transform(df_susy)
-print(">> Dados em escala")
+#print(">> Colcoa os dados em escala")
+#transformer = RobustScaler(copy=True, quantile_range=(30.0, 70.0), 
+#                           with_centering=True, with_scaling=True)
+#df_susy = transformer.fit_transform(df_susy)
+#print(">> Dados em escala")
 
 
 print(">> Inicia a separacao dos dados de treino e teste")
@@ -93,33 +93,26 @@ logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_
 print(">> Ambiente dos logs criados com sucesso")
 print(">> Inicia o treinamento de cada conjunto de arvores")
 
-for n_tree in range(18):
-    #n_tree = 1
+for n_tree in range(18):    
     print('>>> Iniciando execucao - ', n_tree)
     print('>> Cria o modelo')
-    model_eg = EnginneringForest(select_features=n_tree+1)
+    model_eg = EnginneringForest(select_features=n_tree+1, name_log='test_susy_nf_{0}'.format(n_tree+1))
+    model_eg.chunck = 128
     print('>> Treina o modelo')
     model_eg.fit(X_train, y_train)
-    
-    print('>> Testa p modelo')
-    y_pred = []
-    passo = 0
-    for i in range(10000, X_test.shape[0], 10000):
-        print('>> BLoco testado = {0}'.format(i))
-        inicio = passo - 1
-        tmp_pred = model_eg.predict(X_test.loc[inicio:i])
-        passo = 10000
-        y_pred.extend(tmp_pred)
-   
-    
-    print('>> Calcula a acuracia')
+    # model_eg.chunck = 32
+    print('>> Testa o modelo')
+    y_pred = model_eg.predict(X_test)
+
     mac = accuracy_score(y_test, y_pred)
     logger_accuracy_eg.info(str(mac))
-    print('>> Calcula a matriz de confusao')
+
     mcm = confusion_matrix(y_test,y_pred)
     logger_matrix_confusion_eg.info(str(mcm))
-    print(">> N. de atributos {0}, Acuracia = {1}, N. de Arvores = {2}".format((n_tree+1), mac, len(model_eg.estimators_)))
-    print('>>> Fim da execucao')
+    
+    print('Acuracia = {0}'.format(mac))
+    print("Matriz de confusao \n{0}".format(str(mcm)))
+
     del model_eg
 
 print("Fim do treinamento de cada conjunto de arvores")
