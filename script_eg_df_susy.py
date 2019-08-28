@@ -87,33 +87,34 @@ print(">> Cria o ambiente de log para salvar os dados de acuracia e matriz de co
 
 reset_logger('logger_accuracy_dataset_susy2.log')
 reset_logger('logger_matrix_confusion_dataset_susy2.log')
-logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_dataset_susy2.log')
-logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_dataset_susy2.log')
+logger_accuracy_eg = setup_logger('accuracy_eg', 'logger_accuracy_dataset_susy_3.log')
+logger_matrix_confusion_eg = setup_logger('matrix_confusion_eg', 'logger_matrix_confusion_dataset_susy_3.log')
 
 print(">> Ambiente dos logs criados com sucesso")
 print(">> Inicia o treinamento de cada conjunto de arvores")
 
-for n_tree in range(18):    
-    print('>>> Iniciando execucao - ', n_tree)
-    print('>> Cria o modelo')
-    model_eg = EnginneringForest(select_features=n_tree+1, name_log='test_susy_nf_{0}'.format(n_tree+1))
-    model_eg.chunck = 128
-    print('>> Treina o modelo')
-    model_eg.fit(X_train, y_train)
-    # model_eg.chunck = 32
-    print('>> Testa o modelo')
-    y_pred = model_eg.predict(X_test)
+#for n_tree in range(18):  
+n_tree = 2  
+print('>>> Iniciando execucao - ', n_tree)
+print('>> Cria o modelo')
+model_eg = EnginneringForest(select_features=n_tree+1, name_log='test_susy_nf_{0}.log'.format(n_tree+1))
+model_eg.chunck = 256
+print('>> Treina o modelo')
+model_eg.fit(X_train, y_train)
+# model_eg.chunck = 32
+print('>> Testa o modelo')
+y_pred = model_eg.predict(X_test)
 
-    mac = accuracy_score(y_test, y_pred)
-    logger_accuracy_eg.info(str(mac))
+mac = accuracy_score(y_test, y_pred)
+logger_accuracy_eg.info(str(mac))
 
-    mcm = confusion_matrix(y_test,y_pred)
-    logger_matrix_confusion_eg.info(str(mcm))
-    
-    print('Acuracia = {0}'.format(mac))
-    print("Matriz de confusao \n{0}".format(str(mcm)))
+mcm = confusion_matrix(y_test,y_pred)
+logger_matrix_confusion_eg.info(str(mcm))
 
-    del model_eg
+print('Acuracia = {0}'.format(mac))
+print("Matriz de confusao \n{0}".format(str(mcm)))
+
+del model_eg
 
 print("Fim do treinamento de cada conjunto de arvores")
 print(">>>> Fim do script")
