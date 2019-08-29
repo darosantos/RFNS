@@ -1,0 +1,52 @@
+1 - Método para otimizar o treino das arvores
+	Analisar as colunas
+	Definir um percentual dos dados a serem usados
+	Usar o conceito e entropia
+	Calcular o quantitativo propocional de exemplos a serem usados por frequência
+	Selecionar apenas o percentual definido e passar para o código
+	
+2 - Testar a função get_df_split
+    Verificar se ao aumentar o valor de chunck o vetor gerado cobre todas a instâncias do dataframe
+	
+Usar np.insert para ser mais viável para armazenar a matriz final
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+b = np.insert(a, 1, [11, 12, 13], axis=1)
+				a = matriz de origem
+				1 = coluna na matriz 0...Limite
+				[] = array a ser adicionado como colunas
+				axis = 1 para indicar inserção em coluna
+				
+Estudar sobre matrizes em numpy
+https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.matrix.html
+
+// Cria uma matriz em que cada lista é uma linha
+a = np.matrix([[1,2,3], [4,5,6], [7,8,9]]) 
+// Retorna uma tupla com nº de linhas x nº colunas
+a.shape
+// Insere uma última coluna
+np.insert(a, a.shape[1], [11, 12, 13], axis=1)
+
+
+
+
+/etc/security/limits.d e adicione essas linhas
+
+1
+2
+3
+4
+mongod       soft        nofile       64000
+mongod       hard        nofile       64000
+mongod       soft        nproc        64000
+mongod       hard        nproc        64000
+
+####
+from  sklearn  import  set_config
+sklearn.set_config(working_memory=1024)
+
+
+
+
+
+
+
