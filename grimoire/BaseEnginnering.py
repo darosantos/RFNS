@@ -42,6 +42,11 @@ class BaseEnginnering(object):
         import numpy as np
         return np.array(elements, np.object)
     
+    def get_size_estimator(self, estimator):
+        from sys import getsizeof
+        
+        return (getsizeof(estimator) / 1024)
+    
     def get_block_fit(self):
         from sys import getsizeof
         from math import ceil
