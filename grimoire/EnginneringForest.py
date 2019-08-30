@@ -17,7 +17,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
-        #self.df_predict_ = DataFrame()
         self.df_predict_ = []
         self.n_features_ = 0
         self.n_samples_ = 0
@@ -37,7 +36,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.n_samples_
         del self.name_features_
         del self.prefix_column_predict
-        # del self.logger
 
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de 
@@ -87,17 +85,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         
         del self.train_X
         del self.train_y
-
-    def voting_old(self) -> list:
-        final_predict = []
-        for i in range(self.df_predict_.shape[0]):
-            class_one = list(self.df_predict_.loc[i]).count(1)
-            class_zero = list(self.df_predict_.loc[i]).count(0)
-            if class_one > class_zero:
-                final_predict.append(1)
-            else:
-                final_predict.append(0)
-        return final_predict 
     
     def voting(self, data) -> list:
         final_predict = []
@@ -113,16 +100,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.predict_X = X.reset_index()
         del X
         self.logger.add('debug','Size predict = {}'.format(self.predict_X.shape))
-        
-        # Determina se o dataset é muito grande para escolher qual estratégia usar
-        # Percorre o dataset em pequenas linhas
-        # A ideia e dividir o dataset em pequenas tabelas
-        # cada tabela contém todos os atributos
-        # depois cada árvoreé usada com a minitabela
-        #self.chunck = 128
-        #num_columns = len(self.df_predict_.columns)
-        #pattern_name_column = "{0}{1}".format(self.prefix_column_predict, 
-        #                                      num_columns)
                                               
         self.logger.add('debug','N estimators = {}'.format(len(self.estimators_)))
         
@@ -147,47 +124,3 @@ class EnginneringForest(ClassifierEnginneringForest):
             self.df_predict_.extend(block_voting)
         
         return self.df_predict_
-        
-    # Código antigo para predição
-    def predict_old(self, X) -> list:
-        if not isinstance(X, DataFrame):
-            raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-        
-        self.predict_X = X.reset_index()
-        
-        self.logger.add('debug','Size predict = {}'.format(self.predict_X.shape))
-        
-        # É aqui que monto a (matriz nº de amostras x nº de classificadores)
-        for subset_feature, estimator in zip(self.group_features_, self.estimators_):
-            # monta o nome da coluna do dataframe de predições
-            num_columns = len(self.df_predict_.columns)
-            pattern_name_column = "{0}{1}".format(self.prefix_column_predict, num_columns)
-            
-            self.logger.add('debug','>>> Predicting subset = {0}'.format(subset_feature))
-            start_train = time.time()
-            # Prepara para o treinamento com o subconjunto
-            subset_test = self.predict_X.loc[:, subset_feature]
-            cls_predict = []
-            for item in self.get_block_fit():
-                
-                self.logger.add('debug','>>>> Block instances for subset = {0}'.format(item))
-                
-                block_instances = subset_test.loc[item[0]:item[1]]
-                cls_predict.extend(estimator.predict(block_instances))
-                
-            
-            end_train = time.time()
-            self.logger.add('debug','>>>> Time predicting = {0}'.format((end_train - start_train)))
-            
-            # Adiciona o vetor de predições como uma coluna no dataframe de predições
-            self.df_predict_.insert(loc=num_columns, 
-                                    column=pattern_name_column, 
-                                    value=cls_predict)
-            del cls_predict
-            del subset_feature
-            del estimator
-
-        del X
-        del self.predict_X
-        
-        return self.voting()
