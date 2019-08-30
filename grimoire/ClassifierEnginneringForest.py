@@ -1,4 +1,4 @@
-from BaseEnginnering import BaseEnginnering
+from grimoire.BaseEnginnering import BaseEnginnering
 
 class ClassifierEnginneringForest(BaseEnginnering):
     

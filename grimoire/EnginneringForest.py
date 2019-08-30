@@ -1,5 +1,5 @@
-from ClassifierEnginneringForest import ClassifierEnginneringForest
-from LoggerEnginnering import LoggerEnginnering
+from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
+from grimoire.LoggerEnginnering import LoggerEnginnering
 from pandas import DataFrame, Series
 import numpy as np
 import time

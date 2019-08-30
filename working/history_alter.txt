@@ -52,3 +52,4 @@ COD		Title		DESCRIÇÃO
 
 #d300819001     Altera a classe BaseEnginnering     Adiciona o método get_size_estimator
 #d300819002     Altera a classe EnginneringFOrest   Remove o código obsoleto
+#d300819003     Altera o projeto                    Corrige eventuais erros no projeto para ser reconhecido como um pacote python
