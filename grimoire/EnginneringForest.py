@@ -60,7 +60,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.logger.add('debug',msg.format(group_feature, 
                                            (end_train - start_train),
                                            self.get_size_estimator(fit_)))
-                                           self.get_size_estimator(fit_))))
         
         return fit_
 
