@@ -48,7 +48,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.estimators_ = self.get_pack_nparray(self.estimators_)
 
     def train(self, group_feature: list, estimator):
-        msg = 'Training subset = {0}, Timing = {1}'
+        msg = 'Training subset = {0}, Timing = {1}, Size (Kb) = {2}'
         start_train = time.time()
         
         subset_xdata, subset_ydata = self.get_subset(group_feature)
@@ -57,7 +57,9 @@ class EnginneringForest(ClassifierEnginneringForest):
         del subset_ydata
         
         end_train = time.time()
-        self.logger.add('debug',msg.format(group_feature, (end_train - start_train)))
+        self.logger.add('debug',msg.format(group_feature, 
+                                           (end_train - start_train),
+                                           self.get_size_estimator(fit_))))
         
         return fit_
 
@@ -108,15 +110,23 @@ class EnginneringForest(ClassifierEnginneringForest):
             
             dfsub = self.predict_X.loc[x_:y_]
             block_predict = []
+            
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
                 self.logger.add('debug', 'Subset predict = {0}'.format(subset_feature))
                 subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
+            
             block_predict = np.matrix(block_predict)
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
+            
             block_predict = block_predict.T
             self.logger.add('debug', "Shape Two = {0}".format(block_predict.shape))
             self.logger.add('debug', "Block predict \n{0}".format(block_predict))
+            
+            # Guarda a matrix de predição
+            np.savetxt('dump_sf_{0}_bp_{1}'.format(self.select_features_, (x_,y_)), 
+                       block_predict, delimiter=",")
+            
             # chama o voting na matriz de predições
             block_voting = self.voting(block_predict)
             self.logger.add('debug', "Block voting data \n{0}".format(str(block_voting)))
