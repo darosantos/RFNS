@@ -53,7 +53,8 @@ COD		Title		DESCRIÇÃO
 #d300819001     Altera a classe BaseEnginnering     Adiciona o método get_size_estimator
 #d300819002     Altera a classe EnginneringFOrest   Remove o código obsoleto
 #d300819003     Altera o projeto                    Corrige eventuais erros no projeto para ser reconhecido como um pacote python
-#d300819004     Altera a classe EnginneringFOrest   Altera o método predict para salve as matrizes de predição
-#d300819005     Altera a classe EnginneringFOrest   Altera o método train para incluir o tamanho em Kbytes do classificador na memória
-#d300819006     Altera a classe EnginneringFOrest   Marcação de código obsoleto 
+#d300819004     Altera a classe EnginneringForest   Altera o método predict para salve as matrizes de predição
+#d300819005     Altera a classe EnginneringForest   Altera o método train para incluir o tamanho em Kbytes do classificador na memória
+#d300819006     Altera a classe EnginneringForest   Marcação de código obsoleto 
 #d300819007     Cria o arquivo spell_0x00000001     Script de pré-teste para executar o primeiro experimento
+#d300819008     Altera a classe EnginneringForest   Correção de bugs
