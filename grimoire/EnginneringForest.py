@@ -21,7 +21,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
-        self.prefix_column_predict = 'cls'
+        #self.prefix_column_predict = 'cls'
         self.logger = LoggerEnginnering(name='enginnering', 
                                         log_file=name_log,
                                         drop_old=reset_log)
@@ -60,6 +60,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.logger.add('debug',msg.format(group_feature, 
                                            (end_train - start_train),
                                            self.get_size_estimator(fit_)))
+                                           self.get_size_estimator(fit_))))
         
         return fit_
 
