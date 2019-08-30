@@ -56,3 +56,4 @@ COD		Title		DESCRIÇÃO
 #d300819004     Altera a classe EnginneringFOrest   Altera o método predict para salve as matrizes de predição
 #d300819005     Altera a classe EnginneringFOrest   Altera o método train para incluir o tamanho em Kbytes do classificador na memória
 #d300819006     Altera a classe EnginneringFOrest   Marcação de código obsoleto 
+#d300819007     Cria o arquivo spell_0x00000001     Script de pré-teste para executar o primeiro experimento
