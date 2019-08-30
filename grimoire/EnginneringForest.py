@@ -59,7 +59,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         end_train = time.time()
         self.logger.add('debug',msg.format(group_feature, 
                                            (end_train - start_train),
-                                           self.get_size_estimator(fit_))))
+                                           self.get_size_estimator(fit_)))
         
         return fit_
 
