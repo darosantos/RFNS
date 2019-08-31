@@ -80,7 +80,7 @@ rf_matrix_confusion = []
 
 for i in range(n_media_interations):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, 
-                                                        random_state=0, 
+                                                        random_state=120, 
                                                         shuffle=True, 
                                                         stratify=y)
     
@@ -115,7 +115,7 @@ for i in range(n_media_interations):
     
         del model_eg
     ef_accuracy.append(ef_tmp_accuracy)
-    ef_matrix_confusion(ef_tmp_matrix_confusion)
+    ef_matrix_confusion.append(ef_tmp_matrix_confusion)
     logger_spell.info('Accuracy EF \n{0}'.format(ef_tmp_accuracy))
     logger_spell.info('Matrix Confusion EF \n{0}'.format(ef_matrix_confusion))
 
@@ -142,7 +142,7 @@ for i in range(n_media_interations):
     
         del model_rf
     rf_accuracy.append(rf_tmp_accuracy)
-    rf_matrix_confusion(rf_tmp_matrix_confusion)
+    rf_matrix_confusion.append(rf_tmp_matrix_confusion)
     logger_spell.info('Accuracy RF \n{0}'.format(rf_tmp_accuracy))
     logger_spell.info('Matrix Confusion RF \n{0}'.format(rf_matrix_confusion))
     

@@ -51,7 +51,7 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
+#*.log
 local_settings.py
 db.sqlite3
 
@@ -104,3 +104,7 @@ venv.bak/
 
 # Large Files
 SUSY.csv
+excluded_git/
+
+# link simbolic
+sorcerer/grimoire
