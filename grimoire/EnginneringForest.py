@@ -84,13 +84,6 @@ class EnginneringForest(ClassifierEnginneringForest):
             del self.train_X
             del self.train_y
     
-    def voting(self, data) -> list:
-        final_predict = []
-        for instance in data:
-            marjotiry = (instance.sum() >= (instance.shape[1] / 2)) and 1 or 0
-            final_predict.append(marjotiry)
-        return final_predict
-        
     def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
@@ -126,3 +119,12 @@ class EnginneringForest(ClassifierEnginneringForest):
             self.df_predict_.extend(block_voting)
         
         return self.df_predict_
+    
+    def voting(self, data) -> list:
+        final_predict = []
+        for instance in data:
+            cz = instance.tolist()[0].count(0)
+            co = instance.tolist()[0].count(1)
+            marjotiry = (co > cz) and 1 or 0
+            final_predict.append(marjotiry)
+        return final_predict

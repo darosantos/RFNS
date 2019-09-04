@@ -62,3 +62,4 @@ COD		Title		DESCRIÇÃO
 #d040919002     Atualizações da classe ClassifierEnginneringForest     Removendo código de comentários
 #d300819003     Altera a classe EnginneringForest   Remover as instruções del do método train e fit; Removido código de comentários; Removido atributos desnecessários; Adicionado o parâmetro de configuração para eliminar os dados de treinamento após o treino
 #d300819004     Altera a classe EnginneringForest   Remover as instruções del do método train e fit; Removido código de comentários; Removido o reset dos indices do parâmetro X; Otimizado as mensagens de log; Alterado o uso de loc para iloc para separar o dataset X em um subset de tamanho definido por get_block_fit(); Removido código desnecessário
+#d300819005     Altera a classe EnginneringForest   Alterado o método voting para corresponder as necessidadeis atuais
