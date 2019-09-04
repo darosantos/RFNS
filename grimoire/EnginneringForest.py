@@ -8,7 +8,7 @@ class EnginneringForest(ClassifierEnginneringForest):
     
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'df_predict_', 'n_features_', 'n_samples_', 'name_features_',
-                 'prefix_column_predict', 'logger')
+                 'prefix_column_predict', 'logger', 'autoclean')
     
     def __init__(self, select_features: int, reset_log=False, name_log='enginnering.log'):
         if type(select_features) != int:
@@ -21,10 +21,10 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
-        #self.prefix_column_predict = 'cls'
         self.logger = LoggerEnginnering(name='enginnering', 
                                         log_file=name_log,
                                         drop_old=reset_log)
+        self.autoclean = False
         super().__init__()
         
     def __del__(self):
@@ -35,7 +35,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.n_features_
         del self.n_samples_
         del self.name_features_
-        #del self.prefix_column_predict
+        del self.autoclean
 
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de 
@@ -53,8 +53,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         
         subset_xdata, subset_ydata = self.get_subset(group_feature)
         fit_ = estimator.fit(subset_xdata, subset_ydata)
-        del subset_xdata
-        del subset_ydata
         
         end_train = time.time()
         self.logger.add('debug',msg.format(group_feature, 
@@ -71,22 +69,20 @@ class EnginneringForest(ClassifierEnginneringForest):
             
         self.n_samples_, self.n_features_ = X.shape
         self.name_features_ = X.columns
-        
         self.train_X = X
         self.train_y = y
         
-        # Cria a floresta
         self.build(features_set=self.name_features_)
 
-        # Treina as arvores individualmente
         self.estimators_ = [self.train(subset_feature, estimator) 
                             for subset_feature, 
                                 estimator in zip(self.group_features_, 
                                                  self.estimators_)]
         self.estimators_ = self.get_pack_nparray(self.estimators_)
         
-        del self.train_X
-        del self.train_y
+        if self.autoclean:
+            del self.train_X
+            del self.train_y
     
     def voting(self, data) -> list:
         final_predict = []

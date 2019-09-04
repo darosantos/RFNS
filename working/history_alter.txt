@@ -60,3 +60,4 @@ COD		Title		DESCRIÇÃO
 #d300819008     Altera a classe EnginneringForest   Correção de bugs
 #d040919001     Altera a classe BaseEnginnering     Altera o método get_block_fit para o caso de quando o bloco cabe na área de memória estimada
 #d040919002     Atualizações da classe ClassifierEnginneringForest     Removendo código de comentários
+#d300819003     Altera a classe EnginneringForest   Remover as instruções del do método train e fit; Removido código de comentários; Removido atributos desnecessários; Adicionado o parâmetro de configuração para eliminar os dados de treinamento após o treino
