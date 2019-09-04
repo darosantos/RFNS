@@ -8,3 +8,7 @@ O que foi feito?
 	Adicionado o parâmetro de configuração para eliminar os dados de treinamento após o treino
 	Removido as instruções del do método predict
 	Alterado a forma com que o método selecionava os blocos de dados para predição, agora o método preserva os indices do objeto Pandas DataFrame
+
+# Guarda a matrix de predição
+            np.savetxt('dump_sf_{0}_bp_{1}'.format(self.select_features_, (x_,y_)), 
+                       block_predict, delimiter=",")

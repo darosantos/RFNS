@@ -94,17 +94,17 @@ class EnginneringForest(ClassifierEnginneringForest):
     def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-        # Este novo código se baseia em lidar com um volume muito grande para predição
-        self.predict_X = X.reset_index()
-        del X
-        self.logger.add('debug','Size predict = {}'.format(self.predict_X.shape))
-                                              
-        self.logger.add('debug','N estimators = {}'.format(len(self.estimators_)))
+        
+        self.predict_X = X
+        
+        self.logger.add('debug',
+                        'Size predict = {0}, N estimators = {1}'.format(self.predict_X.shape, 
+                                                                        len(self.estimators_)))
         
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
             
-            dfsub = self.predict_X.loc[x_:y_]
+            dfsub = self.predict_X.iloc[x_:y_]
             block_predict = []
             
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
@@ -113,17 +113,13 @@ class EnginneringForest(ClassifierEnginneringForest):
                 block_predict.append(estimator.predict(subset_test))
             
             block_predict = np.matrix(block_predict)
+            
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
             
             block_predict = block_predict.T
             self.logger.add('debug', "Shape Two = {0}".format(block_predict.shape))
             self.logger.add('debug', "Block predict \n{0}".format(block_predict))
             
-            # Guarda a matrix de predição
-            np.savetxt('dump_sf_{0}_bp_{1}'.format(self.select_features_, (x_,y_)), 
-                       block_predict, delimiter=",")
-            
-            # chama o voting na matriz de predições
             block_voting = self.voting(block_predict)
             self.logger.add('debug', "Block voting data \n{0}".format(str(block_voting)))
             self.logger.add('debug', "Block voting len {0}".format(len(block_voting)))
