@@ -59,3 +59,4 @@ COD		Title		DESCRIÇÃO
 #d300819007     Cria o arquivo spell_0x00000001     Script de pré-teste para executar o primeiro experimento
 #d300819008     Altera a classe EnginneringForest   Correção de bugs
 #d040919001     Altera a classe BaseEnginnering     Altera o método get_block_fit para o caso de quando o bloco cabe na área de memória estimada
+#d040919002     Atualizações da classe ClassifierEnginneringForest     Removendo código de comentários
