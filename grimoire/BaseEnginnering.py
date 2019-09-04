@@ -61,7 +61,7 @@ class BaseEnginnering(object):
         n_per_block = ceil((1024 * 4 * self.chunck) / instance_sizeof)
         
         if n_per_block >= n_instances:
-            (yield (0,(n_instances-1)))
+            (yield (0, n_instances))
         else:
             pair_blocks = [((y - n_per_block), (y-1)) 
                            for y in range(n_per_block, 

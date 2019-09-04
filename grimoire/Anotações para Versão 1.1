@@ -1,0 +1,10 @@
+O que fazer?
+- Verificar se getsubset está retornando os indices corretos
+- Colocar todas as mensagens de treinamento no módulo de configuração
+- Corrigir o erro de indice no split do dataset
+
+O que foi feito?
+	Remover as instruções del do método train e fit, isto porque esta instrução apaga a área de memória alocada, contudo estas instruções estão sendo executadas apontando para posições do objeto Pandas DataFrame. Em principio isto não deveria ser um problema, contudo a passagem do objeto Pandas DataFrame entre as diversas funções do módulo é feita por referência.
+	Adicionado o parâmetro de configuração para eliminar os dados de treinamento após o treino
+	Removido as instruções del do método predict
+	Alterado a forma com que o método selecionava os blocos de dados para predição, agora o método preserva os indices do objeto Pandas DataFrame
