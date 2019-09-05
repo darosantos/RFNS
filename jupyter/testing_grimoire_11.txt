@@ -1,0 +1,1174 @@
+2019-09-04 15:37:26,632 DEBUG Training subset = ['age' 'sex' 'cp'], Timing = 0.01203608512878418, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,632 DEBUG Training subset = ['age' 'sex' 'cp'], Timing = 0.01203608512878418, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,645 DEBUG Training subset = ['age' 'sex' 'trestbps'], Timing = 0.01098012924194336, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,645 DEBUG Training subset = ['age' 'sex' 'trestbps'], Timing = 0.01098012924194336, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,655 DEBUG Training subset = ['age' 'sex' 'chol'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,655 DEBUG Training subset = ['age' 'sex' 'chol'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,664 DEBUG Training subset = ['age' 'sex' 'fbs'], Timing = 0.009007453918457031, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,664 DEBUG Training subset = ['age' 'sex' 'fbs'], Timing = 0.009007453918457031, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,673 DEBUG Training subset = ['age' 'sex' 'restecg'], Timing = 0.008980035781860352, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,673 DEBUG Training subset = ['age' 'sex' 'restecg'], Timing = 0.008980035781860352, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,683 DEBUG Training subset = ['age' 'sex' 'thalach'], Timing = 0.009032011032104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,683 DEBUG Training subset = ['age' 'sex' 'thalach'], Timing = 0.009032011032104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,694 DEBUG Training subset = ['age' 'sex' 'exang'], Timing = 0.009977579116821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,694 DEBUG Training subset = ['age' 'sex' 'exang'], Timing = 0.009977579116821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,705 DEBUG Training subset = ['age' 'sex' 'oldpeak'], Timing = 0.010012388229370117, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,705 DEBUG Training subset = ['age' 'sex' 'oldpeak'], Timing = 0.010012388229370117, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,716 DEBUG Training subset = ['age' 'sex' 'slope'], Timing = 0.009028434753417969, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,716 DEBUG Training subset = ['age' 'sex' 'slope'], Timing = 0.009028434753417969, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,725 DEBUG Training subset = ['age' 'sex' 'ca'], Timing = 0.009011507034301758, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,725 DEBUG Training subset = ['age' 'sex' 'ca'], Timing = 0.009011507034301758, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,734 DEBUG Training subset = ['age' 'sex' 'thal'], Timing = 0.008001565933227539, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,734 DEBUG Training subset = ['age' 'sex' 'thal'], Timing = 0.008001565933227539, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,747 DEBUG Training subset = ['age' 'cp' 'trestbps'], Timing = 0.013008832931518555, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,747 DEBUG Training subset = ['age' 'cp' 'trestbps'], Timing = 0.013008832931518555, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,758 DEBUG Training subset = ['age' 'cp' 'chol'], Timing = 0.010006189346313477, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,758 DEBUG Training subset = ['age' 'cp' 'chol'], Timing = 0.010006189346313477, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,770 DEBUG Training subset = ['age' 'cp' 'fbs'], Timing = 0.010008573532104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,770 DEBUG Training subset = ['age' 'cp' 'fbs'], Timing = 0.010008573532104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,779 DEBUG Training subset = ['age' 'cp' 'restecg'], Timing = 0.009011030197143555, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,779 DEBUG Training subset = ['age' 'cp' 'restecg'], Timing = 0.009011030197143555, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,790 DEBUG Training subset = ['age' 'cp' 'thalach'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,790 DEBUG Training subset = ['age' 'cp' 'thalach'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,801 DEBUG Training subset = ['age' 'cp' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,801 DEBUG Training subset = ['age' 'cp' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,811 DEBUG Training subset = ['age' 'cp' 'oldpeak'], Timing = 0.009983301162719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,811 DEBUG Training subset = ['age' 'cp' 'oldpeak'], Timing = 0.009983301162719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,821 DEBUG Training subset = ['age' 'cp' 'slope'], Timing = 0.010009765625, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,821 DEBUG Training subset = ['age' 'cp' 'slope'], Timing = 0.010009765625, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,830 DEBUG Training subset = ['age' 'cp' 'ca'], Timing = 0.008007049560546875, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,830 DEBUG Training subset = ['age' 'cp' 'ca'], Timing = 0.008007049560546875, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,839 DEBUG Training subset = ['age' 'cp' 'thal'], Timing = 0.008007287979125977, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,839 DEBUG Training subset = ['age' 'cp' 'thal'], Timing = 0.008007287979125977, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,854 DEBUG Training subset = ['age' 'trestbps' 'chol'], Timing = 0.013012886047363281, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,854 DEBUG Training subset = ['age' 'trestbps' 'chol'], Timing = 0.013012886047363281, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,863 DEBUG Training subset = ['age' 'trestbps' 'fbs'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,863 DEBUG Training subset = ['age' 'trestbps' 'fbs'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,873 DEBUG Training subset = ['age' 'trestbps' 'restecg'], Timing = 0.008996963500976562, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,873 DEBUG Training subset = ['age' 'trestbps' 'restecg'], Timing = 0.008996963500976562, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,883 DEBUG Training subset = ['age' 'trestbps' 'thalach'], Timing = 0.010005712509155273, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,883 DEBUG Training subset = ['age' 'trestbps' 'thalach'], Timing = 0.010005712509155273, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,894 DEBUG Training subset = ['age' 'trestbps' 'exang'], Timing = 0.01001429557800293, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,894 DEBUG Training subset = ['age' 'trestbps' 'exang'], Timing = 0.01001429557800293, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,909 DEBUG Training subset = ['age' 'trestbps' 'oldpeak'], Timing = 0.014009237289428711, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,909 DEBUG Training subset = ['age' 'trestbps' 'oldpeak'], Timing = 0.014009237289428711, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,919 DEBUG Training subset = ['age' 'trestbps' 'slope'], Timing = 0.010008573532104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,919 DEBUG Training subset = ['age' 'trestbps' 'slope'], Timing = 0.010008573532104492, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,929 DEBUG Training subset = ['age' 'trestbps' 'ca'], Timing = 0.009032249450683594, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,929 DEBUG Training subset = ['age' 'trestbps' 'ca'], Timing = 0.009032249450683594, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,938 DEBUG Training subset = ['age' 'trestbps' 'thal'], Timing = 0.007978200912475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,938 DEBUG Training subset = ['age' 'trestbps' 'thal'], Timing = 0.007978200912475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,949 DEBUG Training subset = ['age' 'chol' 'fbs'], Timing = 0.011034727096557617, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,949 DEBUG Training subset = ['age' 'chol' 'fbs'], Timing = 0.011034727096557617, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,959 DEBUG Training subset = ['age' 'chol' 'restecg'], Timing = 0.00898289680480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,959 DEBUG Training subset = ['age' 'chol' 'restecg'], Timing = 0.00898289680480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,969 DEBUG Training subset = ['age' 'chol' 'thalach'], Timing = 0.009004354476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,969 DEBUG Training subset = ['age' 'chol' 'thalach'], Timing = 0.009004354476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,979 DEBUG Training subset = ['age' 'chol' 'exang'], Timing = 0.009027957916259766, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,979 DEBUG Training subset = ['age' 'chol' 'exang'], Timing = 0.009027957916259766, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,989 DEBUG Training subset = ['age' 'chol' 'oldpeak'], Timing = 0.010006189346313477, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,989 DEBUG Training subset = ['age' 'chol' 'oldpeak'], Timing = 0.010006189346313477, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,998 DEBUG Training subset = ['age' 'chol' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:26,998 DEBUG Training subset = ['age' 'chol' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,008 DEBUG Training subset = ['age' 'chol' 'ca'], Timing = 0.008979082107543945, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,008 DEBUG Training subset = ['age' 'chol' 'ca'], Timing = 0.008979082107543945, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,018 DEBUG Training subset = ['age' 'chol' 'thal'], Timing = 0.009018898010253906, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,018 DEBUG Training subset = ['age' 'chol' 'thal'], Timing = 0.009018898010253906, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,027 DEBUG Training subset = ['age' 'fbs' 'restecg'], Timing = 0.008021116256713867, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,027 DEBUG Training subset = ['age' 'fbs' 'restecg'], Timing = 0.008021116256713867, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,036 DEBUG Training subset = ['age' 'fbs' 'thalach'], Timing = 0.00797891616821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,036 DEBUG Training subset = ['age' 'fbs' 'thalach'], Timing = 0.00797891616821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,045 DEBUG Training subset = ['age' 'fbs' 'exang'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,045 DEBUG Training subset = ['age' 'fbs' 'exang'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,054 DEBUG Training subset = ['age' 'fbs' 'oldpeak'], Timing = 0.009025096893310547, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,054 DEBUG Training subset = ['age' 'fbs' 'oldpeak'], Timing = 0.009025096893310547, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,063 DEBUG Training subset = ['age' 'fbs' 'slope'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,063 DEBUG Training subset = ['age' 'fbs' 'slope'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,071 DEBUG Training subset = ['age' 'fbs' 'ca'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,071 DEBUG Training subset = ['age' 'fbs' 'ca'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,079 DEBUG Training subset = ['age' 'fbs' 'thal'], Timing = 0.007979631423950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,079 DEBUG Training subset = ['age' 'fbs' 'thal'], Timing = 0.007979631423950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,089 DEBUG Training subset = ['age' 'restecg' 'thalach'], Timing = 0.009011268615722656, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,089 DEBUG Training subset = ['age' 'restecg' 'thalach'], Timing = 0.009011268615722656, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,097 DEBUG Training subset = ['age' 'restecg' 'exang'], Timing = 0.008028268814086914, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,097 DEBUG Training subset = ['age' 'restecg' 'exang'], Timing = 0.008028268814086914, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,107 DEBUG Training subset = ['age' 'restecg' 'oldpeak'], Timing = 0.00898599624633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,107 DEBUG Training subset = ['age' 'restecg' 'oldpeak'], Timing = 0.00898599624633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,116 DEBUG Training subset = ['age' 'restecg' 'slope'], Timing = 0.007999420166015625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,116 DEBUG Training subset = ['age' 'restecg' 'slope'], Timing = 0.007999420166015625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,127 DEBUG Training subset = ['age' 'restecg' 'ca'], Timing = 0.009032964706420898, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,127 DEBUG Training subset = ['age' 'restecg' 'ca'], Timing = 0.009032964706420898, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,135 DEBUG Training subset = ['age' 'restecg' 'thal'], Timing = 0.007978677749633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,135 DEBUG Training subset = ['age' 'restecg' 'thal'], Timing = 0.007978677749633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,145 DEBUG Training subset = ['age' 'thalach' 'exang'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,145 DEBUG Training subset = ['age' 'thalach' 'exang'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,154 DEBUG Training subset = ['age' 'thalach' 'oldpeak'], Timing = 0.009026765823364258, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,154 DEBUG Training subset = ['age' 'thalach' 'oldpeak'], Timing = 0.009026765823364258, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,164 DEBUG Training subset = ['age' 'thalach' 'slope'], Timing = 0.00901341438293457, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,164 DEBUG Training subset = ['age' 'thalach' 'slope'], Timing = 0.00901341438293457, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,173 DEBUG Training subset = ['age' 'thalach' 'ca'], Timing = 0.008973360061645508, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,173 DEBUG Training subset = ['age' 'thalach' 'ca'], Timing = 0.008973360061645508, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,182 DEBUG Training subset = ['age' 'thalach' 'thal'], Timing = 0.00900411605834961, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,182 DEBUG Training subset = ['age' 'thalach' 'thal'], Timing = 0.00900411605834961, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,191 DEBUG Training subset = ['age' 'exang' 'oldpeak'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,191 DEBUG Training subset = ['age' 'exang' 'oldpeak'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,200 DEBUG Training subset = ['age' 'exang' 'slope'], Timing = 0.00803375244140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,200 DEBUG Training subset = ['age' 'exang' 'slope'], Timing = 0.00803375244140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,208 DEBUG Training subset = ['age' 'exang' 'ca'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,208 DEBUG Training subset = ['age' 'exang' 'ca'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,217 DEBUG Training subset = ['age' 'exang' 'thal'], Timing = 0.00697779655456543, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,217 DEBUG Training subset = ['age' 'exang' 'thal'], Timing = 0.00697779655456543, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,226 DEBUG Training subset = ['age' 'oldpeak' 'slope'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,226 DEBUG Training subset = ['age' 'oldpeak' 'slope'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,236 DEBUG Training subset = ['age' 'oldpeak' 'ca'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,236 DEBUG Training subset = ['age' 'oldpeak' 'ca'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,246 DEBUG Training subset = ['age' 'oldpeak' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,246 DEBUG Training subset = ['age' 'oldpeak' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,256 DEBUG Training subset = ['age' 'slope' 'ca'], Timing = 0.009980440139770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,256 DEBUG Training subset = ['age' 'slope' 'ca'], Timing = 0.009980440139770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,266 DEBUG Training subset = ['age' 'slope' 'thal'], Timing = 0.009006023406982422, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,266 DEBUG Training subset = ['age' 'slope' 'thal'], Timing = 0.009006023406982422, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,276 DEBUG Training subset = ['age' 'ca' 'thal'], Timing = 0.009033679962158203, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,276 DEBUG Training subset = ['age' 'ca' 'thal'], Timing = 0.009033679962158203, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,285 DEBUG Training subset = ['sex' 'cp' 'trestbps'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,285 DEBUG Training subset = ['sex' 'cp' 'trestbps'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,294 DEBUG Training subset = ['sex' 'cp' 'chol'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,294 DEBUG Training subset = ['sex' 'cp' 'chol'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,302 DEBUG Training subset = ['sex' 'cp' 'fbs'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,302 DEBUG Training subset = ['sex' 'cp' 'fbs'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,310 DEBUG Training subset = ['sex' 'cp' 'restecg'], Timing = 0.007031679153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,310 DEBUG Training subset = ['sex' 'cp' 'restecg'], Timing = 0.007031679153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,318 DEBUG Training subset = ['sex' 'cp' 'thalach'], Timing = 0.007979869842529297, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,318 DEBUG Training subset = ['sex' 'cp' 'thalach'], Timing = 0.007979869842529297, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,327 DEBUG Training subset = ['sex' 'cp' 'exang'], Timing = 0.008013010025024414, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,327 DEBUG Training subset = ['sex' 'cp' 'exang'], Timing = 0.008013010025024414, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,336 DEBUG Training subset = ['sex' 'cp' 'oldpeak'], Timing = 0.008025884628295898, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,336 DEBUG Training subset = ['sex' 'cp' 'oldpeak'], Timing = 0.008025884628295898, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,345 DEBUG Training subset = ['sex' 'cp' 'slope'], Timing = 0.0069789886474609375, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,345 DEBUG Training subset = ['sex' 'cp' 'slope'], Timing = 0.0069789886474609375, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,352 DEBUG Training subset = ['sex' 'cp' 'ca'], Timing = 0.007003068923950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,352 DEBUG Training subset = ['sex' 'cp' 'ca'], Timing = 0.007003068923950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,360 DEBUG Training subset = ['sex' 'cp' 'thal'], Timing = 0.007013797760009766, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,360 DEBUG Training subset = ['sex' 'cp' 'thal'], Timing = 0.007013797760009766, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,369 DEBUG Training subset = ['sex' 'trestbps' 'chol'], Timing = 0.00897979736328125, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,369 DEBUG Training subset = ['sex' 'trestbps' 'chol'], Timing = 0.00897979736328125, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,379 DEBUG Training subset = ['sex' 'trestbps' 'fbs'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,379 DEBUG Training subset = ['sex' 'trestbps' 'fbs'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,388 DEBUG Training subset = ['sex' 'trestbps' 'restecg'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,388 DEBUG Training subset = ['sex' 'trestbps' 'restecg'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,397 DEBUG Training subset = ['sex' 'trestbps' 'thalach'], Timing = 0.008978128433227539, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,397 DEBUG Training subset = ['sex' 'trestbps' 'thalach'], Timing = 0.008978128433227539, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,406 DEBUG Training subset = ['sex' 'trestbps' 'exang'], Timing = 0.0070133209228515625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,406 DEBUG Training subset = ['sex' 'trestbps' 'exang'], Timing = 0.0070133209228515625, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,415 DEBUG Training subset = ['sex' 'trestbps' 'oldpeak'], Timing = 0.008998870849609375, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,415 DEBUG Training subset = ['sex' 'trestbps' 'oldpeak'], Timing = 0.008998870849609375, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,423 DEBUG Training subset = ['sex' 'trestbps' 'slope'], Timing = 0.007031679153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,423 DEBUG Training subset = ['sex' 'trestbps' 'slope'], Timing = 0.007031679153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,432 DEBUG Training subset = ['sex' 'trestbps' 'ca'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,432 DEBUG Training subset = ['sex' 'trestbps' 'ca'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,441 DEBUG Training subset = ['sex' 'trestbps' 'thal'], Timing = 0.007032632827758789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,441 DEBUG Training subset = ['sex' 'trestbps' 'thal'], Timing = 0.007032632827758789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,451 DEBUG Training subset = ['sex' 'chol' 'fbs'], Timing = 0.00800466537475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,451 DEBUG Training subset = ['sex' 'chol' 'fbs'], Timing = 0.00800466537475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,460 DEBUG Training subset = ['sex' 'chol' 'restecg'], Timing = 0.008977413177490234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,460 DEBUG Training subset = ['sex' 'chol' 'restecg'], Timing = 0.008977413177490234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,470 DEBUG Training subset = ['sex' 'chol' 'thalach'], Timing = 0.010012388229370117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,470 DEBUG Training subset = ['sex' 'chol' 'thalach'], Timing = 0.010012388229370117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,482 DEBUG Training subset = ['sex' 'chol' 'exang'], Timing = 0.011013507843017578, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,482 DEBUG Training subset = ['sex' 'chol' 'exang'], Timing = 0.011013507843017578, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,501 DEBUG Training subset = ['sex' 'chol' 'oldpeak'], Timing = 0.018009662628173828, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,501 DEBUG Training subset = ['sex' 'chol' 'oldpeak'], Timing = 0.018009662628173828, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,511 DEBUG Training subset = ['sex' 'chol' 'slope'], Timing = 0.009012460708618164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,511 DEBUG Training subset = ['sex' 'chol' 'slope'], Timing = 0.009012460708618164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,520 DEBUG Training subset = ['sex' 'chol' 'ca'], Timing = 0.008003711700439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,520 DEBUG Training subset = ['sex' 'chol' 'ca'], Timing = 0.008003711700439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,538 DEBUG Training subset = ['sex' 'chol' 'thal'], Timing = 0.016005277633666992, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,538 DEBUG Training subset = ['sex' 'chol' 'thal'], Timing = 0.016005277633666992, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,549 DEBUG Training subset = ['sex' 'fbs' 'restecg'], Timing = 0.011035442352294922, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,549 DEBUG Training subset = ['sex' 'fbs' 'restecg'], Timing = 0.011035442352294922, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,560 DEBUG Training subset = ['sex' 'fbs' 'thalach'], Timing = 0.01000666618347168, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,560 DEBUG Training subset = ['sex' 'fbs' 'thalach'], Timing = 0.01000666618347168, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,568 DEBUG Training subset = ['sex' 'fbs' 'exang'], Timing = 0.007002115249633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,568 DEBUG Training subset = ['sex' 'fbs' 'exang'], Timing = 0.007002115249633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,579 DEBUG Training subset = ['sex' 'fbs' 'oldpeak'], Timing = 0.008986473083496094, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,579 DEBUG Training subset = ['sex' 'fbs' 'oldpeak'], Timing = 0.008986473083496094, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,588 DEBUG Training subset = ['sex' 'fbs' 'slope'], Timing = 0.008999347686767578, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,588 DEBUG Training subset = ['sex' 'fbs' 'slope'], Timing = 0.008999347686767578, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,600 DEBUG Training subset = ['sex' 'fbs' 'ca'], Timing = 0.010013103485107422, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,600 DEBUG Training subset = ['sex' 'fbs' 'ca'], Timing = 0.010013103485107422, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,611 DEBUG Training subset = ['sex' 'fbs' 'thal'], Timing = 0.011028051376342773, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,611 DEBUG Training subset = ['sex' 'fbs' 'thal'], Timing = 0.011028051376342773, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,621 DEBUG Training subset = ['sex' 'restecg' 'thalach'], Timing = 0.008986711502075195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,621 DEBUG Training subset = ['sex' 'restecg' 'thalach'], Timing = 0.008986711502075195, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,630 DEBUG Training subset = ['sex' 'restecg' 'exang'], Timing = 0.007023811340332031, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,630 DEBUG Training subset = ['sex' 'restecg' 'exang'], Timing = 0.007023811340332031, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,639 DEBUG Training subset = ['sex' 'restecg' 'oldpeak'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,639 DEBUG Training subset = ['sex' 'restecg' 'oldpeak'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,647 DEBUG Training subset = ['sex' 'restecg' 'slope'], Timing = 0.008013486862182617, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,647 DEBUG Training subset = ['sex' 'restecg' 'slope'], Timing = 0.008013486862182617, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,655 DEBUG Training subset = ['sex' 'restecg' 'ca'], Timing = 0.007025718688964844, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,655 DEBUG Training subset = ['sex' 'restecg' 'ca'], Timing = 0.007025718688964844, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,663 DEBUG Training subset = ['sex' 'restecg' 'thal'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,663 DEBUG Training subset = ['sex' 'restecg' 'thal'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,672 DEBUG Training subset = ['sex' 'thalach' 'exang'], Timing = 0.009005069732666016, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,672 DEBUG Training subset = ['sex' 'thalach' 'exang'], Timing = 0.009005069732666016, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,681 DEBUG Training subset = ['sex' 'thalach' 'oldpeak'], Timing = 0.009033918380737305, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,681 DEBUG Training subset = ['sex' 'thalach' 'oldpeak'], Timing = 0.009033918380737305, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,691 DEBUG Training subset = ['sex' 'thalach' 'slope'], Timing = 0.007979869842529297, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,691 DEBUG Training subset = ['sex' 'thalach' 'slope'], Timing = 0.007979869842529297, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,704 DEBUG Training subset = ['sex' 'thalach' 'ca'], Timing = 0.013001203536987305, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,704 DEBUG Training subset = ['sex' 'thalach' 'ca'], Timing = 0.013001203536987305, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,713 DEBUG Training subset = ['sex' 'thalach' 'thal'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,713 DEBUG Training subset = ['sex' 'thalach' 'thal'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,723 DEBUG Training subset = ['sex' 'exang' 'oldpeak'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,723 DEBUG Training subset = ['sex' 'exang' 'oldpeak'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,731 DEBUG Training subset = ['sex' 'exang' 'slope'], Timing = 0.008034467697143555, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,731 DEBUG Training subset = ['sex' 'exang' 'slope'], Timing = 0.008034467697143555, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,739 DEBUG Training subset = ['sex' 'exang' 'ca'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,739 DEBUG Training subset = ['sex' 'exang' 'ca'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,748 DEBUG Training subset = ['sex' 'exang' 'thal'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,748 DEBUG Training subset = ['sex' 'exang' 'thal'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,758 DEBUG Training subset = ['sex' 'oldpeak' 'slope'], Timing = 0.009028434753417969, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,758 DEBUG Training subset = ['sex' 'oldpeak' 'slope'], Timing = 0.009028434753417969, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,767 DEBUG Training subset = ['sex' 'oldpeak' 'ca'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,767 DEBUG Training subset = ['sex' 'oldpeak' 'ca'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,776 DEBUG Training subset = ['sex' 'oldpeak' 'thal'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,776 DEBUG Training subset = ['sex' 'oldpeak' 'thal'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,784 DEBUG Training subset = ['sex' 'slope' 'ca'], Timing = 0.006983518600463867, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,784 DEBUG Training subset = ['sex' 'slope' 'ca'], Timing = 0.006983518600463867, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,792 DEBUG Training subset = ['sex' 'slope' 'thal'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,792 DEBUG Training subset = ['sex' 'slope' 'thal'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,800 DEBUG Training subset = ['sex' 'ca' 'thal'], Timing = 0.007033348083496094, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,800 DEBUG Training subset = ['sex' 'ca' 'thal'], Timing = 0.007033348083496094, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,810 DEBUG Training subset = ['cp' 'trestbps' 'chol'], Timing = 0.009005546569824219, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,810 DEBUG Training subset = ['cp' 'trestbps' 'chol'], Timing = 0.009005546569824219, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,818 DEBUG Training subset = ['cp' 'trestbps' 'fbs'], Timing = 0.007979154586791992, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,818 DEBUG Training subset = ['cp' 'trestbps' 'fbs'], Timing = 0.007979154586791992, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,827 DEBUG Training subset = ['cp' 'trestbps' 'restecg'], Timing = 0.00801229476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,827 DEBUG Training subset = ['cp' 'trestbps' 'restecg'], Timing = 0.00801229476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,836 DEBUG Training subset = ['cp' 'trestbps' 'thalach'], Timing = 0.009027719497680664, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,836 DEBUG Training subset = ['cp' 'trestbps' 'thalach'], Timing = 0.009027719497680664, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,845 DEBUG Training subset = ['cp' 'trestbps' 'exang'], Timing = 0.008008003234863281, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,845 DEBUG Training subset = ['cp' 'trestbps' 'exang'], Timing = 0.008008003234863281, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,855 DEBUG Training subset = ['cp' 'trestbps' 'oldpeak'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,855 DEBUG Training subset = ['cp' 'trestbps' 'oldpeak'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,874 DEBUG Training subset = ['cp' 'trestbps' 'slope'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,874 DEBUG Training subset = ['cp' 'trestbps' 'slope'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,883 DEBUG Training subset = ['cp' 'trestbps' 'ca'], Timing = 0.009007930755615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,883 DEBUG Training subset = ['cp' 'trestbps' 'ca'], Timing = 0.009007930755615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,892 DEBUG Training subset = ['cp' 'trestbps' 'thal'], Timing = 0.0070056915283203125, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,892 DEBUG Training subset = ['cp' 'trestbps' 'thal'], Timing = 0.0070056915283203125, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,901 DEBUG Training subset = ['cp' 'chol' 'fbs'], Timing = 0.00901341438293457, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,901 DEBUG Training subset = ['cp' 'chol' 'fbs'], Timing = 0.00901341438293457, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,911 DEBUG Training subset = ['cp' 'chol' 'restecg'], Timing = 0.009005069732666016, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,911 DEBUG Training subset = ['cp' 'chol' 'restecg'], Timing = 0.009005069732666016, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,920 DEBUG Training subset = ['cp' 'chol' 'thalach'], Timing = 0.009007930755615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,920 DEBUG Training subset = ['cp' 'chol' 'thalach'], Timing = 0.009007930755615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,930 DEBUG Training subset = ['cp' 'chol' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,930 DEBUG Training subset = ['cp' 'chol' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,940 DEBUG Training subset = ['cp' 'chol' 'oldpeak'], Timing = 0.010030746459960938, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,940 DEBUG Training subset = ['cp' 'chol' 'oldpeak'], Timing = 0.010030746459960938, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,950 DEBUG Training subset = ['cp' 'chol' 'slope'], Timing = 0.008982181549072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,950 DEBUG Training subset = ['cp' 'chol' 'slope'], Timing = 0.008982181549072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,959 DEBUG Training subset = ['cp' 'chol' 'ca'], Timing = 0.00799870491027832, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,959 DEBUG Training subset = ['cp' 'chol' 'ca'], Timing = 0.00799870491027832, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,968 DEBUG Training subset = ['cp' 'chol' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,968 DEBUG Training subset = ['cp' 'chol' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,976 DEBUG Training subset = ['cp' 'fbs' 'restecg'], Timing = 0.00703120231628418, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,976 DEBUG Training subset = ['cp' 'fbs' 'restecg'], Timing = 0.00703120231628418, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,986 DEBUG Training subset = ['cp' 'fbs' 'thalach'], Timing = 0.008984804153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,986 DEBUG Training subset = ['cp' 'fbs' 'thalach'], Timing = 0.008984804153442383, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,994 DEBUG Training subset = ['cp' 'fbs' 'exang'], Timing = 0.007029056549072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:27,994 DEBUG Training subset = ['cp' 'fbs' 'exang'], Timing = 0.007029056549072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,002 DEBUG Training subset = ['cp' 'fbs' 'oldpeak'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,002 DEBUG Training subset = ['cp' 'fbs' 'oldpeak'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,010 DEBUG Training subset = ['cp' 'fbs' 'slope'], Timing = 0.0070285797119140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,010 DEBUG Training subset = ['cp' 'fbs' 'slope'], Timing = 0.0070285797119140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,018 DEBUG Training subset = ['cp' 'fbs' 'ca'], Timing = 0.00697779655456543, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,018 DEBUG Training subset = ['cp' 'fbs' 'ca'], Timing = 0.00697779655456543, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,027 DEBUG Training subset = ['cp' 'fbs' 'thal'], Timing = 0.007032155990600586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,027 DEBUG Training subset = ['cp' 'fbs' 'thal'], Timing = 0.007032155990600586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,035 DEBUG Training subset = ['cp' 'restecg' 'thalach'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,035 DEBUG Training subset = ['cp' 'restecg' 'thalach'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,043 DEBUG Training subset = ['cp' 'restecg' 'exang'], Timing = 0.007007598876953125, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,043 DEBUG Training subset = ['cp' 'restecg' 'exang'], Timing = 0.007007598876953125, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,052 DEBUG Training subset = ['cp' 'restecg' 'oldpeak'], Timing = 0.00797724723815918, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,052 DEBUG Training subset = ['cp' 'restecg' 'oldpeak'], Timing = 0.00797724723815918, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,061 DEBUG Training subset = ['cp' 'restecg' 'slope'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,061 DEBUG Training subset = ['cp' 'restecg' 'slope'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,069 DEBUG Training subset = ['cp' 'restecg' 'ca'], Timing = 0.007005929946899414, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,069 DEBUG Training subset = ['cp' 'restecg' 'ca'], Timing = 0.007005929946899414, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,077 DEBUG Training subset = ['cp' 'restecg' 'thal'], Timing = 0.007033586502075195, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,077 DEBUG Training subset = ['cp' 'restecg' 'thal'], Timing = 0.007033586502075195, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,086 DEBUG Training subset = ['cp' 'thalach' 'exang'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,086 DEBUG Training subset = ['cp' 'thalach' 'exang'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,095 DEBUG Training subset = ['cp' 'thalach' 'oldpeak'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,095 DEBUG Training subset = ['cp' 'thalach' 'oldpeak'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,104 DEBUG Training subset = ['cp' 'thalach' 'slope'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,104 DEBUG Training subset = ['cp' 'thalach' 'slope'], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,114 DEBUG Training subset = ['cp' 'thalach' 'ca'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,114 DEBUG Training subset = ['cp' 'thalach' 'ca'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,122 DEBUG Training subset = ['cp' 'thalach' 'thal'], Timing = 0.008004188537597656, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,122 DEBUG Training subset = ['cp' 'thalach' 'thal'], Timing = 0.008004188537597656, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,132 DEBUG Training subset = ['cp' 'exang' 'oldpeak'], Timing = 0.008032083511352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,132 DEBUG Training subset = ['cp' 'exang' 'oldpeak'], Timing = 0.008032083511352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,140 DEBUG Training subset = ['cp' 'exang' 'slope'], Timing = 0.006978034973144531, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,140 DEBUG Training subset = ['cp' 'exang' 'slope'], Timing = 0.006978034973144531, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,148 DEBUG Training subset = ['cp' 'exang' 'ca'], Timing = 0.007004737854003906, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,148 DEBUG Training subset = ['cp' 'exang' 'ca'], Timing = 0.007004737854003906, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,156 DEBUG Training subset = ['cp' 'exang' 'thal'], Timing = 0.008032798767089844, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,156 DEBUG Training subset = ['cp' 'exang' 'thal'], Timing = 0.008032798767089844, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,165 DEBUG Training subset = ['cp' 'oldpeak' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,165 DEBUG Training subset = ['cp' 'oldpeak' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,174 DEBUG Training subset = ['cp' 'oldpeak' 'ca'], Timing = 0.008006811141967773, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,174 DEBUG Training subset = ['cp' 'oldpeak' 'ca'], Timing = 0.008006811141967773, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,184 DEBUG Training subset = ['cp' 'oldpeak' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,184 DEBUG Training subset = ['cp' 'oldpeak' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,193 DEBUG Training subset = ['cp' 'slope' 'ca'], Timing = 0.0070269107818603516, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,193 DEBUG Training subset = ['cp' 'slope' 'ca'], Timing = 0.0070269107818603516, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,201 DEBUG Training subset = ['cp' 'slope' 'thal'], Timing = 0.0070037841796875, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,201 DEBUG Training subset = ['cp' 'slope' 'thal'], Timing = 0.0070037841796875, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,209 DEBUG Training subset = ['cp' 'ca' 'thal'], Timing = 0.007012128829956055, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,209 DEBUG Training subset = ['cp' 'ca' 'thal'], Timing = 0.007012128829956055, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,219 DEBUG Training subset = ['trestbps' 'chol' 'fbs'], Timing = 0.008026599884033203, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,219 DEBUG Training subset = ['trestbps' 'chol' 'fbs'], Timing = 0.008026599884033203, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,229 DEBUG Training subset = ['trestbps' 'chol' 'restecg'], Timing = 0.009006738662719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,229 DEBUG Training subset = ['trestbps' 'chol' 'restecg'], Timing = 0.009006738662719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,239 DEBUG Training subset = ['trestbps' 'chol' 'thalach'], Timing = 0.009977579116821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,239 DEBUG Training subset = ['trestbps' 'chol' 'thalach'], Timing = 0.009977579116821289, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,248 DEBUG Training subset = ['trestbps' 'chol' 'exang'], Timing = 0.009006977081298828, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,248 DEBUG Training subset = ['trestbps' 'chol' 'exang'], Timing = 0.009006977081298828, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,258 DEBUG Training subset = ['trestbps' 'chol' 'oldpeak'], Timing = 0.009033679962158203, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,258 DEBUG Training subset = ['trestbps' 'chol' 'oldpeak'], Timing = 0.009033679962158203, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,268 DEBUG Training subset = ['trestbps' 'chol' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,268 DEBUG Training subset = ['trestbps' 'chol' 'slope'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,277 DEBUG Training subset = ['trestbps' 'chol' 'ca'], Timing = 0.008986949920654297, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,277 DEBUG Training subset = ['trestbps' 'chol' 'ca'], Timing = 0.008986949920654297, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,287 DEBUG Training subset = ['trestbps' 'chol' 'thal'], Timing = 0.008997678756713867, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,287 DEBUG Training subset = ['trestbps' 'chol' 'thal'], Timing = 0.008997678756713867, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,297 DEBUG Training subset = ['trestbps' 'fbs' 'restecg'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,297 DEBUG Training subset = ['trestbps' 'fbs' 'restecg'], Timing = 0.00900578498840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,307 DEBUG Training subset = ['trestbps' 'fbs' 'thalach'], Timing = 0.00801396369934082, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,307 DEBUG Training subset = ['trestbps' 'fbs' 'thalach'], Timing = 0.00801396369934082, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,315 DEBUG Training subset = ['trestbps' 'fbs' 'exang'], Timing = 0.008027791976928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,315 DEBUG Training subset = ['trestbps' 'fbs' 'exang'], Timing = 0.008027791976928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,325 DEBUG Training subset = ['trestbps' 'fbs' 'oldpeak'], Timing = 0.007979631423950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,325 DEBUG Training subset = ['trestbps' 'fbs' 'oldpeak'], Timing = 0.007979631423950195, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,333 DEBUG Training subset = ['trestbps' 'fbs' 'slope'], Timing = 0.007984638214111328, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,333 DEBUG Training subset = ['trestbps' 'fbs' 'slope'], Timing = 0.007984638214111328, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,342 DEBUG Training subset = ['trestbps' 'fbs' 'ca'], Timing = 0.007033109664916992, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,342 DEBUG Training subset = ['trestbps' 'fbs' 'ca'], Timing = 0.007033109664916992, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,351 DEBUG Training subset = ['trestbps' 'fbs' 'thal'], Timing = 0.009008646011352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,351 DEBUG Training subset = ['trestbps' 'fbs' 'thal'], Timing = 0.009008646011352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,361 DEBUG Training subset = ['trestbps' 'restecg' 'thalach'], Timing = 0.00900411605834961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,361 DEBUG Training subset = ['trestbps' 'restecg' 'thalach'], Timing = 0.00900411605834961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,370 DEBUG Training subset = ['trestbps' 'restecg' 'exang'], Timing = 0.00898599624633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,370 DEBUG Training subset = ['trestbps' 'restecg' 'exang'], Timing = 0.00898599624633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,380 DEBUG Training subset = ['trestbps' 'restecg' 'oldpeak'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,380 DEBUG Training subset = ['trestbps' 'restecg' 'oldpeak'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,388 DEBUG Training subset = ['trestbps' 'restecg' 'slope'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,388 DEBUG Training subset = ['trestbps' 'restecg' 'slope'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,397 DEBUG Training subset = ['trestbps' 'restecg' 'ca'], Timing = 0.007976531982421875, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,397 DEBUG Training subset = ['trestbps' 'restecg' 'ca'], Timing = 0.007976531982421875, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,406 DEBUG Training subset = ['trestbps' 'restecg' 'thal'], Timing = 0.009011507034301758, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,406 DEBUG Training subset = ['trestbps' 'restecg' 'thal'], Timing = 0.009011507034301758, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,415 DEBUG Training subset = ['trestbps' 'thalach' 'exang'], Timing = 0.009029388427734375, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,415 DEBUG Training subset = ['trestbps' 'thalach' 'exang'], Timing = 0.009029388427734375, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,426 DEBUG Training subset = ['trestbps' 'thalach' 'oldpeak'], Timing = 0.00998234748840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,426 DEBUG Training subset = ['trestbps' 'thalach' 'oldpeak'], Timing = 0.00998234748840332, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,435 DEBUG Training subset = ['trestbps' 'thalach' 'slope'], Timing = 0.008027791976928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,435 DEBUG Training subset = ['trestbps' 'thalach' 'slope'], Timing = 0.008027791976928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,445 DEBUG Training subset = ['trestbps' 'thalach' 'ca'], Timing = 0.008008718490600586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,445 DEBUG Training subset = ['trestbps' 'thalach' 'ca'], Timing = 0.008008718490600586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,454 DEBUG Training subset = ['trestbps' 'thalach' 'thal'], Timing = 0.007979393005371094, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,454 DEBUG Training subset = ['trestbps' 'thalach' 'thal'], Timing = 0.007979393005371094, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,463 DEBUG Training subset = ['trestbps' 'exang' 'oldpeak'], Timing = 0.009003877639770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,463 DEBUG Training subset = ['trestbps' 'exang' 'oldpeak'], Timing = 0.009003877639770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,472 DEBUG Training subset = ['trestbps' 'exang' 'slope'], Timing = 0.0070111751556396484, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,472 DEBUG Training subset = ['trestbps' 'exang' 'slope'], Timing = 0.0070111751556396484, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,481 DEBUG Training subset = ['trestbps' 'exang' 'ca'], Timing = 0.008031368255615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,481 DEBUG Training subset = ['trestbps' 'exang' 'ca'], Timing = 0.008031368255615234, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,490 DEBUG Training subset = ['trestbps' 'exang' 'thal'], Timing = 0.00800943374633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,490 DEBUG Training subset = ['trestbps' 'exang' 'thal'], Timing = 0.00800943374633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,499 DEBUG Training subset = ['trestbps' 'oldpeak' 'slope'], Timing = 0.008974552154541016, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,499 DEBUG Training subset = ['trestbps' 'oldpeak' 'slope'], Timing = 0.008974552154541016, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,509 DEBUG Training subset = ['trestbps' 'oldpeak' 'ca'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,509 DEBUG Training subset = ['trestbps' 'oldpeak' 'ca'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,518 DEBUG Training subset = ['trestbps' 'oldpeak' 'thal'], Timing = 0.008025884628295898, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,518 DEBUG Training subset = ['trestbps' 'oldpeak' 'thal'], Timing = 0.008025884628295898, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,527 DEBUG Training subset = ['trestbps' 'slope' 'ca'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,527 DEBUG Training subset = ['trestbps' 'slope' 'ca'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,536 DEBUG Training subset = ['trestbps' 'slope' 'thal'], Timing = 0.006978750228881836, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,536 DEBUG Training subset = ['trestbps' 'slope' 'thal'], Timing = 0.006978750228881836, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,545 DEBUG Training subset = ['trestbps' 'ca' 'thal'], Timing = 0.00803518295288086, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,545 DEBUG Training subset = ['trestbps' 'ca' 'thal'], Timing = 0.00803518295288086, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,554 DEBUG Training subset = ['chol' 'fbs' 'restecg'], Timing = 0.008978843688964844, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,554 DEBUG Training subset = ['chol' 'fbs' 'restecg'], Timing = 0.008978843688964844, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,564 DEBUG Training subset = ['chol' 'fbs' 'thalach'], Timing = 0.00800466537475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,564 DEBUG Training subset = ['chol' 'fbs' 'thalach'], Timing = 0.00800466537475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,573 DEBUG Training subset = ['chol' 'fbs' 'exang'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,573 DEBUG Training subset = ['chol' 'fbs' 'exang'], Timing = 0.008005142211914062, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,582 DEBUG Training subset = ['chol' 'fbs' 'oldpeak'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,582 DEBUG Training subset = ['chol' 'fbs' 'oldpeak'], Timing = 0.009034156799316406, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,591 DEBUG Training subset = ['chol' 'fbs' 'slope'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,591 DEBUG Training subset = ['chol' 'fbs' 'slope'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,601 DEBUG Training subset = ['chol' 'fbs' 'ca'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,601 DEBUG Training subset = ['chol' 'fbs' 'ca'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,610 DEBUG Training subset = ['chol' 'fbs' 'thal'], Timing = 0.009032964706420898, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,610 DEBUG Training subset = ['chol' 'fbs' 'thal'], Timing = 0.009032964706420898, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,620 DEBUG Training subset = ['chol' 'restecg' 'thalach'], Timing = 0.007976770401000977, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,620 DEBUG Training subset = ['chol' 'restecg' 'thalach'], Timing = 0.007976770401000977, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,629 DEBUG Training subset = ['chol' 'restecg' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,629 DEBUG Training subset = ['chol' 'restecg' 'exang'], Timing = 0.009005308151245117, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,639 DEBUG Training subset = ['chol' 'restecg' 'oldpeak'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,639 DEBUG Training subset = ['chol' 'restecg' 'oldpeak'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,648 DEBUG Training subset = ['chol' 'restecg' 'slope'], Timing = 0.009006738662719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,648 DEBUG Training subset = ['chol' 'restecg' 'slope'], Timing = 0.009006738662719727, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,657 DEBUG Training subset = ['chol' 'restecg' 'ca'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,657 DEBUG Training subset = ['chol' 'restecg' 'ca'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,667 DEBUG Training subset = ['chol' 'restecg' 'thal'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,667 DEBUG Training subset = ['chol' 'restecg' 'thal'], Timing = 0.009011983871459961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,678 DEBUG Training subset = ['chol' 'thalach' 'exang'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,678 DEBUG Training subset = ['chol' 'thalach' 'exang'], Timing = 0.009027481079101562, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,688 DEBUG Training subset = ['chol' 'thalach' 'oldpeak'], Timing = 0.010007143020629883, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,688 DEBUG Training subset = ['chol' 'thalach' 'oldpeak'], Timing = 0.010007143020629883, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,698 DEBUG Training subset = ['chol' 'thalach' 'slope'], Timing = 0.009031534194946289, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,698 DEBUG Training subset = ['chol' 'thalach' 'slope'], Timing = 0.009031534194946289, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,708 DEBUG Training subset = ['chol' 'thalach' 'ca'], Timing = 0.009006500244140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,708 DEBUG Training subset = ['chol' 'thalach' 'ca'], Timing = 0.009006500244140625, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,718 DEBUG Training subset = ['chol' 'thalach' 'thal'], Timing = 0.009976863861083984, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,718 DEBUG Training subset = ['chol' 'thalach' 'thal'], Timing = 0.009976863861083984, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,728 DEBUG Training subset = ['chol' 'exang' 'oldpeak'], Timing = 0.01003575325012207, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,728 DEBUG Training subset = ['chol' 'exang' 'oldpeak'], Timing = 0.01003575325012207, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,737 DEBUG Training subset = ['chol' 'exang' 'slope'], Timing = 0.008977890014648438, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,737 DEBUG Training subset = ['chol' 'exang' 'slope'], Timing = 0.008977890014648438, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,748 DEBUG Training subset = ['chol' 'exang' 'ca'], Timing = 0.010015010833740234, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,748 DEBUG Training subset = ['chol' 'exang' 'ca'], Timing = 0.010015010833740234, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,759 DEBUG Training subset = ['chol' 'exang' 'thal'], Timing = 0.009003400802612305, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,759 DEBUG Training subset = ['chol' 'exang' 'thal'], Timing = 0.009003400802612305, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,769 DEBUG Training subset = ['chol' 'oldpeak' 'slope'], Timing = 0.010005474090576172, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,769 DEBUG Training subset = ['chol' 'oldpeak' 'slope'], Timing = 0.010005474090576172, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,779 DEBUG Training subset = ['chol' 'oldpeak' 'ca'], Timing = 0.009013891220092773, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,779 DEBUG Training subset = ['chol' 'oldpeak' 'ca'], Timing = 0.009013891220092773, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,789 DEBUG Training subset = ['chol' 'oldpeak' 'thal'], Timing = 0.009004354476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,789 DEBUG Training subset = ['chol' 'oldpeak' 'thal'], Timing = 0.009004354476928711, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,798 DEBUG Training subset = ['chol' 'slope' 'ca'], Timing = 0.008027076721191406, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,798 DEBUG Training subset = ['chol' 'slope' 'ca'], Timing = 0.008027076721191406, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,807 DEBUG Training subset = ['chol' 'slope' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,807 DEBUG Training subset = ['chol' 'slope' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,817 DEBUG Training subset = ['chol' 'ca' 'thal'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,817 DEBUG Training subset = ['chol' 'ca' 'thal'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,826 DEBUG Training subset = ['fbs' 'restecg' 'thalach'], Timing = 0.008007287979125977, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,826 DEBUG Training subset = ['fbs' 'restecg' 'thalach'], Timing = 0.008007287979125977, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,833 DEBUG Training subset = ['fbs' 'restecg' 'exang'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,833 DEBUG Training subset = ['fbs' 'restecg' 'exang'], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,842 DEBUG Training subset = ['fbs' 'restecg' 'oldpeak'], Timing = 0.008004426956176758, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,842 DEBUG Training subset = ['fbs' 'restecg' 'oldpeak'], Timing = 0.008004426956176758, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,850 DEBUG Training subset = ['fbs' 'restecg' 'slope'], Timing = 0.007028341293334961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,850 DEBUG Training subset = ['fbs' 'restecg' 'slope'], Timing = 0.007028341293334961, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,858 DEBUG Training subset = ['fbs' 'restecg' 'ca'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,858 DEBUG Training subset = ['fbs' 'restecg' 'ca'], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,866 DEBUG Training subset = ['fbs' 'restecg' 'thal'], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,866 DEBUG Training subset = ['fbs' 'restecg' 'thal'], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,877 DEBUG Training subset = ['fbs' 'thalach' 'exang'], Timing = 0.009981155395507812, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,877 DEBUG Training subset = ['fbs' 'thalach' 'exang'], Timing = 0.009981155395507812, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,891 DEBUG Training subset = ['fbs' 'thalach' 'oldpeak'], Timing = 0.012979984283447266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,891 DEBUG Training subset = ['fbs' 'thalach' 'oldpeak'], Timing = 0.012979984283447266, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,902 DEBUG Training subset = ['fbs' 'thalach' 'slope'], Timing = 0.010012149810791016, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,902 DEBUG Training subset = ['fbs' 'thalach' 'slope'], Timing = 0.010012149810791016, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,929 DEBUG Training subset = ['fbs' 'thalach' 'ca'], Timing = 0.027014493942260742, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,929 DEBUG Training subset = ['fbs' 'thalach' 'ca'], Timing = 0.027014493942260742, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,962 DEBUG Training subset = ['fbs' 'thalach' 'thal'], Timing = 0.03002190589904785, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,962 DEBUG Training subset = ['fbs' 'thalach' 'thal'], Timing = 0.03002190589904785, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,993 DEBUG Training subset = ['fbs' 'exang' 'oldpeak'], Timing = 0.02902078628540039, Size (Kb) = 0.0546875
+2019-09-04 15:37:28,993 DEBUG Training subset = ['fbs' 'exang' 'oldpeak'], Timing = 0.02902078628540039, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,019 DEBUG Training subset = ['fbs' 'exang' 'slope'], Timing = 0.024015188217163086, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,019 DEBUG Training subset = ['fbs' 'exang' 'slope'], Timing = 0.024015188217163086, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,044 DEBUG Training subset = ['fbs' 'exang' 'ca'], Timing = 0.023989439010620117, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,044 DEBUG Training subset = ['fbs' 'exang' 'ca'], Timing = 0.023989439010620117, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,058 DEBUG Training subset = ['fbs' 'exang' 'thal'], Timing = 0.012017488479614258, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,058 DEBUG Training subset = ['fbs' 'exang' 'thal'], Timing = 0.012017488479614258, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,067 DEBUG Training subset = ['fbs' 'oldpeak' 'slope'], Timing = 0.008003711700439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,067 DEBUG Training subset = ['fbs' 'oldpeak' 'slope'], Timing = 0.008003711700439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,076 DEBUG Training subset = ['fbs' 'oldpeak' 'ca'], Timing = 0.008026599884033203, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,076 DEBUG Training subset = ['fbs' 'oldpeak' 'ca'], Timing = 0.008026599884033203, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,085 DEBUG Training subset = ['fbs' 'oldpeak' 'thal'], Timing = 0.008007049560546875, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,085 DEBUG Training subset = ['fbs' 'oldpeak' 'thal'], Timing = 0.008007049560546875, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,093 DEBUG Training subset = ['fbs' 'slope' 'ca'], Timing = 0.006979227066040039, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,093 DEBUG Training subset = ['fbs' 'slope' 'ca'], Timing = 0.006979227066040039, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,101 DEBUG Training subset = ['fbs' 'slope' 'thal'], Timing = 0.00700688362121582, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,101 DEBUG Training subset = ['fbs' 'slope' 'thal'], Timing = 0.00700688362121582, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,110 DEBUG Training subset = ['fbs' 'ca' 'thal'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,110 DEBUG Training subset = ['fbs' 'ca' 'thal'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,119 DEBUG Training subset = ['restecg' 'thalach' 'exang'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,119 DEBUG Training subset = ['restecg' 'thalach' 'exang'], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,128 DEBUG Training subset = ['restecg' 'thalach' 'oldpeak'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,128 DEBUG Training subset = ['restecg' 'thalach' 'oldpeak'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,137 DEBUG Training subset = ['restecg' 'thalach' 'slope'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,137 DEBUG Training subset = ['restecg' 'thalach' 'slope'], Timing = 0.007977724075317383, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,146 DEBUG Training subset = ['restecg' 'thalach' 'ca'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,146 DEBUG Training subset = ['restecg' 'thalach' 'ca'], Timing = 0.008007526397705078, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,155 DEBUG Training subset = ['restecg' 'thalach' 'thal'], Timing = 0.008032560348510742, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,155 DEBUG Training subset = ['restecg' 'thalach' 'thal'], Timing = 0.008032560348510742, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,164 DEBUG Training subset = ['restecg' 'exang' 'oldpeak'], Timing = 0.007980585098266602, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,164 DEBUG Training subset = ['restecg' 'exang' 'oldpeak'], Timing = 0.007980585098266602, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,172 DEBUG Training subset = ['restecg' 'exang' 'slope'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,172 DEBUG Training subset = ['restecg' 'exang' 'slope'], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,180 DEBUG Training subset = ['restecg' 'exang' 'ca'], Timing = 0.007027149200439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,180 DEBUG Training subset = ['restecg' 'exang' 'ca'], Timing = 0.007027149200439453, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,188 DEBUG Training subset = ['restecg' 'exang' 'thal'], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,188 DEBUG Training subset = ['restecg' 'exang' 'thal'], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,198 DEBUG Training subset = ['restecg' 'oldpeak' 'slope'], Timing = 0.008022785186767578, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,198 DEBUG Training subset = ['restecg' 'oldpeak' 'slope'], Timing = 0.008022785186767578, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,207 DEBUG Training subset = ['restecg' 'oldpeak' 'ca'], Timing = 0.009006977081298828, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,207 DEBUG Training subset = ['restecg' 'oldpeak' 'ca'], Timing = 0.009006977081298828, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,216 DEBUG Training subset = ['restecg' 'oldpeak' 'thal'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,216 DEBUG Training subset = ['restecg' 'oldpeak' 'thal'], Timing = 0.007978439331054688, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,225 DEBUG Training subset = ['restecg' 'slope' 'ca'], Timing = 0.009014129638671875, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,225 DEBUG Training subset = ['restecg' 'slope' 'ca'], Timing = 0.009014129638671875, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,233 DEBUG Training subset = ['restecg' 'slope' 'thal'], Timing = 0.006997585296630859, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,233 DEBUG Training subset = ['restecg' 'slope' 'thal'], Timing = 0.006997585296630859, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,241 DEBUG Training subset = ['restecg' 'ca' 'thal'], Timing = 0.007005214691162109, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,241 DEBUG Training subset = ['restecg' 'ca' 'thal'], Timing = 0.007005214691162109, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,250 DEBUG Training subset = ['thalach' 'exang' 'oldpeak'], Timing = 0.008004903793334961, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,250 DEBUG Training subset = ['thalach' 'exang' 'oldpeak'], Timing = 0.008004903793334961, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,259 DEBUG Training subset = ['thalach' 'exang' 'slope'], Timing = 0.007978677749633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,259 DEBUG Training subset = ['thalach' 'exang' 'slope'], Timing = 0.007978677749633789, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,268 DEBUG Training subset = ['thalach' 'exang' 'ca'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,268 DEBUG Training subset = ['thalach' 'exang' 'ca'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,277 DEBUG Training subset = ['thalach' 'exang' 'thal'], Timing = 0.008033514022827148, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,277 DEBUG Training subset = ['thalach' 'exang' 'thal'], Timing = 0.008033514022827148, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,286 DEBUG Training subset = ['thalach' 'oldpeak' 'slope'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,286 DEBUG Training subset = ['thalach' 'oldpeak' 'slope'], Timing = 0.009006261825561523, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,298 DEBUG Training subset = ['thalach' 'oldpeak' 'ca'], Timing = 0.009980440139770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,298 DEBUG Training subset = ['thalach' 'oldpeak' 'ca'], Timing = 0.009980440139770508, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,311 DEBUG Training subset = ['thalach' 'oldpeak' 'thal'], Timing = 0.012007713317871094, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,311 DEBUG Training subset = ['thalach' 'oldpeak' 'thal'], Timing = 0.012007713317871094, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,320 DEBUG Training subset = ['thalach' 'slope' 'ca'], Timing = 0.008032560348510742, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,320 DEBUG Training subset = ['thalach' 'slope' 'ca'], Timing = 0.008032560348510742, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,330 DEBUG Training subset = ['thalach' 'slope' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,330 DEBUG Training subset = ['thalach' 'slope' 'thal'], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,338 DEBUG Training subset = ['thalach' 'ca' 'thal'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,338 DEBUG Training subset = ['thalach' 'ca' 'thal'], Timing = 0.008033275604248047, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,347 DEBUG Training subset = ['exang' 'oldpeak' 'slope'], Timing = 0.00800776481628418, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,347 DEBUG Training subset = ['exang' 'oldpeak' 'slope'], Timing = 0.00800776481628418, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,357 DEBUG Training subset = ['exang' 'oldpeak' 'ca'], Timing = 0.009005546569824219, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,357 DEBUG Training subset = ['exang' 'oldpeak' 'ca'], Timing = 0.009005546569824219, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,367 DEBUG Training subset = ['exang' 'oldpeak' 'thal'], Timing = 0.008032083511352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,367 DEBUG Training subset = ['exang' 'oldpeak' 'thal'], Timing = 0.008032083511352539, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,376 DEBUG Training subset = ['exang' 'slope' 'ca'], Timing = 0.008003950119018555, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,376 DEBUG Training subset = ['exang' 'slope' 'ca'], Timing = 0.008003950119018555, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,384 DEBUG Training subset = ['exang' 'slope' 'thal'], Timing = 0.006979227066040039, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,384 DEBUG Training subset = ['exang' 'slope' 'thal'], Timing = 0.006979227066040039, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,391 DEBUG Training subset = ['exang' 'ca' 'thal'], Timing = 0.007001638412475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,391 DEBUG Training subset = ['exang' 'ca' 'thal'], Timing = 0.007001638412475586, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,400 DEBUG Training subset = ['oldpeak' 'slope' 'ca'], Timing = 0.00797724723815918, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,400 DEBUG Training subset = ['oldpeak' 'slope' 'ca'], Timing = 0.00797724723815918, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,410 DEBUG Training subset = ['oldpeak' 'slope' 'thal'], Timing = 0.008033514022827148, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,410 DEBUG Training subset = ['oldpeak' 'slope' 'thal'], Timing = 0.008033514022827148, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,420 DEBUG Training subset = ['oldpeak' 'ca' 'thal'], Timing = 0.008980035781860352, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,420 DEBUG Training subset = ['oldpeak' 'ca' 'thal'], Timing = 0.008980035781860352, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,428 DEBUG Training subset = ['slope' 'ca' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:29,428 DEBUG Training subset = ['slope' 'ca' 'thal'], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-09-04 15:37:54,454 DEBUG Size predict = (91, 13), N estimators = 286
+2019-09-04 15:37:54,454 DEBUG Size predict = (91, 13), N estimators = 286
+2019-09-04 15:37:54,469 DEBUG Block Limit = (0, 91)
+2019-09-04 15:37:54,469 DEBUG Block Limit = (0, 91)
+2019-09-04 15:37:54,472 DEBUG Subset predict = ['age' 'sex' 'cp']
+2019-09-04 15:37:54,472 DEBUG Subset predict = ['age' 'sex' 'cp']
+2019-09-04 15:37:54,482 DEBUG Subset predict = ['age' 'sex' 'trestbps']
+2019-09-04 15:37:54,482 DEBUG Subset predict = ['age' 'sex' 'trestbps']
+2019-09-04 15:37:54,489 DEBUG Subset predict = ['age' 'sex' 'chol']
+2019-09-04 15:37:54,489 DEBUG Subset predict = ['age' 'sex' 'chol']
+2019-09-04 15:37:54,497 DEBUG Subset predict = ['age' 'sex' 'fbs']
+2019-09-04 15:37:54,497 DEBUG Subset predict = ['age' 'sex' 'fbs']
+2019-09-04 15:37:54,506 DEBUG Subset predict = ['age' 'sex' 'restecg']
+2019-09-04 15:37:54,506 DEBUG Subset predict = ['age' 'sex' 'restecg']
+2019-09-04 15:37:54,512 DEBUG Subset predict = ['age' 'sex' 'thalach']
+2019-09-04 15:37:54,512 DEBUG Subset predict = ['age' 'sex' 'thalach']
+2019-09-04 15:37:54,521 DEBUG Subset predict = ['age' 'sex' 'exang']
+2019-09-04 15:37:54,521 DEBUG Subset predict = ['age' 'sex' 'exang']
+2019-09-04 15:37:54,528 DEBUG Subset predict = ['age' 'sex' 'oldpeak']
+2019-09-04 15:37:54,528 DEBUG Subset predict = ['age' 'sex' 'oldpeak']
+2019-09-04 15:37:54,541 DEBUG Subset predict = ['age' 'sex' 'slope']
+2019-09-04 15:37:54,541 DEBUG Subset predict = ['age' 'sex' 'slope']
+2019-09-04 15:37:54,555 DEBUG Subset predict = ['age' 'sex' 'ca']
+2019-09-04 15:37:54,555 DEBUG Subset predict = ['age' 'sex' 'ca']
+2019-09-04 15:37:54,564 DEBUG Subset predict = ['age' 'sex' 'thal']
+2019-09-04 15:37:54,564 DEBUG Subset predict = ['age' 'sex' 'thal']
+2019-09-04 15:37:54,573 DEBUG Subset predict = ['age' 'cp' 'trestbps']
+2019-09-04 15:37:54,573 DEBUG Subset predict = ['age' 'cp' 'trestbps']
+2019-09-04 15:37:54,583 DEBUG Subset predict = ['age' 'cp' 'chol']
+2019-09-04 15:37:54,583 DEBUG Subset predict = ['age' 'cp' 'chol']
+2019-09-04 15:37:54,591 DEBUG Subset predict = ['age' 'cp' 'fbs']
+2019-09-04 15:37:54,591 DEBUG Subset predict = ['age' 'cp' 'fbs']
+2019-09-04 15:37:54,601 DEBUG Subset predict = ['age' 'cp' 'restecg']
+2019-09-04 15:37:54,601 DEBUG Subset predict = ['age' 'cp' 'restecg']
+2019-09-04 15:37:54,611 DEBUG Subset predict = ['age' 'cp' 'thalach']
+2019-09-04 15:37:54,611 DEBUG Subset predict = ['age' 'cp' 'thalach']
+2019-09-04 15:37:54,618 DEBUG Subset predict = ['age' 'cp' 'exang']
+2019-09-04 15:37:54,618 DEBUG Subset predict = ['age' 'cp' 'exang']
+2019-09-04 15:37:54,624 DEBUG Subset predict = ['age' 'cp' 'oldpeak']
+2019-09-04 15:37:54,624 DEBUG Subset predict = ['age' 'cp' 'oldpeak']
+2019-09-04 15:37:54,633 DEBUG Subset predict = ['age' 'cp' 'slope']
+2019-09-04 15:37:54,633 DEBUG Subset predict = ['age' 'cp' 'slope']
+2019-09-04 15:37:54,640 DEBUG Subset predict = ['age' 'cp' 'ca']
+2019-09-04 15:37:54,640 DEBUG Subset predict = ['age' 'cp' 'ca']
+2019-09-04 15:37:54,647 DEBUG Subset predict = ['age' 'cp' 'thal']
+2019-09-04 15:37:54,647 DEBUG Subset predict = ['age' 'cp' 'thal']
+2019-09-04 15:37:54,653 DEBUG Subset predict = ['age' 'trestbps' 'chol']
+2019-09-04 15:37:54,653 DEBUG Subset predict = ['age' 'trestbps' 'chol']
+2019-09-04 15:37:54,661 DEBUG Subset predict = ['age' 'trestbps' 'fbs']
+2019-09-04 15:37:54,661 DEBUG Subset predict = ['age' 'trestbps' 'fbs']
+2019-09-04 15:37:54,668 DEBUG Subset predict = ['age' 'trestbps' 'restecg']
+2019-09-04 15:37:54,668 DEBUG Subset predict = ['age' 'trestbps' 'restecg']
+2019-09-04 15:37:54,675 DEBUG Subset predict = ['age' 'trestbps' 'thalach']
+2019-09-04 15:37:54,675 DEBUG Subset predict = ['age' 'trestbps' 'thalach']
+2019-09-04 15:37:54,683 DEBUG Subset predict = ['age' 'trestbps' 'exang']
+2019-09-04 15:37:54,683 DEBUG Subset predict = ['age' 'trestbps' 'exang']
+2019-09-04 15:37:54,691 DEBUG Subset predict = ['age' 'trestbps' 'oldpeak']
+2019-09-04 15:37:54,691 DEBUG Subset predict = ['age' 'trestbps' 'oldpeak']
+2019-09-04 15:37:54,698 DEBUG Subset predict = ['age' 'trestbps' 'slope']
+2019-09-04 15:37:54,698 DEBUG Subset predict = ['age' 'trestbps' 'slope']
+2019-09-04 15:37:54,704 DEBUG Subset predict = ['age' 'trestbps' 'ca']
+2019-09-04 15:37:54,704 DEBUG Subset predict = ['age' 'trestbps' 'ca']
+2019-09-04 15:37:54,710 DEBUG Subset predict = ['age' 'trestbps' 'thal']
+2019-09-04 15:37:54,710 DEBUG Subset predict = ['age' 'trestbps' 'thal']
+2019-09-04 15:37:54,718 DEBUG Subset predict = ['age' 'chol' 'fbs']
+2019-09-04 15:37:54,718 DEBUG Subset predict = ['age' 'chol' 'fbs']
+2019-09-04 15:37:54,724 DEBUG Subset predict = ['age' 'chol' 'restecg']
+2019-09-04 15:37:54,724 DEBUG Subset predict = ['age' 'chol' 'restecg']
+2019-09-04 15:37:54,730 DEBUG Subset predict = ['age' 'chol' 'thalach']
+2019-09-04 15:37:54,730 DEBUG Subset predict = ['age' 'chol' 'thalach']
+2019-09-04 15:37:54,736 DEBUG Subset predict = ['age' 'chol' 'exang']
+2019-09-04 15:37:54,736 DEBUG Subset predict = ['age' 'chol' 'exang']
+2019-09-04 15:37:54,741 DEBUG Subset predict = ['age' 'chol' 'oldpeak']
+2019-09-04 15:37:54,741 DEBUG Subset predict = ['age' 'chol' 'oldpeak']
+2019-09-04 15:37:54,750 DEBUG Subset predict = ['age' 'chol' 'slope']
+2019-09-04 15:37:54,750 DEBUG Subset predict = ['age' 'chol' 'slope']
+2019-09-04 15:37:54,758 DEBUG Subset predict = ['age' 'chol' 'ca']
+2019-09-04 15:37:54,758 DEBUG Subset predict = ['age' 'chol' 'ca']
+2019-09-04 15:37:54,766 DEBUG Subset predict = ['age' 'chol' 'thal']
+2019-09-04 15:37:54,766 DEBUG Subset predict = ['age' 'chol' 'thal']
+2019-09-04 15:37:54,772 DEBUG Subset predict = ['age' 'fbs' 'restecg']
+2019-09-04 15:37:54,772 DEBUG Subset predict = ['age' 'fbs' 'restecg']
+2019-09-04 15:37:54,778 DEBUG Subset predict = ['age' 'fbs' 'thalach']
+2019-09-04 15:37:54,778 DEBUG Subset predict = ['age' 'fbs' 'thalach']
+2019-09-04 15:37:54,784 DEBUG Subset predict = ['age' 'fbs' 'exang']
+2019-09-04 15:37:54,784 DEBUG Subset predict = ['age' 'fbs' 'exang']
+2019-09-04 15:37:54,790 DEBUG Subset predict = ['age' 'fbs' 'oldpeak']
+2019-09-04 15:37:54,790 DEBUG Subset predict = ['age' 'fbs' 'oldpeak']
+2019-09-04 15:37:54,796 DEBUG Subset predict = ['age' 'fbs' 'slope']
+2019-09-04 15:37:54,796 DEBUG Subset predict = ['age' 'fbs' 'slope']
+2019-09-04 15:37:54,802 DEBUG Subset predict = ['age' 'fbs' 'ca']
+2019-09-04 15:37:54,802 DEBUG Subset predict = ['age' 'fbs' 'ca']
+2019-09-04 15:37:54,808 DEBUG Subset predict = ['age' 'fbs' 'thal']
+2019-09-04 15:37:54,808 DEBUG Subset predict = ['age' 'fbs' 'thal']
+2019-09-04 15:37:54,813 DEBUG Subset predict = ['age' 'restecg' 'thalach']
+2019-09-04 15:37:54,813 DEBUG Subset predict = ['age' 'restecg' 'thalach']
+2019-09-04 15:37:54,819 DEBUG Subset predict = ['age' 'restecg' 'exang']
+2019-09-04 15:37:54,819 DEBUG Subset predict = ['age' 'restecg' 'exang']
+2019-09-04 15:37:54,825 DEBUG Subset predict = ['age' 'restecg' 'oldpeak']
+2019-09-04 15:37:54,825 DEBUG Subset predict = ['age' 'restecg' 'oldpeak']
+2019-09-04 15:37:54,831 DEBUG Subset predict = ['age' 'restecg' 'slope']
+2019-09-04 15:37:54,831 DEBUG Subset predict = ['age' 'restecg' 'slope']
+2019-09-04 15:37:54,837 DEBUG Subset predict = ['age' 'restecg' 'ca']
+2019-09-04 15:37:54,837 DEBUG Subset predict = ['age' 'restecg' 'ca']
+2019-09-04 15:37:54,842 DEBUG Subset predict = ['age' 'restecg' 'thal']
+2019-09-04 15:37:54,842 DEBUG Subset predict = ['age' 'restecg' 'thal']
+2019-09-04 15:37:54,852 DEBUG Subset predict = ['age' 'thalach' 'exang']
+2019-09-04 15:37:54,852 DEBUG Subset predict = ['age' 'thalach' 'exang']
+2019-09-04 15:37:54,861 DEBUG Subset predict = ['age' 'thalach' 'oldpeak']
+2019-09-04 15:37:54,861 DEBUG Subset predict = ['age' 'thalach' 'oldpeak']
+2019-09-04 15:37:54,868 DEBUG Subset predict = ['age' 'thalach' 'slope']
+2019-09-04 15:37:54,868 DEBUG Subset predict = ['age' 'thalach' 'slope']
+2019-09-04 15:37:54,873 DEBUG Subset predict = ['age' 'thalach' 'ca']
+2019-09-04 15:37:54,873 DEBUG Subset predict = ['age' 'thalach' 'ca']
+2019-09-04 15:37:54,879 DEBUG Subset predict = ['age' 'thalach' 'thal']
+2019-09-04 15:37:54,879 DEBUG Subset predict = ['age' 'thalach' 'thal']
+2019-09-04 15:37:54,885 DEBUG Subset predict = ['age' 'exang' 'oldpeak']
+2019-09-04 15:37:54,885 DEBUG Subset predict = ['age' 'exang' 'oldpeak']
+2019-09-04 15:37:54,894 DEBUG Subset predict = ['age' 'exang' 'slope']
+2019-09-04 15:37:54,894 DEBUG Subset predict = ['age' 'exang' 'slope']
+2019-09-04 15:37:54,900 DEBUG Subset predict = ['age' 'exang' 'ca']
+2019-09-04 15:37:54,900 DEBUG Subset predict = ['age' 'exang' 'ca']
+2019-09-04 15:37:54,908 DEBUG Subset predict = ['age' 'exang' 'thal']
+2019-09-04 15:37:54,908 DEBUG Subset predict = ['age' 'exang' 'thal']
+2019-09-04 15:37:54,914 DEBUG Subset predict = ['age' 'oldpeak' 'slope']
+2019-09-04 15:37:54,914 DEBUG Subset predict = ['age' 'oldpeak' 'slope']
+2019-09-04 15:37:54,924 DEBUG Subset predict = ['age' 'oldpeak' 'ca']
+2019-09-04 15:37:54,924 DEBUG Subset predict = ['age' 'oldpeak' 'ca']
+2019-09-04 15:37:54,934 DEBUG Subset predict = ['age' 'oldpeak' 'thal']
+2019-09-04 15:37:54,934 DEBUG Subset predict = ['age' 'oldpeak' 'thal']
+2019-09-04 15:37:54,940 DEBUG Subset predict = ['age' 'slope' 'ca']
+2019-09-04 15:37:54,940 DEBUG Subset predict = ['age' 'slope' 'ca']
+2019-09-04 15:37:54,947 DEBUG Subset predict = ['age' 'slope' 'thal']
+2019-09-04 15:37:54,947 DEBUG Subset predict = ['age' 'slope' 'thal']
+2019-09-04 15:37:54,956 DEBUG Subset predict = ['age' 'ca' 'thal']
+2019-09-04 15:37:54,956 DEBUG Subset predict = ['age' 'ca' 'thal']
+2019-09-04 15:37:54,961 DEBUG Subset predict = ['sex' 'cp' 'trestbps']
+2019-09-04 15:37:54,961 DEBUG Subset predict = ['sex' 'cp' 'trestbps']
+2019-09-04 15:37:54,968 DEBUG Subset predict = ['sex' 'cp' 'chol']
+2019-09-04 15:37:54,968 DEBUG Subset predict = ['sex' 'cp' 'chol']
+2019-09-04 15:37:54,973 DEBUG Subset predict = ['sex' 'cp' 'fbs']
+2019-09-04 15:37:54,973 DEBUG Subset predict = ['sex' 'cp' 'fbs']
+2019-09-04 15:37:54,979 DEBUG Subset predict = ['sex' 'cp' 'restecg']
+2019-09-04 15:37:54,979 DEBUG Subset predict = ['sex' 'cp' 'restecg']
+2019-09-04 15:37:54,985 DEBUG Subset predict = ['sex' 'cp' 'thalach']
+2019-09-04 15:37:54,985 DEBUG Subset predict = ['sex' 'cp' 'thalach']
+2019-09-04 15:37:54,991 DEBUG Subset predict = ['sex' 'cp' 'exang']
+2019-09-04 15:37:54,991 DEBUG Subset predict = ['sex' 'cp' 'exang']
+2019-09-04 15:37:54,996 DEBUG Subset predict = ['sex' 'cp' 'oldpeak']
+2019-09-04 15:37:54,996 DEBUG Subset predict = ['sex' 'cp' 'oldpeak']
+2019-09-04 15:37:55,002 DEBUG Subset predict = ['sex' 'cp' 'slope']
+2019-09-04 15:37:55,002 DEBUG Subset predict = ['sex' 'cp' 'slope']
+2019-09-04 15:37:55,008 DEBUG Subset predict = ['sex' 'cp' 'ca']
+2019-09-04 15:37:55,008 DEBUG Subset predict = ['sex' 'cp' 'ca']
+2019-09-04 15:37:55,014 DEBUG Subset predict = ['sex' 'cp' 'thal']
+2019-09-04 15:37:55,014 DEBUG Subset predict = ['sex' 'cp' 'thal']
+2019-09-04 15:37:55,020 DEBUG Subset predict = ['sex' 'trestbps' 'chol']
+2019-09-04 15:37:55,020 DEBUG Subset predict = ['sex' 'trestbps' 'chol']
+2019-09-04 15:37:55,026 DEBUG Subset predict = ['sex' 'trestbps' 'fbs']
+2019-09-04 15:37:55,026 DEBUG Subset predict = ['sex' 'trestbps' 'fbs']
+2019-09-04 15:37:55,031 DEBUG Subset predict = ['sex' 'trestbps' 'restecg']
+2019-09-04 15:37:55,031 DEBUG Subset predict = ['sex' 'trestbps' 'restecg']
+2019-09-04 15:37:55,037 DEBUG Subset predict = ['sex' 'trestbps' 'thalach']
+2019-09-04 15:37:55,037 DEBUG Subset predict = ['sex' 'trestbps' 'thalach']
+2019-09-04 15:37:55,043 DEBUG Subset predict = ['sex' 'trestbps' 'exang']
+2019-09-04 15:37:55,043 DEBUG Subset predict = ['sex' 'trestbps' 'exang']
+2019-09-04 15:37:55,048 DEBUG Subset predict = ['sex' 'trestbps' 'oldpeak']
+2019-09-04 15:37:55,048 DEBUG Subset predict = ['sex' 'trestbps' 'oldpeak']
+2019-09-04 15:37:55,054 DEBUG Subset predict = ['sex' 'trestbps' 'slope']
+2019-09-04 15:37:55,054 DEBUG Subset predict = ['sex' 'trestbps' 'slope']
+2019-09-04 15:37:55,060 DEBUG Subset predict = ['sex' 'trestbps' 'ca']
+2019-09-04 15:37:55,060 DEBUG Subset predict = ['sex' 'trestbps' 'ca']
+2019-09-04 15:37:55,066 DEBUG Subset predict = ['sex' 'trestbps' 'thal']
+2019-09-04 15:37:55,066 DEBUG Subset predict = ['sex' 'trestbps' 'thal']
+2019-09-04 15:37:55,071 DEBUG Subset predict = ['sex' 'chol' 'fbs']
+2019-09-04 15:37:55,071 DEBUG Subset predict = ['sex' 'chol' 'fbs']
+2019-09-04 15:37:55,077 DEBUG Subset predict = ['sex' 'chol' 'restecg']
+2019-09-04 15:37:55,077 DEBUG Subset predict = ['sex' 'chol' 'restecg']
+2019-09-04 15:37:55,083 DEBUG Subset predict = ['sex' 'chol' 'thalach']
+2019-09-04 15:37:55,083 DEBUG Subset predict = ['sex' 'chol' 'thalach']
+2019-09-04 15:37:55,088 DEBUG Subset predict = ['sex' 'chol' 'exang']
+2019-09-04 15:37:55,088 DEBUG Subset predict = ['sex' 'chol' 'exang']
+2019-09-04 15:37:55,094 DEBUG Subset predict = ['sex' 'chol' 'oldpeak']
+2019-09-04 15:37:55,094 DEBUG Subset predict = ['sex' 'chol' 'oldpeak']
+2019-09-04 15:37:55,100 DEBUG Subset predict = ['sex' 'chol' 'slope']
+2019-09-04 15:37:55,100 DEBUG Subset predict = ['sex' 'chol' 'slope']
+2019-09-04 15:37:55,106 DEBUG Subset predict = ['sex' 'chol' 'ca']
+2019-09-04 15:37:55,106 DEBUG Subset predict = ['sex' 'chol' 'ca']
+2019-09-04 15:37:55,112 DEBUG Subset predict = ['sex' 'chol' 'thal']
+2019-09-04 15:37:55,112 DEBUG Subset predict = ['sex' 'chol' 'thal']
+2019-09-04 15:37:55,117 DEBUG Subset predict = ['sex' 'fbs' 'restecg']
+2019-09-04 15:37:55,117 DEBUG Subset predict = ['sex' 'fbs' 'restecg']
+2019-09-04 15:37:55,123 DEBUG Subset predict = ['sex' 'fbs' 'thalach']
+2019-09-04 15:37:55,123 DEBUG Subset predict = ['sex' 'fbs' 'thalach']
+2019-09-04 15:37:55,129 DEBUG Subset predict = ['sex' 'fbs' 'exang']
+2019-09-04 15:37:55,129 DEBUG Subset predict = ['sex' 'fbs' 'exang']
+2019-09-04 15:37:55,135 DEBUG Subset predict = ['sex' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,135 DEBUG Subset predict = ['sex' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,141 DEBUG Subset predict = ['sex' 'fbs' 'slope']
+2019-09-04 15:37:55,141 DEBUG Subset predict = ['sex' 'fbs' 'slope']
+2019-09-04 15:37:55,147 DEBUG Subset predict = ['sex' 'fbs' 'ca']
+2019-09-04 15:37:55,147 DEBUG Subset predict = ['sex' 'fbs' 'ca']
+2019-09-04 15:37:55,153 DEBUG Subset predict = ['sex' 'fbs' 'thal']
+2019-09-04 15:37:55,153 DEBUG Subset predict = ['sex' 'fbs' 'thal']
+2019-09-04 15:37:55,158 DEBUG Subset predict = ['sex' 'restecg' 'thalach']
+2019-09-04 15:37:55,158 DEBUG Subset predict = ['sex' 'restecg' 'thalach']
+2019-09-04 15:37:55,165 DEBUG Subset predict = ['sex' 'restecg' 'exang']
+2019-09-04 15:37:55,165 DEBUG Subset predict = ['sex' 'restecg' 'exang']
+2019-09-04 15:37:55,170 DEBUG Subset predict = ['sex' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,170 DEBUG Subset predict = ['sex' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,176 DEBUG Subset predict = ['sex' 'restecg' 'slope']
+2019-09-04 15:37:55,176 DEBUG Subset predict = ['sex' 'restecg' 'slope']
+2019-09-04 15:37:55,182 DEBUG Subset predict = ['sex' 'restecg' 'ca']
+2019-09-04 15:37:55,182 DEBUG Subset predict = ['sex' 'restecg' 'ca']
+2019-09-04 15:37:55,188 DEBUG Subset predict = ['sex' 'restecg' 'thal']
+2019-09-04 15:37:55,188 DEBUG Subset predict = ['sex' 'restecg' 'thal']
+2019-09-04 15:37:55,194 DEBUG Subset predict = ['sex' 'thalach' 'exang']
+2019-09-04 15:37:55,194 DEBUG Subset predict = ['sex' 'thalach' 'exang']
+2019-09-04 15:37:55,199 DEBUG Subset predict = ['sex' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,199 DEBUG Subset predict = ['sex' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,205 DEBUG Subset predict = ['sex' 'thalach' 'slope']
+2019-09-04 15:37:55,205 DEBUG Subset predict = ['sex' 'thalach' 'slope']
+2019-09-04 15:37:55,211 DEBUG Subset predict = ['sex' 'thalach' 'ca']
+2019-09-04 15:37:55,211 DEBUG Subset predict = ['sex' 'thalach' 'ca']
+2019-09-04 15:37:55,216 DEBUG Subset predict = ['sex' 'thalach' 'thal']
+2019-09-04 15:37:55,216 DEBUG Subset predict = ['sex' 'thalach' 'thal']
+2019-09-04 15:37:55,222 DEBUG Subset predict = ['sex' 'exang' 'oldpeak']
+2019-09-04 15:37:55,222 DEBUG Subset predict = ['sex' 'exang' 'oldpeak']
+2019-09-04 15:37:55,229 DEBUG Subset predict = ['sex' 'exang' 'slope']
+2019-09-04 15:37:55,229 DEBUG Subset predict = ['sex' 'exang' 'slope']
+2019-09-04 15:37:55,234 DEBUG Subset predict = ['sex' 'exang' 'ca']
+2019-09-04 15:37:55,234 DEBUG Subset predict = ['sex' 'exang' 'ca']
+2019-09-04 15:37:55,239 DEBUG Subset predict = ['sex' 'exang' 'thal']
+2019-09-04 15:37:55,239 DEBUG Subset predict = ['sex' 'exang' 'thal']
+2019-09-04 15:37:55,245 DEBUG Subset predict = ['sex' 'oldpeak' 'slope']
+2019-09-04 15:37:55,245 DEBUG Subset predict = ['sex' 'oldpeak' 'slope']
+2019-09-04 15:37:55,251 DEBUG Subset predict = ['sex' 'oldpeak' 'ca']
+2019-09-04 15:37:55,251 DEBUG Subset predict = ['sex' 'oldpeak' 'ca']
+2019-09-04 15:37:55,258 DEBUG Subset predict = ['sex' 'oldpeak' 'thal']
+2019-09-04 15:37:55,258 DEBUG Subset predict = ['sex' 'oldpeak' 'thal']
+2019-09-04 15:37:55,265 DEBUG Subset predict = ['sex' 'slope' 'ca']
+2019-09-04 15:37:55,265 DEBUG Subset predict = ['sex' 'slope' 'ca']
+2019-09-04 15:37:55,270 DEBUG Subset predict = ['sex' 'slope' 'thal']
+2019-09-04 15:37:55,270 DEBUG Subset predict = ['sex' 'slope' 'thal']
+2019-09-04 15:37:55,276 DEBUG Subset predict = ['sex' 'ca' 'thal']
+2019-09-04 15:37:55,276 DEBUG Subset predict = ['sex' 'ca' 'thal']
+2019-09-04 15:37:55,281 DEBUG Subset predict = ['cp' 'trestbps' 'chol']
+2019-09-04 15:37:55,281 DEBUG Subset predict = ['cp' 'trestbps' 'chol']
+2019-09-04 15:37:55,287 DEBUG Subset predict = ['cp' 'trestbps' 'fbs']
+2019-09-04 15:37:55,287 DEBUG Subset predict = ['cp' 'trestbps' 'fbs']
+2019-09-04 15:37:55,293 DEBUG Subset predict = ['cp' 'trestbps' 'restecg']
+2019-09-04 15:37:55,293 DEBUG Subset predict = ['cp' 'trestbps' 'restecg']
+2019-09-04 15:37:55,298 DEBUG Subset predict = ['cp' 'trestbps' 'thalach']
+2019-09-04 15:37:55,298 DEBUG Subset predict = ['cp' 'trestbps' 'thalach']
+2019-09-04 15:37:55,304 DEBUG Subset predict = ['cp' 'trestbps' 'exang']
+2019-09-04 15:37:55,304 DEBUG Subset predict = ['cp' 'trestbps' 'exang']
+2019-09-04 15:37:55,310 DEBUG Subset predict = ['cp' 'trestbps' 'oldpeak']
+2019-09-04 15:37:55,310 DEBUG Subset predict = ['cp' 'trestbps' 'oldpeak']
+2019-09-04 15:37:55,316 DEBUG Subset predict = ['cp' 'trestbps' 'slope']
+2019-09-04 15:37:55,316 DEBUG Subset predict = ['cp' 'trestbps' 'slope']
+2019-09-04 15:37:55,321 DEBUG Subset predict = ['cp' 'trestbps' 'ca']
+2019-09-04 15:37:55,321 DEBUG Subset predict = ['cp' 'trestbps' 'ca']
+2019-09-04 15:37:55,327 DEBUG Subset predict = ['cp' 'trestbps' 'thal']
+2019-09-04 15:37:55,327 DEBUG Subset predict = ['cp' 'trestbps' 'thal']
+2019-09-04 15:37:55,333 DEBUG Subset predict = ['cp' 'chol' 'fbs']
+2019-09-04 15:37:55,333 DEBUG Subset predict = ['cp' 'chol' 'fbs']
+2019-09-04 15:37:55,338 DEBUG Subset predict = ['cp' 'chol' 'restecg']
+2019-09-04 15:37:55,338 DEBUG Subset predict = ['cp' 'chol' 'restecg']
+2019-09-04 15:37:55,344 DEBUG Subset predict = ['cp' 'chol' 'thalach']
+2019-09-04 15:37:55,344 DEBUG Subset predict = ['cp' 'chol' 'thalach']
+2019-09-04 15:37:55,349 DEBUG Subset predict = ['cp' 'chol' 'exang']
+2019-09-04 15:37:55,349 DEBUG Subset predict = ['cp' 'chol' 'exang']
+2019-09-04 15:37:55,355 DEBUG Subset predict = ['cp' 'chol' 'oldpeak']
+2019-09-04 15:37:55,355 DEBUG Subset predict = ['cp' 'chol' 'oldpeak']
+2019-09-04 15:37:55,361 DEBUG Subset predict = ['cp' 'chol' 'slope']
+2019-09-04 15:37:55,361 DEBUG Subset predict = ['cp' 'chol' 'slope']
+2019-09-04 15:37:55,368 DEBUG Subset predict = ['cp' 'chol' 'ca']
+2019-09-04 15:37:55,368 DEBUG Subset predict = ['cp' 'chol' 'ca']
+2019-09-04 15:37:55,375 DEBUG Subset predict = ['cp' 'chol' 'thal']
+2019-09-04 15:37:55,375 DEBUG Subset predict = ['cp' 'chol' 'thal']
+2019-09-04 15:37:55,380 DEBUG Subset predict = ['cp' 'fbs' 'restecg']
+2019-09-04 15:37:55,380 DEBUG Subset predict = ['cp' 'fbs' 'restecg']
+2019-09-04 15:37:55,386 DEBUG Subset predict = ['cp' 'fbs' 'thalach']
+2019-09-04 15:37:55,386 DEBUG Subset predict = ['cp' 'fbs' 'thalach']
+2019-09-04 15:37:55,393 DEBUG Subset predict = ['cp' 'fbs' 'exang']
+2019-09-04 15:37:55,393 DEBUG Subset predict = ['cp' 'fbs' 'exang']
+2019-09-04 15:37:55,400 DEBUG Subset predict = ['cp' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,400 DEBUG Subset predict = ['cp' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,409 DEBUG Subset predict = ['cp' 'fbs' 'slope']
+2019-09-04 15:37:55,409 DEBUG Subset predict = ['cp' 'fbs' 'slope']
+2019-09-04 15:37:55,415 DEBUG Subset predict = ['cp' 'fbs' 'ca']
+2019-09-04 15:37:55,415 DEBUG Subset predict = ['cp' 'fbs' 'ca']
+2019-09-04 15:37:55,420 DEBUG Subset predict = ['cp' 'fbs' 'thal']
+2019-09-04 15:37:55,420 DEBUG Subset predict = ['cp' 'fbs' 'thal']
+2019-09-04 15:37:55,426 DEBUG Subset predict = ['cp' 'restecg' 'thalach']
+2019-09-04 15:37:55,426 DEBUG Subset predict = ['cp' 'restecg' 'thalach']
+2019-09-04 15:37:55,432 DEBUG Subset predict = ['cp' 'restecg' 'exang']
+2019-09-04 15:37:55,432 DEBUG Subset predict = ['cp' 'restecg' 'exang']
+2019-09-04 15:37:55,437 DEBUG Subset predict = ['cp' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,437 DEBUG Subset predict = ['cp' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,445 DEBUG Subset predict = ['cp' 'restecg' 'slope']
+2019-09-04 15:37:55,445 DEBUG Subset predict = ['cp' 'restecg' 'slope']
+2019-09-04 15:37:55,451 DEBUG Subset predict = ['cp' 'restecg' 'ca']
+2019-09-04 15:37:55,451 DEBUG Subset predict = ['cp' 'restecg' 'ca']
+2019-09-04 15:37:55,457 DEBUG Subset predict = ['cp' 'restecg' 'thal']
+2019-09-04 15:37:55,457 DEBUG Subset predict = ['cp' 'restecg' 'thal']
+2019-09-04 15:37:55,462 DEBUG Subset predict = ['cp' 'thalach' 'exang']
+2019-09-04 15:37:55,462 DEBUG Subset predict = ['cp' 'thalach' 'exang']
+2019-09-04 15:37:55,468 DEBUG Subset predict = ['cp' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,468 DEBUG Subset predict = ['cp' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,474 DEBUG Subset predict = ['cp' 'thalach' 'slope']
+2019-09-04 15:37:55,474 DEBUG Subset predict = ['cp' 'thalach' 'slope']
+2019-09-04 15:37:55,480 DEBUG Subset predict = ['cp' 'thalach' 'ca']
+2019-09-04 15:37:55,480 DEBUG Subset predict = ['cp' 'thalach' 'ca']
+2019-09-04 15:37:55,487 DEBUG Subset predict = ['cp' 'thalach' 'thal']
+2019-09-04 15:37:55,487 DEBUG Subset predict = ['cp' 'thalach' 'thal']
+2019-09-04 15:37:55,493 DEBUG Subset predict = ['cp' 'exang' 'oldpeak']
+2019-09-04 15:37:55,493 DEBUG Subset predict = ['cp' 'exang' 'oldpeak']
+2019-09-04 15:37:55,500 DEBUG Subset predict = ['cp' 'exang' 'slope']
+2019-09-04 15:37:55,500 DEBUG Subset predict = ['cp' 'exang' 'slope']
+2019-09-04 15:37:55,507 DEBUG Subset predict = ['cp' 'exang' 'ca']
+2019-09-04 15:37:55,507 DEBUG Subset predict = ['cp' 'exang' 'ca']
+2019-09-04 15:37:55,512 DEBUG Subset predict = ['cp' 'exang' 'thal']
+2019-09-04 15:37:55,512 DEBUG Subset predict = ['cp' 'exang' 'thal']
+2019-09-04 15:37:55,519 DEBUG Subset predict = ['cp' 'oldpeak' 'slope']
+2019-09-04 15:37:55,519 DEBUG Subset predict = ['cp' 'oldpeak' 'slope']
+2019-09-04 15:37:55,526 DEBUG Subset predict = ['cp' 'oldpeak' 'ca']
+2019-09-04 15:37:55,526 DEBUG Subset predict = ['cp' 'oldpeak' 'ca']
+2019-09-04 15:37:55,533 DEBUG Subset predict = ['cp' 'oldpeak' 'thal']
+2019-09-04 15:37:55,533 DEBUG Subset predict = ['cp' 'oldpeak' 'thal']
+2019-09-04 15:37:55,541 DEBUG Subset predict = ['cp' 'slope' 'ca']
+2019-09-04 15:37:55,541 DEBUG Subset predict = ['cp' 'slope' 'ca']
+2019-09-04 15:37:55,550 DEBUG Subset predict = ['cp' 'slope' 'thal']
+2019-09-04 15:37:55,550 DEBUG Subset predict = ['cp' 'slope' 'thal']
+2019-09-04 15:37:55,574 DEBUG Subset predict = ['cp' 'ca' 'thal']
+2019-09-04 15:37:55,574 DEBUG Subset predict = ['cp' 'ca' 'thal']
+2019-09-04 15:37:55,581 DEBUG Subset predict = ['trestbps' 'chol' 'fbs']
+2019-09-04 15:37:55,581 DEBUG Subset predict = ['trestbps' 'chol' 'fbs']
+2019-09-04 15:37:55,587 DEBUG Subset predict = ['trestbps' 'chol' 'restecg']
+2019-09-04 15:37:55,587 DEBUG Subset predict = ['trestbps' 'chol' 'restecg']
+2019-09-04 15:37:55,594 DEBUG Subset predict = ['trestbps' 'chol' 'thalach']
+2019-09-04 15:37:55,594 DEBUG Subset predict = ['trestbps' 'chol' 'thalach']
+2019-09-04 15:37:55,600 DEBUG Subset predict = ['trestbps' 'chol' 'exang']
+2019-09-04 15:37:55,600 DEBUG Subset predict = ['trestbps' 'chol' 'exang']
+2019-09-04 15:37:55,612 DEBUG Subset predict = ['trestbps' 'chol' 'oldpeak']
+2019-09-04 15:37:55,612 DEBUG Subset predict = ['trestbps' 'chol' 'oldpeak']
+2019-09-04 15:37:55,620 DEBUG Subset predict = ['trestbps' 'chol' 'slope']
+2019-09-04 15:37:55,620 DEBUG Subset predict = ['trestbps' 'chol' 'slope']
+2019-09-04 15:37:55,628 DEBUG Subset predict = ['trestbps' 'chol' 'ca']
+2019-09-04 15:37:55,628 DEBUG Subset predict = ['trestbps' 'chol' 'ca']
+2019-09-04 15:37:55,636 DEBUG Subset predict = ['trestbps' 'chol' 'thal']
+2019-09-04 15:37:55,636 DEBUG Subset predict = ['trestbps' 'chol' 'thal']
+2019-09-04 15:37:55,641 DEBUG Subset predict = ['trestbps' 'fbs' 'restecg']
+2019-09-04 15:37:55,641 DEBUG Subset predict = ['trestbps' 'fbs' 'restecg']
+2019-09-04 15:37:55,649 DEBUG Subset predict = ['trestbps' 'fbs' 'thalach']
+2019-09-04 15:37:55,649 DEBUG Subset predict = ['trestbps' 'fbs' 'thalach']
+2019-09-04 15:37:55,655 DEBUG Subset predict = ['trestbps' 'fbs' 'exang']
+2019-09-04 15:37:55,655 DEBUG Subset predict = ['trestbps' 'fbs' 'exang']
+2019-09-04 15:37:55,660 DEBUG Subset predict = ['trestbps' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,660 DEBUG Subset predict = ['trestbps' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,670 DEBUG Subset predict = ['trestbps' 'fbs' 'slope']
+2019-09-04 15:37:55,670 DEBUG Subset predict = ['trestbps' 'fbs' 'slope']
+2019-09-04 15:37:55,678 DEBUG Subset predict = ['trestbps' 'fbs' 'ca']
+2019-09-04 15:37:55,678 DEBUG Subset predict = ['trestbps' 'fbs' 'ca']
+2019-09-04 15:37:55,684 DEBUG Subset predict = ['trestbps' 'fbs' 'thal']
+2019-09-04 15:37:55,684 DEBUG Subset predict = ['trestbps' 'fbs' 'thal']
+2019-09-04 15:37:55,690 DEBUG Subset predict = ['trestbps' 'restecg' 'thalach']
+2019-09-04 15:37:55,690 DEBUG Subset predict = ['trestbps' 'restecg' 'thalach']
+2019-09-04 15:37:55,696 DEBUG Subset predict = ['trestbps' 'restecg' 'exang']
+2019-09-04 15:37:55,696 DEBUG Subset predict = ['trestbps' 'restecg' 'exang']
+2019-09-04 15:37:55,701 DEBUG Subset predict = ['trestbps' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,701 DEBUG Subset predict = ['trestbps' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,708 DEBUG Subset predict = ['trestbps' 'restecg' 'slope']
+2019-09-04 15:37:55,708 DEBUG Subset predict = ['trestbps' 'restecg' 'slope']
+2019-09-04 15:37:55,715 DEBUG Subset predict = ['trestbps' 'restecg' 'ca']
+2019-09-04 15:37:55,715 DEBUG Subset predict = ['trestbps' 'restecg' 'ca']
+2019-09-04 15:37:55,722 DEBUG Subset predict = ['trestbps' 'restecg' 'thal']
+2019-09-04 15:37:55,722 DEBUG Subset predict = ['trestbps' 'restecg' 'thal']
+2019-09-04 15:37:55,730 DEBUG Subset predict = ['trestbps' 'thalach' 'exang']
+2019-09-04 15:37:55,730 DEBUG Subset predict = ['trestbps' 'thalach' 'exang']
+2019-09-04 15:37:55,736 DEBUG Subset predict = ['trestbps' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,736 DEBUG Subset predict = ['trestbps' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,743 DEBUG Subset predict = ['trestbps' 'thalach' 'slope']
+2019-09-04 15:37:55,743 DEBUG Subset predict = ['trestbps' 'thalach' 'slope']
+2019-09-04 15:37:55,750 DEBUG Subset predict = ['trestbps' 'thalach' 'ca']
+2019-09-04 15:37:55,750 DEBUG Subset predict = ['trestbps' 'thalach' 'ca']
+2019-09-04 15:37:55,757 DEBUG Subset predict = ['trestbps' 'thalach' 'thal']
+2019-09-04 15:37:55,757 DEBUG Subset predict = ['trestbps' 'thalach' 'thal']
+2019-09-04 15:37:55,766 DEBUG Subset predict = ['trestbps' 'exang' 'oldpeak']
+2019-09-04 15:37:55,766 DEBUG Subset predict = ['trestbps' 'exang' 'oldpeak']
+2019-09-04 15:37:55,774 DEBUG Subset predict = ['trestbps' 'exang' 'slope']
+2019-09-04 15:37:55,774 DEBUG Subset predict = ['trestbps' 'exang' 'slope']
+2019-09-04 15:37:55,780 DEBUG Subset predict = ['trestbps' 'exang' 'ca']
+2019-09-04 15:37:55,780 DEBUG Subset predict = ['trestbps' 'exang' 'ca']
+2019-09-04 15:37:55,786 DEBUG Subset predict = ['trestbps' 'exang' 'thal']
+2019-09-04 15:37:55,786 DEBUG Subset predict = ['trestbps' 'exang' 'thal']
+2019-09-04 15:37:55,792 DEBUG Subset predict = ['trestbps' 'oldpeak' 'slope']
+2019-09-04 15:37:55,792 DEBUG Subset predict = ['trestbps' 'oldpeak' 'slope']
+2019-09-04 15:37:55,799 DEBUG Subset predict = ['trestbps' 'oldpeak' 'ca']
+2019-09-04 15:37:55,799 DEBUG Subset predict = ['trestbps' 'oldpeak' 'ca']
+2019-09-04 15:37:55,806 DEBUG Subset predict = ['trestbps' 'oldpeak' 'thal']
+2019-09-04 15:37:55,806 DEBUG Subset predict = ['trestbps' 'oldpeak' 'thal']
+2019-09-04 15:37:55,812 DEBUG Subset predict = ['trestbps' 'slope' 'ca']
+2019-09-04 15:37:55,812 DEBUG Subset predict = ['trestbps' 'slope' 'ca']
+2019-09-04 15:37:55,817 DEBUG Subset predict = ['trestbps' 'slope' 'thal']
+2019-09-04 15:37:55,817 DEBUG Subset predict = ['trestbps' 'slope' 'thal']
+2019-09-04 15:37:55,823 DEBUG Subset predict = ['trestbps' 'ca' 'thal']
+2019-09-04 15:37:55,823 DEBUG Subset predict = ['trestbps' 'ca' 'thal']
+2019-09-04 15:37:55,829 DEBUG Subset predict = ['chol' 'fbs' 'restecg']
+2019-09-04 15:37:55,829 DEBUG Subset predict = ['chol' 'fbs' 'restecg']
+2019-09-04 15:37:55,837 DEBUG Subset predict = ['chol' 'fbs' 'thalach']
+2019-09-04 15:37:55,837 DEBUG Subset predict = ['chol' 'fbs' 'thalach']
+2019-09-04 15:37:55,842 DEBUG Subset predict = ['chol' 'fbs' 'exang']
+2019-09-04 15:37:55,842 DEBUG Subset predict = ['chol' 'fbs' 'exang']
+2019-09-04 15:37:55,849 DEBUG Subset predict = ['chol' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,849 DEBUG Subset predict = ['chol' 'fbs' 'oldpeak']
+2019-09-04 15:37:55,855 DEBUG Subset predict = ['chol' 'fbs' 'slope']
+2019-09-04 15:37:55,855 DEBUG Subset predict = ['chol' 'fbs' 'slope']
+2019-09-04 15:37:55,861 DEBUG Subset predict = ['chol' 'fbs' 'ca']
+2019-09-04 15:37:55,861 DEBUG Subset predict = ['chol' 'fbs' 'ca']
+2019-09-04 15:37:55,872 DEBUG Subset predict = ['chol' 'fbs' 'thal']
+2019-09-04 15:37:55,872 DEBUG Subset predict = ['chol' 'fbs' 'thal']
+2019-09-04 15:37:55,891 DEBUG Subset predict = ['chol' 'restecg' 'thalach']
+2019-09-04 15:37:55,891 DEBUG Subset predict = ['chol' 'restecg' 'thalach']
+2019-09-04 15:37:55,899 DEBUG Subset predict = ['chol' 'restecg' 'exang']
+2019-09-04 15:37:55,899 DEBUG Subset predict = ['chol' 'restecg' 'exang']
+2019-09-04 15:37:55,906 DEBUG Subset predict = ['chol' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,906 DEBUG Subset predict = ['chol' 'restecg' 'oldpeak']
+2019-09-04 15:37:55,913 DEBUG Subset predict = ['chol' 'restecg' 'slope']
+2019-09-04 15:37:55,913 DEBUG Subset predict = ['chol' 'restecg' 'slope']
+2019-09-04 15:37:55,920 DEBUG Subset predict = ['chol' 'restecg' 'ca']
+2019-09-04 15:37:55,920 DEBUG Subset predict = ['chol' 'restecg' 'ca']
+2019-09-04 15:37:55,927 DEBUG Subset predict = ['chol' 'restecg' 'thal']
+2019-09-04 15:37:55,927 DEBUG Subset predict = ['chol' 'restecg' 'thal']
+2019-09-04 15:37:55,937 DEBUG Subset predict = ['chol' 'thalach' 'exang']
+2019-09-04 15:37:55,937 DEBUG Subset predict = ['chol' 'thalach' 'exang']
+2019-09-04 15:37:55,948 DEBUG Subset predict = ['chol' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,948 DEBUG Subset predict = ['chol' 'thalach' 'oldpeak']
+2019-09-04 15:37:55,958 DEBUG Subset predict = ['chol' 'thalach' 'slope']
+2019-09-04 15:37:55,958 DEBUG Subset predict = ['chol' 'thalach' 'slope']
+2019-09-04 15:37:55,965 DEBUG Subset predict = ['chol' 'thalach' 'ca']
+2019-09-04 15:37:55,965 DEBUG Subset predict = ['chol' 'thalach' 'ca']
+2019-09-04 15:37:55,972 DEBUG Subset predict = ['chol' 'thalach' 'thal']
+2019-09-04 15:37:55,972 DEBUG Subset predict = ['chol' 'thalach' 'thal']
+2019-09-04 15:37:55,983 DEBUG Subset predict = ['chol' 'exang' 'oldpeak']
+2019-09-04 15:37:55,983 DEBUG Subset predict = ['chol' 'exang' 'oldpeak']
+2019-09-04 15:37:55,992 DEBUG Subset predict = ['chol' 'exang' 'slope']
+2019-09-04 15:37:55,992 DEBUG Subset predict = ['chol' 'exang' 'slope']
+2019-09-04 15:37:56,005 DEBUG Subset predict = ['chol' 'exang' 'ca']
+2019-09-04 15:37:56,005 DEBUG Subset predict = ['chol' 'exang' 'ca']
+2019-09-04 15:37:56,020 DEBUG Subset predict = ['chol' 'exang' 'thal']
+2019-09-04 15:37:56,020 DEBUG Subset predict = ['chol' 'exang' 'thal']
+2019-09-04 15:37:56,029 DEBUG Subset predict = ['chol' 'oldpeak' 'slope']
+2019-09-04 15:37:56,029 DEBUG Subset predict = ['chol' 'oldpeak' 'slope']
+2019-09-04 15:37:56,042 DEBUG Subset predict = ['chol' 'oldpeak' 'ca']
+2019-09-04 15:37:56,042 DEBUG Subset predict = ['chol' 'oldpeak' 'ca']
+2019-09-04 15:37:56,055 DEBUG Subset predict = ['chol' 'oldpeak' 'thal']
+2019-09-04 15:37:56,055 DEBUG Subset predict = ['chol' 'oldpeak' 'thal']
+2019-09-04 15:37:56,074 DEBUG Subset predict = ['chol' 'slope' 'ca']
+2019-09-04 15:37:56,074 DEBUG Subset predict = ['chol' 'slope' 'ca']
+2019-09-04 15:37:56,082 DEBUG Subset predict = ['chol' 'slope' 'thal']
+2019-09-04 15:37:56,082 DEBUG Subset predict = ['chol' 'slope' 'thal']
+2019-09-04 15:37:56,091 DEBUG Subset predict = ['chol' 'ca' 'thal']
+2019-09-04 15:37:56,091 DEBUG Subset predict = ['chol' 'ca' 'thal']
+2019-09-04 15:37:56,097 DEBUG Subset predict = ['fbs' 'restecg' 'thalach']
+2019-09-04 15:37:56,097 DEBUG Subset predict = ['fbs' 'restecg' 'thalach']
+2019-09-04 15:37:56,105 DEBUG Subset predict = ['fbs' 'restecg' 'exang']
+2019-09-04 15:37:56,105 DEBUG Subset predict = ['fbs' 'restecg' 'exang']
+2019-09-04 15:37:56,111 DEBUG Subset predict = ['fbs' 'restecg' 'oldpeak']
+2019-09-04 15:37:56,111 DEBUG Subset predict = ['fbs' 'restecg' 'oldpeak']
+2019-09-04 15:37:56,118 DEBUG Subset predict = ['fbs' 'restecg' 'slope']
+2019-09-04 15:37:56,118 DEBUG Subset predict = ['fbs' 'restecg' 'slope']
+2019-09-04 15:37:56,126 DEBUG Subset predict = ['fbs' 'restecg' 'ca']
+2019-09-04 15:37:56,126 DEBUG Subset predict = ['fbs' 'restecg' 'ca']
+2019-09-04 15:37:56,132 DEBUG Subset predict = ['fbs' 'restecg' 'thal']
+2019-09-04 15:37:56,132 DEBUG Subset predict = ['fbs' 'restecg' 'thal']
+2019-09-04 15:37:56,139 DEBUG Subset predict = ['fbs' 'thalach' 'exang']
+2019-09-04 15:37:56,139 DEBUG Subset predict = ['fbs' 'thalach' 'exang']
+2019-09-04 15:37:56,145 DEBUG Subset predict = ['fbs' 'thalach' 'oldpeak']
+2019-09-04 15:37:56,145 DEBUG Subset predict = ['fbs' 'thalach' 'oldpeak']
+2019-09-04 15:37:56,152 DEBUG Subset predict = ['fbs' 'thalach' 'slope']
+2019-09-04 15:37:56,152 DEBUG Subset predict = ['fbs' 'thalach' 'slope']
+2019-09-04 15:37:56,158 DEBUG Subset predict = ['fbs' 'thalach' 'ca']
+2019-09-04 15:37:56,158 DEBUG Subset predict = ['fbs' 'thalach' 'ca']
+2019-09-04 15:37:56,164 DEBUG Subset predict = ['fbs' 'thalach' 'thal']
+2019-09-04 15:37:56,164 DEBUG Subset predict = ['fbs' 'thalach' 'thal']
+2019-09-04 15:37:56,172 DEBUG Subset predict = ['fbs' 'exang' 'oldpeak']
+2019-09-04 15:37:56,172 DEBUG Subset predict = ['fbs' 'exang' 'oldpeak']
+2019-09-04 15:37:56,179 DEBUG Subset predict = ['fbs' 'exang' 'slope']
+2019-09-04 15:37:56,179 DEBUG Subset predict = ['fbs' 'exang' 'slope']
+2019-09-04 15:37:56,186 DEBUG Subset predict = ['fbs' 'exang' 'ca']
+2019-09-04 15:37:56,186 DEBUG Subset predict = ['fbs' 'exang' 'ca']
+2019-09-04 15:37:56,192 DEBUG Subset predict = ['fbs' 'exang' 'thal']
+2019-09-04 15:37:56,192 DEBUG Subset predict = ['fbs' 'exang' 'thal']
+2019-09-04 15:37:56,198 DEBUG Subset predict = ['fbs' 'oldpeak' 'slope']
+2019-09-04 15:37:56,198 DEBUG Subset predict = ['fbs' 'oldpeak' 'slope']
+2019-09-04 15:37:56,205 DEBUG Subset predict = ['fbs' 'oldpeak' 'ca']
+2019-09-04 15:37:56,205 DEBUG Subset predict = ['fbs' 'oldpeak' 'ca']
+2019-09-04 15:37:56,212 DEBUG Subset predict = ['fbs' 'oldpeak' 'thal']
+2019-09-04 15:37:56,212 DEBUG Subset predict = ['fbs' 'oldpeak' 'thal']
+2019-09-04 15:37:56,220 DEBUG Subset predict = ['fbs' 'slope' 'ca']
+2019-09-04 15:37:56,220 DEBUG Subset predict = ['fbs' 'slope' 'ca']
+2019-09-04 15:37:56,227 DEBUG Subset predict = ['fbs' 'slope' 'thal']
+2019-09-04 15:37:56,227 DEBUG Subset predict = ['fbs' 'slope' 'thal']
+2019-09-04 15:37:56,234 DEBUG Subset predict = ['fbs' 'ca' 'thal']
+2019-09-04 15:37:56,234 DEBUG Subset predict = ['fbs' 'ca' 'thal']
+2019-09-04 15:37:56,240 DEBUG Subset predict = ['restecg' 'thalach' 'exang']
+2019-09-04 15:37:56,240 DEBUG Subset predict = ['restecg' 'thalach' 'exang']
+2019-09-04 15:37:56,247 DEBUG Subset predict = ['restecg' 'thalach' 'oldpeak']
+2019-09-04 15:37:56,247 DEBUG Subset predict = ['restecg' 'thalach' 'oldpeak']
+2019-09-04 15:37:56,255 DEBUG Subset predict = ['restecg' 'thalach' 'slope']
+2019-09-04 15:37:56,255 DEBUG Subset predict = ['restecg' 'thalach' 'slope']
+2019-09-04 15:37:56,260 DEBUG Subset predict = ['restecg' 'thalach' 'ca']
+2019-09-04 15:37:56,260 DEBUG Subset predict = ['restecg' 'thalach' 'ca']
+2019-09-04 15:37:56,267 DEBUG Subset predict = ['restecg' 'thalach' 'thal']
+2019-09-04 15:37:56,267 DEBUG Subset predict = ['restecg' 'thalach' 'thal']
+2019-09-04 15:37:56,273 DEBUG Subset predict = ['restecg' 'exang' 'oldpeak']
+2019-09-04 15:37:56,273 DEBUG Subset predict = ['restecg' 'exang' 'oldpeak']
+2019-09-04 15:37:56,280 DEBUG Subset predict = ['restecg' 'exang' 'slope']
+2019-09-04 15:37:56,280 DEBUG Subset predict = ['restecg' 'exang' 'slope']
+2019-09-04 15:37:56,287 DEBUG Subset predict = ['restecg' 'exang' 'ca']
+2019-09-04 15:37:56,287 DEBUG Subset predict = ['restecg' 'exang' 'ca']
+2019-09-04 15:37:56,294 DEBUG Subset predict = ['restecg' 'exang' 'thal']
+2019-09-04 15:37:56,294 DEBUG Subset predict = ['restecg' 'exang' 'thal']
+2019-09-04 15:37:56,300 DEBUG Subset predict = ['restecg' 'oldpeak' 'slope']
+2019-09-04 15:37:56,300 DEBUG Subset predict = ['restecg' 'oldpeak' 'slope']
+2019-09-04 15:37:56,307 DEBUG Subset predict = ['restecg' 'oldpeak' 'ca']
+2019-09-04 15:37:56,307 DEBUG Subset predict = ['restecg' 'oldpeak' 'ca']
+2019-09-04 15:37:56,313 DEBUG Subset predict = ['restecg' 'oldpeak' 'thal']
+2019-09-04 15:37:56,313 DEBUG Subset predict = ['restecg' 'oldpeak' 'thal']
+2019-09-04 15:37:56,320 DEBUG Subset predict = ['restecg' 'slope' 'ca']
+2019-09-04 15:37:56,320 DEBUG Subset predict = ['restecg' 'slope' 'ca']
+2019-09-04 15:37:56,327 DEBUG Subset predict = ['restecg' 'slope' 'thal']
+2019-09-04 15:37:56,327 DEBUG Subset predict = ['restecg' 'slope' 'thal']
+2019-09-04 15:37:56,334 DEBUG Subset predict = ['restecg' 'ca' 'thal']
+2019-09-04 15:37:56,334 DEBUG Subset predict = ['restecg' 'ca' 'thal']
+2019-09-04 15:37:56,339 DEBUG Subset predict = ['thalach' 'exang' 'oldpeak']
+2019-09-04 15:37:56,339 DEBUG Subset predict = ['thalach' 'exang' 'oldpeak']
+2019-09-04 15:37:56,345 DEBUG Subset predict = ['thalach' 'exang' 'slope']
+2019-09-04 15:37:56,345 DEBUG Subset predict = ['thalach' 'exang' 'slope']
+2019-09-04 15:37:56,351 DEBUG Subset predict = ['thalach' 'exang' 'ca']
+2019-09-04 15:37:56,351 DEBUG Subset predict = ['thalach' 'exang' 'ca']
+2019-09-04 15:37:56,357 DEBUG Subset predict = ['thalach' 'exang' 'thal']
+2019-09-04 15:37:56,357 DEBUG Subset predict = ['thalach' 'exang' 'thal']
+2019-09-04 15:37:56,363 DEBUG Subset predict = ['thalach' 'oldpeak' 'slope']
+2019-09-04 15:37:56,363 DEBUG Subset predict = ['thalach' 'oldpeak' 'slope']
+2019-09-04 15:37:56,370 DEBUG Subset predict = ['thalach' 'oldpeak' 'ca']
+2019-09-04 15:37:56,370 DEBUG Subset predict = ['thalach' 'oldpeak' 'ca']
+2019-09-04 15:37:56,378 DEBUG Subset predict = ['thalach' 'oldpeak' 'thal']
+2019-09-04 15:37:56,378 DEBUG Subset predict = ['thalach' 'oldpeak' 'thal']
+2019-09-04 15:37:56,384 DEBUG Subset predict = ['thalach' 'slope' 'ca']
+2019-09-04 15:37:56,384 DEBUG Subset predict = ['thalach' 'slope' 'ca']
+2019-09-04 15:37:56,390 DEBUG Subset predict = ['thalach' 'slope' 'thal']
+2019-09-04 15:37:56,390 DEBUG Subset predict = ['thalach' 'slope' 'thal']
+2019-09-04 15:37:56,395 DEBUG Subset predict = ['thalach' 'ca' 'thal']
+2019-09-04 15:37:56,395 DEBUG Subset predict = ['thalach' 'ca' 'thal']
+2019-09-04 15:37:56,401 DEBUG Subset predict = ['exang' 'oldpeak' 'slope']
+2019-09-04 15:37:56,401 DEBUG Subset predict = ['exang' 'oldpeak' 'slope']
+2019-09-04 15:37:56,408 DEBUG Subset predict = ['exang' 'oldpeak' 'ca']
+2019-09-04 15:37:56,408 DEBUG Subset predict = ['exang' 'oldpeak' 'ca']
+2019-09-04 15:37:56,414 DEBUG Subset predict = ['exang' 'oldpeak' 'thal']
+2019-09-04 15:37:56,414 DEBUG Subset predict = ['exang' 'oldpeak' 'thal']
+2019-09-04 15:37:56,420 DEBUG Subset predict = ['exang' 'slope' 'ca']
+2019-09-04 15:37:56,420 DEBUG Subset predict = ['exang' 'slope' 'ca']
+2019-09-04 15:37:56,426 DEBUG Subset predict = ['exang' 'slope' 'thal']
+2019-09-04 15:37:56,426 DEBUG Subset predict = ['exang' 'slope' 'thal']
+2019-09-04 15:37:56,432 DEBUG Subset predict = ['exang' 'ca' 'thal']
+2019-09-04 15:37:56,432 DEBUG Subset predict = ['exang' 'ca' 'thal']
+2019-09-04 15:37:56,437 DEBUG Subset predict = ['oldpeak' 'slope' 'ca']
+2019-09-04 15:37:56,437 DEBUG Subset predict = ['oldpeak' 'slope' 'ca']
+2019-09-04 15:37:56,444 DEBUG Subset predict = ['oldpeak' 'slope' 'thal']
+2019-09-04 15:37:56,444 DEBUG Subset predict = ['oldpeak' 'slope' 'thal']
+2019-09-04 15:37:56,450 DEBUG Subset predict = ['oldpeak' 'ca' 'thal']
+2019-09-04 15:37:56,450 DEBUG Subset predict = ['oldpeak' 'ca' 'thal']
+2019-09-04 15:37:56,456 DEBUG Subset predict = ['slope' 'ca' 'thal']
+2019-09-04 15:37:56,456 DEBUG Subset predict = ['slope' 'ca' 'thal']
+2019-09-04 15:37:56,463 DEBUG Shape One = (286, 91)
+2019-09-04 15:37:56,463 DEBUG Shape One = (286, 91)
+2019-09-04 15:37:56,498 DEBUG Shape Two = (91, 286)
+2019-09-04 15:37:56,498 DEBUG Shape Two = (91, 286)
+2019-09-04 15:37:56,500 DEBUG Block predict 
+[[0 0 0 ... 1 0 0]
+ [1 1 1 ... 1 1 1]
+ [0 1 1 ... 1 1 1]
+ ...
+ [0 0 1 ... 0 0 0]
+ [0 0 0 ... 0 1 1]
+ [1 1 1 ... 0 0 0]]
+2019-09-04 15:37:56,500 DEBUG Block predict 
+[[0 0 0 ... 1 0 0]
+ [1 1 1 ... 1 1 1]
+ [0 1 1 ... 1 1 1]
+ ...
+ [0 0 1 ... 0 0 0]
+ [0 0 0 ... 0 1 1]
+ [1 1 1 ... 0 0 0]]
+2019-09-04 15:37:56,507 DEBUG Block voting data 
+[0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0]
+2019-09-04 15:37:56,507 DEBUG Block voting data 
+[0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0]
+2019-09-04 15:37:56,508 DEBUG Block voting len 91
+2019-09-04 15:37:56,508 DEBUG Block voting len 91
