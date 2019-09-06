@@ -41,8 +41,8 @@ def reset_logger(name):
     if isfile(name):
         remove(name)
         
-reset_logger('logger_spell_0x00000002_rs_100.log')
-logger_spell = setup_logger('logger_spell', 'logger_spell_0x000000012_rs_100.log')
+reset_logger('logger_spell_0x00000002_rs_120.log')
+logger_spell = setup_logger('logger_spell', 'logger_spell_0x000000012_rs_120.log')
         
 print("Ambiente de logs criado")
 print(">> Carregando o dataset")
@@ -80,7 +80,7 @@ rf_matrix_confusion = []
 
 for i in range(n_media_interations):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, 
-                                                        random_state=100, 
+                                                        random_state=120, 
                                                         shuffle=True, 
                                                         stratify=y)
     
