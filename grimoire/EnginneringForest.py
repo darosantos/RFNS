@@ -106,12 +106,12 @@ class EnginneringForest(ClassifierEnginneringForest):
                 block_predict.append(estimator.predict(subset_test))
             
             block_predict = np.matrix(block_predict)
-            np.savetxt(fname='block_predict.log', X=block_predict,
-                       fmt='%d', delimiter=',')
             
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
             
             block_predict = block_predict.T
+            np.savetxt(fname='block_predict.log', X=block_predict,
+                       fmt='%d', delimiter=',')
             self.logger.add('debug', "Shape Two = {0}".format(block_predict.shape))
             self.logger.add('debug', "Block predict \n{0}".format(block_predict))
             
