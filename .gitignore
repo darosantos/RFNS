@@ -108,3 +108,7 @@ excluded_git/
 
 # link simbolic
 sorcerer/grimoire
+
+sorcerer/block_predict.log
+
+sorcerer/enginnering.log
