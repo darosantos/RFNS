@@ -4,8 +4,9 @@ from time import gmtime, strftime
 
 class ConfigurationEnginnering(object):
 
-    __slots__ = ('chunck', 'enable_preprocessing', 'save_matrix_prediction', 
-                 'file_name_matrix_prediction', 'autoclean',
+    __slots__ = ('chunck', 'enable_preprocessing', 'autoclean',
+                 'save_matrix_prediction',  'file_name_matrix_prediction',
+                 'format_data_predict', 'delimit_data_predict',
                  'start_logging', 'name_file_log', 'drop_old_log', 'logger')
     
     def __init__(self):
@@ -28,9 +29,11 @@ class ConfigurationEnginnering(object):
     def __del__(self):
         del self.chunck
         del self.enable_preprocessing
+        del self.autoclean
         del self.save_matrix_prediction
         del self.file_name_matrix_prediction
-        del self.autoclean
+        del self.format_data_predict
+        del self.delimit_data_predict
         del self.start_logging
         del self.name_file_log
         del self.drop_old_log
