@@ -1,4 +1,6 @@
-class BaseEnginnering(object):
+from grimoire.ConfigurationEnginnering import ConfigurationEnginnering
+
+class BaseEnginnering(ConfigurationEnginnering):
     
     __slots__ = ('train_X', 'train_y', 'predict_X', 'chunck')
     
@@ -6,13 +8,11 @@ class BaseEnginnering(object):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
-        self.chunck = 32
         
     def __del__(self):
         del self.train_X
         del self.train_y
         del self.predict_X
-        del self.chunck
         
     def get_subset(self, columns) -> tuple:
         df_subset_x = self.train_X.loc[:, columns]

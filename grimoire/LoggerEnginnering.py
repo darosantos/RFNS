@@ -5,8 +5,8 @@ class LoggerEnginnering:
     __slots__ = ('name', 'level', 'path', 'log_file', 
                  'default_extension', 'formatter', 'logger')
     
-    def __init__(self, name, log_file, path='', 
-                 level=logging.DEBUG, drop_old=False):
+    def __init__(self, log_file='', path='', 
+                 level=logging.DEBUG, drop_old=False, name='enginnering'):
         self.name = name
         self.level = level
         self.path = path
