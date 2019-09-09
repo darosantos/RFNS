@@ -55,6 +55,9 @@ class LoggerEnginnering:
             remove(self.get_log_name())
         
     def run(self):
+        if self.log_file == '':
+            return
+            
         handler = logging.FileHandler(self.get_log_name())
         handler.setFormatter(logging.Formatter(self.formatter))
 
@@ -63,6 +66,9 @@ class LoggerEnginnering:
         self.logger.addHandler(handler)
     
     def add(self, type, msg):
+        if self.log_file == '':
+            return
+            
         msg = str(msg)
         if type == 'info':
             self.logger.info(msg)
