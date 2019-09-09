@@ -65,3 +65,4 @@ COD		Title		DESCRIÇÃO
 #d300819005     Altera a classe EnginneringForest   Alterado o método voting para corresponder as necessidadeis atuais
 #d300819006     Altera a classe EnginneringForest   Alterado o método predict para manter logs dos dados de predição
 #d070919001     Altera o projeto                    Adiciona a classe ConfigurationEnginnering e coloca nela todos os utilitários do projeto
+#d090919001     Altera a classe LoggerEnginnering   Altera o método run e add para "silenciar" erro de alerta caso o ambiente de logging não esteja criado, assim não afetando as classes que usam LoggerEnginnering, mas não ativam o logging de imediato
