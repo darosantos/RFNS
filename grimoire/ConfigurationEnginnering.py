@@ -21,7 +21,7 @@ class ConfigurationEnginnering(object):
         self.delimit_data_predict = ','
         
         # Configuraton for logging
-        self.start_logging = False
+        self.start_logging = True
         self.name_file_log = ''
         self.drop_old_log = True
         self.logger = LoggerEnginnering()
@@ -37,14 +37,17 @@ class ConfigurationEnginnering(object):
         del self.start_logging
         del self.name_file_log
         del self.drop_old_log
-        del self.logger
+        # del self.logger
     
-    def run_logging(self):
+    def run_logging(self, auto_starting=False):
+        if auto_starting:
+            self.auto_starting = True
+            
         if self.start_logging:
             if self.name_file_log == '':
-                local_time = strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
+                local_time = strftime("%a, %d %b %Y %H-%M-%S +0000", gmtime())
                 self.name_file_log =  'enginnering_{0}'.format(local_time)
-                
+            print('File log name ', self.name_file_log)
             self.logger = LoggerEnginnering(log_file=self.name_file_log,
                                             drop_old=self.drop_old_log)
                                             
