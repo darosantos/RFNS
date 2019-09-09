@@ -24,3 +24,7 @@ gprof2dot -f pstats profile.prof -o graph.dot
 
 Blaze
 Numba
+Sympy https://www.sympy.org/pt/index.html
+
+https://github.com/biosustain/optlang
+
