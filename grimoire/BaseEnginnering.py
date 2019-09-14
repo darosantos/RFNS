@@ -9,6 +9,8 @@ class BaseEnginnering(ConfigurationEnginnering):
         self.train_y = []
         self.predict_X = []
         
+        super().__init__()
+        
     def __del__(self):
         del self.train_X
         del self.train_y

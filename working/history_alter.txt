@@ -67,3 +67,4 @@ COD		Title		DESCRIÇÃO
 #d070919001     Altera o projeto                    Adiciona a classe ConfigurationEnginnering e coloca nela todos os utilitários do projeto
 #d090919001     Altera a classe LoggerEnginnering   Altera o método run e add para "silenciar" erro de alerta caso o ambiente de logging não esteja criado, assim não afetando as classes que usam LoggerEnginnering, mas não ativam o logging de imediato
 #d090919002     Adiciona ConfigurationEnginnering   Adiciona a classe ConfigurationEnginnering responsável por conter todas as configurações do projeto que não estejam relacionados aos algoritmos de aprendizado de máquina
+#d140919001     Altera a classe ConfigurationEnginnering   Correção de bugs

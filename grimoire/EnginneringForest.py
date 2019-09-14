@@ -1,5 +1,6 @@
 from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
 from pandas import DataFrame, Series
+from numpy import matrix
 import time
 
 class EnginneringForest(ClassifierEnginneringForest):
@@ -99,7 +100,7 @@ class EnginneringForest(ClassifierEnginneringForest):
                 subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
             
-            block_predict = np.matrix(block_predict)
+            block_predict = matrix(block_predict)
             self.run_save_predict(block_predict)
             
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
