@@ -1,13 +1,13 @@
 from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
 from pandas import DataFrame, Series
-from numpy import matrix
+from numpy import matrix, unique
 import time
 
 class EnginneringForest(ClassifierEnginneringForest):
     
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'vector_predict_', 'n_features_', 'n_samples_', 
-                 'name_features_')
+                 'name_features_', 'classes_')
     
     def __init__(self, select_features: int):
         if type(select_features) != int:
@@ -20,6 +20,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
+        self.classes_ = []
         
         super().__init__()
         
@@ -66,6 +67,11 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.name_features_ = X.columns
         self.train_X = X
         self.train_y = y
+        
+        if self.auto_coded_target:
+            self.classes_ = unique(y)
+        else:
+            self.classes_ = list(set(y))
         
         self.build(features_set=self.name_features_)
 

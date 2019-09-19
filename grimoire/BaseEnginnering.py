@@ -76,3 +76,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                 
             for item in pair_blocks:
                 (yield (item))
+
+    def get_transform(self):
+        if self.preprocessing_enable:
+            self.run_transformer()
