@@ -77,3 +77,4 @@ COD		Title		DESCRIÇÃO
 #d190819006     Altera a classe ConfigurationEnginnering   Altera o método run_transformer renomeando-o para run_encoder; adiciona as novas propriedades em __slots__; corrige o método __del__
 #d190819007     Altera a classe ConfigurationEnginnering   Inclui o atributo normalize_enable para que o pré-profecessamento com a transformação dos dados possa ser executada separadamente da normalização
 #d190819008     Altera a classe EnginneringForest   Adiciona a definição das funções get_transform, get_normalize e get_preprocessing
+#d190819009     Altera a classe EnginneringForest   Adequa a escrita do código para as orientações PEP
