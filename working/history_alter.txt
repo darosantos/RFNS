@@ -70,3 +70,4 @@ COD		Title		DESCRIÇÃO
 #d140919001     Altera a classe ConfigurationEnginnering   Correção de bugs
 #d140919001     Altera o projeto                    Altera o código para funcionar com mais de uma classe alvo
 #d190819001     Altera a classe ConfigurationEnginnering   Adequa a escrita do código para as orientações PEP
+#d190819002     Altera a classe ConfigurationEnginnering   Adiciona o método run_encoder_data para que o usuário possa especificar qual codificador será usado nos dados (X)
