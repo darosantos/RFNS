@@ -25,6 +25,7 @@ class ConfigurationEnginnering:
         self.preprocessing_enable = False
         self.preprocessing_data = False
         self.preprocessing_target = False
+        self.preprocessing_scaler = False
         self.encoder_X = None
         self.encoder_y = None
         self.scaler = None
@@ -116,6 +117,11 @@ class ConfigurationEnginnering:
                                            handle_unknown='ignore',
                                            n_values='auto',
                                            categorical_features='all')
+
         if self.preprocessing_target & (self.enconder_y is None):
             self.encoder_y = LabelEncoder()
-            
+
+        if self.preprocessing_scaler & (self.scaler is None):
+            self.scaler = StandardScaler(copy=True,
+                                         with_mean=True,
+                                         with_std=True)
