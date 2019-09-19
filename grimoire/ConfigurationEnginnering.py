@@ -26,6 +26,7 @@ class ConfigurationEnginnering:
         self.preprocessing_target = False
         self.encoder_X = None
         self.encoder_y = None
+        self.scaler = None
 
         # Configuration for save data predict
         self.save_matrix_prediction = True
@@ -76,8 +77,12 @@ class ConfigurationEnginnering:
             self.encoder_X = LabelEncoder()
         elif encoder_type == 1:
             self.encoder_X = OneHotEncoder(categories='auto',
+                                           drop=None,
                                            sparse=False,
-                                           handle_unknown='ignore')
+                                           dtype=np.float64,
+                                           handle_unknown='ignore',
+                                           n_values='auto',
+                                           categorical_features='all')
         elif encoder_type == 2:
             self.encoder_X = OrdinalEncoder(categories='auto',
                                             dtype=np.float64)
@@ -89,8 +94,12 @@ class ConfigurationEnginnering:
     def run_transformer(self):
         if self.preprocessing_data & (self.enconder_X is None):
             self.encoder_X = OneHotEncoder(categories='auto',
+                                           drop=None,
                                            sparse=False,
-                                           handle_unknown='ignore')
+                                           dtype=np.float64,
+                                           handle_unknown='ignore',
+                                           n_values='auto',
+                                           categorical_features='all')
         if self.preprocessing_target & (self.enconder_y is None):
             self.encoder_y = LabelEncoder()
             
