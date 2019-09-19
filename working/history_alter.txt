@@ -74,3 +74,4 @@ COD		Title		DESCRIÇÃO
 #d190819003     Altera a classe ConfigurationEnginnering   Adiciona o método run_transformer que inicializa os codificadores default a serem usados nos dados (X,y), este método só faz sentido em ser usado caso o método run_encoder_data não tenha sido chamado anteriormente.
 #d190819004     Altera a classe ConfigurationEnginnering   Adiciona o método run_scaler_data para que o usuário possa especificar qual classe de escala a ser usado nos dados (X)
 #d190819005     Altera a classe ConfigurationEnginnering   Altera o método run_transformer para incluir a inicialização de uma classe para colcoar em escalar os dados (X)
+#d190819006     Altera a classe ConfigurationEnginnering   Altera o método run_transformer renomeando-o para run_encoder; adiciona as novas propriedades em __slots__; corrige o método __del__

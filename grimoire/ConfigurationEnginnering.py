@@ -11,7 +11,8 @@ class ConfigurationEnginnering:
 
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'preprocessing_data',
-                 'preprocessing_target', 'encoder_X', 'encoder_y',
+                 'preprocessing_target', 'preprocessing_scaler',
+                 'encoder_X', 'encoder_y', 'scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
                  'format_data_predict', 'delimit_data_predict',
                  'start_logging', 'name_file_log', 'drop_old_log', 'logger')
@@ -44,8 +45,15 @@ class ConfigurationEnginnering:
 
     def __del__(self):
         del self.chunck
-        del self.enable_preprocessing
         del self.autoclean
+        del self.str_data_format
+        del self.preprocessing_enable
+        del self.preprocessing_data
+        del self.preprocessing_target
+        del self.preprocessing_scaler
+        del self.encoder_X
+        del self.encoder_y
+        del self.scaler
         del self.save_matrix_prediction
         del self.file_name_matrix_prediction
         del self.format_data_predict
@@ -108,7 +116,7 @@ class ConfigurationEnginnering:
         else:
             raise TypeError("Don't you specified scaler?")
 
-    def run_transformer(self):
+    def run_encoder(self):
         if self.preprocessing_data & (self.enconder_X is None):
             self.encoder_X = OneHotEncoder(categories='auto',
                                            drop=None,
