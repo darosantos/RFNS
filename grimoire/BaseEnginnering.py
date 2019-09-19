@@ -80,3 +80,9 @@ class BaseEnginnering(ConfigurationEnginnering):
     def get_transform(self):
         if self.preprocessing_enable:
             self.run_transformer()
+            
+    def get_normalize(self):
+        pass
+    
+    def get_preprocessing(self):
+        pass
