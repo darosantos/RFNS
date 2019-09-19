@@ -12,7 +12,7 @@ class ConfigurationEnginnering:
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'preprocessing_data',
                  'preprocessing_target', 'preprocessing_scaler',
-                 'encoder_X', 'encoder_y', 'scaler',
+                 'encoder_X', 'encoder_y', 'normalize_enable', 'scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
                  'format_data_predict', 'delimit_data_predict',
                  'start_logging', 'name_file_log', 'drop_old_log', 'logger')
@@ -29,6 +29,7 @@ class ConfigurationEnginnering:
         self.preprocessing_scaler = False
         self.encoder_X = None
         self.encoder_y = None
+        self.normalize_enable = False
         self.scaler = None
 
         # Configuration for save data predict
@@ -53,6 +54,7 @@ class ConfigurationEnginnering:
         del self.preprocessing_scaler
         del self.encoder_X
         del self.encoder_y
+        del self.normalize_enable
         del self.scaler
         del self.save_matrix_prediction
         del self.file_name_matrix_prediction
