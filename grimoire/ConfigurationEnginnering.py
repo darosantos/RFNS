@@ -2,6 +2,7 @@ from grimoire.LoggerEnginnering import LoggerEnginnering
 
 from time import gmtime, strftime
 from sklearn.preprocessing import LabelEncoder, OrdinalEncoder, OneHotEncoder
+from sklear.preprocessing import StandardScaler, RobustScaler
 
 import numpy as np
 
@@ -90,6 +91,21 @@ class ConfigurationEnginnering:
             self.encoder_X = my_encoder
         else:
             raise TypeError("Don't you specified encoder?")
+
+    def run_scaler_data(self, scaler_type, my_scaler=None):
+        if scaler_type == 0:
+            self.scaler = StandardScaler(copy=True,
+                                         with_mean=True,
+                                         with_std=True)
+        elif scaler_type == 1:
+            self.scaler = RobustScaler(with_centering=True,
+                                       with_scaling=True,
+                                       quantile_range=(25.0, 75.0),
+                                       copy=True)
+        elif scaler_type == 2:
+            self.scaler = my_scaler
+        else:
+            raise TypeError("Don't you specified scaler?")
 
     def run_transformer(self):
         if self.preprocessing_data & (self.enconder_X is None):
