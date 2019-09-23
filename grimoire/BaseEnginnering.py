@@ -1,9 +1,8 @@
 from grimoire.ConfigurationEnginnering import ConfigurationEnginnering
 
-
 class BaseEnginnering(ConfigurationEnginnering):
 
-    __slots__ = ('train_X', 'train_y', 'predict_X', 'chunck')
+    __slots__ = ('train_X', 'train_y', 'predict_X')
 
     def __init__(self):
         self.train_X = []
@@ -77,12 +76,44 @@ class BaseEnginnering(ConfigurationEnginnering):
             for item in pair_blocks:
                 (yield (item))
 
+# Implementar no método para que a transformação sejap progressiva
     def get_transform(self):
-        if self.preprocessing_enable:
-            self.run_transformer()
+        if self.encoder_enable & self.encoder_data:
+            self.run_encoder_data(1)
+            #self.train_X = self.encoder_X.fit_transform(self.train_X)
+            for col in self.train_X.columns:
+                if type(self.train_X[col][0]) in self.encoder_not_type:
+                    self.encoder_df.insert(loc=self.encoder_df.shape[1],
+                                           column=col,
+                                           value=self.train_X[col])
+                else:
+                    df_col = self.train_X.loc[:, [col]]
+                    # reverse list of unique values
+                    unique_categories = df_col[col].unique()[::-1]
+                    self.encoder_feature[col] = unique_categories
+                    df_tmp = self.encoder_X.fit_transform(df_col)
+                    if (len(df_tmp.shape) == 1):
+                        self.encoder_df.insert(loc=self.encoder_df.shape[1],
+                                               column='{0}_all'.format(col), 
+                                               value=df_tmp)
+                    else:
+                        index_shape = range(df_tmp.shape[1])
+                        for i, c in zip(index_shape, unique_categories):
+                            self.encoder_df.insert(loc=self.encoder_df.shape[1],
+                                                   column='{0}_{1}'.format(col, c), 
+                                                   value=df_tmp[:,i])
+            del self.train_X
+            self.train_X = self.encoder_df
+            self.encoder_df = None
+
+            
+        if self.encoder_enable & self.encoder_target:
+            self.run_encoder_target(0)
+            self.train_y = self.encoder_y.fit_transform(self.train_y)
 
     def get_normalize(self):
         pass
 
+# Adicionar na etapa de preprocessamento um código que verifica a integridade do dataset
     def get_preprocessing(self):
         pass
