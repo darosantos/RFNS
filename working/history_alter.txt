@@ -69,12 +69,13 @@ COD		Title		DESCRIÇÃO
 #d090919002     Adiciona ConfigurationEnginnering   Adiciona a classe ConfigurationEnginnering responsável por conter todas as configurações do projeto que não estejam relacionados aos algoritmos de aprendizado de máquina
 #d140919001     Altera a classe ConfigurationEnginnering   Correção de bugs
 #d140919001     Altera o projeto                    Altera o código para funcionar com mais de uma classe alvo
-#d190819001     Altera a classe ConfigurationEnginnering   Adequa a escrita do código para as orientações PEP
-#d190819002     Altera a classe ConfigurationEnginnering   Adiciona o método run_encoder_data para que o usuário possa especificar qual codificador será usado nos dados (X)
-#d190819003     Altera a classe ConfigurationEnginnering   Adiciona o método run_transformer que inicializa os codificadores default a serem usados nos dados (X,y), este método só faz sentido em ser usado caso o método run_encoder_data não tenha sido chamado anteriormente.
-#d190819004     Altera a classe ConfigurationEnginnering   Adiciona o método run_scaler_data para que o usuário possa especificar qual classe de escala a ser usado nos dados (X)
-#d190819005     Altera a classe ConfigurationEnginnering   Altera o método run_transformer para incluir a inicialização de uma classe para colcoar em escalar os dados (X)
-#d190819006     Altera a classe ConfigurationEnginnering   Altera o método run_transformer renomeando-o para run_encoder; adiciona as novas propriedades em __slots__; corrige o método __del__
-#d190819007     Altera a classe ConfigurationEnginnering   Inclui o atributo normalize_enable para que o pré-profecessamento com a transformação dos dados possa ser executada separadamente da normalização
-#d190819008     Altera a classe EnginneringForest   Adiciona a definição das funções get_transform, get_normalize e get_preprocessing
-#d190819009     Altera a classe EnginneringForest   Adequa a escrita do código para as orientações PEP
+#d190919001     Altera a classe ConfigurationEnginnering   Adequa a escrita do código para as orientações PEP
+#d190919002     Altera a classe ConfigurationEnginnering   Adiciona o método run_encoder_data para que o usuário possa especificar qual codificador será usado nos dados (X)
+#d190919003     Altera a classe ConfigurationEnginnering   Adiciona o método run_transformer que inicializa os codificadores default a serem usados nos dados (X,y), este método só faz sentido em ser usado caso o método run_encoder_data não tenha sido chamado anteriormente.
+#d190919004     Altera a classe ConfigurationEnginnering   Adiciona o método run_scaler_data para que o usuário possa especificar qual classe de escala a ser usado nos dados (X)
+#d190919005     Altera a classe ConfigurationEnginnering   Altera o método run_transformer para incluir a inicialização de uma classe para colcoar em escalar os dados (X)
+#d190919006     Altera a classe ConfigurationEnginnering   Altera o método run_transformer renomeando-o para run_encoder; adiciona as novas propriedades em __slots__; corrige o método __del__
+#d190919007     Altera a classe ConfigurationEnginnering   Inclui o atributo normalize_enable para que o pré-profecessamento com a transformação dos dados possa ser executada separadamente da normalização
+#d190919008     Altera a classe EnginneringForest   Adiciona a definição das funções get_transform, get_normalize e get_preprocessing
+#d190919009     Altera a classe EnginneringForest   Adequa a escrita do código para as orientações PEP
+#d230919001     Altera a classe ConfigurationEnginnering   Adiciona novos atributos e alteram outros para que a classe fique mais simples de gerenciar o pré-processamento e para que a classe fique encarregada somente de manter os métodos para inicialização das instâncias para encoder e normalize dos dados.

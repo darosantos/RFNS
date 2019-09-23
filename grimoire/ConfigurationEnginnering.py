@@ -2,16 +2,20 @@ from grimoire.LoggerEnginnering import LoggerEnginnering
 
 from time import gmtime, strftime
 from sklearn.preprocessing import LabelEncoder, OrdinalEncoder, OneHotEncoder
-from sklear.preprocessing import StandardScaler, RobustScaler
+from sklearn.preprocessing import StandardScaler, RobustScaler
 
 import numpy as np
+
+from pandas import DataFrame
 
 
 class ConfigurationEnginnering:
 
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
-                 'preprocessing_enable', 'preprocessing_data',
-                 'preprocessing_target', 'preprocessing_scaler',
+                 'preprocessing_enable', 'encoder_enable', 'encoder_data',
+                 'encoder_target', 'encoder_not_type', 'encoder_feature',
+                 'encoder_df', 
+                 'preprocessing_scaler',
                  'encoder_X', 'encoder_y', 'normalize_enable', 'scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
                  'format_data_predict', 'delimit_data_predict',
@@ -24,12 +28,27 @@ class ConfigurationEnginnering:
 
         # Configuration for prepossing
         self.preprocessing_enable = False
-        self.preprocessing_data = False
-        self.preprocessing_target = False
+        # Usado para criar os codificadores
+        self.encoder_enable = False
+        # Usado para codificar os dados
+        self.encoder_data = False
+        # Usado para codificar os rótulos
+        self.encoder_target = False
+        #
+        self.encoder_not_type = [int, float, complex,
+                                 np.int8, np.int16, np.int32, np.int64,
+                                 np.float, np.float64, np.complex64]
+        #
+        self.encoder_feature = {}
+        #
+        self.encoder_df = DataFrame()
+        #
+        # self.encoder_drop_old_data = True
+
         self.preprocessing_scaler = False
         self.encoder_X = None
         self.encoder_y = None
-        self.normalize_enable = False
+        self.normalize_enable = False # deprecated
         self.scaler = None
 
         # Configuration for save data predict
@@ -84,24 +103,33 @@ class ConfigurationEnginnering:
                        fmt=self.format_data_predict,
                        delimiter=self.delimit_data_predict)
 
-    def run_encoder_data(self, encoder_type, my_encoder=None):
-        if encoder_type == 0:
-            self.encoder_X = LabelEncoder()
-        elif encoder_type == 1:
-            self.encoder_X = OneHotEncoder(categories='auto',
-                                           drop=None,
-                                           sparse=False,
-                                           dtype=np.float64,
-                                           handle_unknown='ignore',
-                                           n_values='auto',
-                                           categorical_features='all')
-        elif encoder_type == 2:
-            self.encoder_X = OrdinalEncoder(categories='auto',
-                                            dtype=np.float64)
-        elif encoder_type == 3:
-            self.encoder_X = my_encoder
-        else:
-            raise TypeError("Don't you specified encoder?")
+    def run_encoder_data(self, encoder_type, my_encoder=None, force=False):
+        if self.encoder_enable & (self.encoder_X is None) | force:
+            if encoder_type == 0:
+                self.encoder_X = LabelEncoder()
+            elif encoder_type == 1:
+                self.encoder_X = OneHotEncoder(categories='auto',
+                                               drop=None,
+                                               sparse=False,
+                                               dtype=np.float64,
+                                               handle_unknown='ignore',
+                                               n_values='auto')
+            elif encoder_type == 2:
+                self.encoder_X = OrdinalEncoder(categories='auto',
+                                                dtype=np.float64)
+            elif encoder_type == 3:
+                self.encoder_X = my_encoder
+            else:
+                raise TypeError("Don't you specified encoder for data?")
+
+    def run_encoder_target(self, encoder_type, my_encoder=None, force=False):
+        if self.encoder_enable & (self.encoder_y is None) | force:
+            if encoder_type == 0:
+                self.encoder_X = LabelEncoder()
+            elif encoder_type == 1:
+                self.encoder_y = my_encoder
+            else:
+                raise TypeError("Don't you specified encoder for target?")
 
     def run_scaler_data(self, scaler_type, my_scaler=None):
         if scaler_type == 0:
@@ -118,15 +146,14 @@ class ConfigurationEnginnering:
         else:
             raise TypeError("Don't you specified scaler?")
 
-    def run_encoder(self):
+    def run_preprocessing(self):
         if self.preprocessing_data & (self.enconder_X is None):
             self.encoder_X = OneHotEncoder(categories='auto',
                                            drop=None,
                                            sparse=False,
                                            dtype=np.float64,
                                            handle_unknown='ignore',
-                                           n_values='auto',
-                                           categorical_features='all')
+                                           n_values='auto')
 
         if self.preprocessing_target & (self.enconder_y is None):
             self.encoder_y = LabelEncoder()
