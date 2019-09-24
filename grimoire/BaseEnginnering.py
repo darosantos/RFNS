@@ -79,7 +79,6 @@ class BaseEnginnering(ConfigurationEnginnering):
             for item in pair_blocks:
                 (yield (item))
 
-# Implementar no método para que a transformação sejap progressiva
     def get_transform(self):
         if self.encoder_enable & self.encoder_data & (self.encoder_flag[0] == 0):
             self.run_encoder_data()
@@ -120,7 +119,14 @@ class BaseEnginnering(ConfigurationEnginnering):
             self.encoder_flag[1] = 1
 
     def get_normalize(self):
-        pass
+        if self.normalize_enable & (self.normalize_flag == 0):
+            self.run_scaler_data()
+            normal_index = self.train_X.index
+            normal_values = self.normalize_scaler.fit_transform(self.train_X)
+            normal_columns = self.train_X.columns
+            self.train_X = DataFrame(data=normal_values,
+                                     index=normal_index,
+                                     columns=normal_columns)
 
 # Adicionar na etapa de preprocessamento um código que verifica a integridade do dataset
     def get_preprocessing(self):
