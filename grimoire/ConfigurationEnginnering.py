@@ -12,7 +12,8 @@ class ConfigurationEnginnering:
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'encoder_enable', 'encoder_data',
                  'encoder_target', 'encoder_not_type', 'encoder_feature',
-                 'encoder_flag', 'normalize_enable', 'normalize_flag',
+                 'encoder_flag', 'encoder_categorical_columns',
+                 'normalize_enable', 'normalize_flag',
                  'encoder_X', 'encoder_y', 'normalize_scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
                  'format_data_predict', 'delimit_data_predict',
@@ -39,6 +40,8 @@ class ConfigurationEnginnering:
         self.encoder_feature = {}
         # Usado para contorlar se X ou y foram codificados
         self.encoder_flag = [0, 0]
+        # Usado para guardar o nome das colunas que foram codificadas
+        self.encoder_categorical_columns = []
         # Usado para habilitar a normalização
         self.normalize_enable = False
         # Usado para controle da normalização caso feita ou não
@@ -74,6 +77,7 @@ class ConfigurationEnginnering:
         del self.encoder_not_type
         del self.encoder_feature
         del self.encoder_flag
+        del self.encoder_categorical_columns
         del self.normalize_enable
         del self.normalize_flag
         del self.encoder_X
