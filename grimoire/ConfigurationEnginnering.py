@@ -6,15 +6,12 @@ from sklearn.preprocessing import StandardScaler, RobustScaler
 
 import numpy as np
 
-from pandas import DataFrame
-
 
 class ConfigurationEnginnering:
 
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'encoder_enable', 'encoder_data',
                  'encoder_target', 'encoder_not_type', 'encoder_feature',
-                 'encoder_df', 
                  'preprocessing_scaler',
                  'encoder_X', 'encoder_y', 'normalize_enable', 'scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
@@ -40,10 +37,6 @@ class ConfigurationEnginnering:
                                  np.float, np.float64, np.complex64]
         #
         self.encoder_feature = {}
-        #
-        self.encoder_df = DataFrame()
-        #
-        # self.encoder_drop_old_data = True
 
         self.preprocessing_scaler = False
         self.encoder_X = None
