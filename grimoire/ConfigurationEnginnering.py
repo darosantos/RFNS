@@ -103,8 +103,8 @@ class ConfigurationEnginnering:
                        fmt=self.format_data_predict,
                        delimiter=self.delimit_data_predict)
 
-    def run_encoder_data(self, encoder_type, my_encoder=None, force=False):
-        if self.encoder_enable & (self.encoder_X is None) | force:
+    def run_encoder_data(self, encoder_type=1, my_encoder=None, force=False):
+        if (self.encoder_enable & (self.encoder_X is None)) | force:
             if encoder_type == 0:
                 self.encoder_X = LabelEncoder()
             elif encoder_type == 1:
@@ -122,10 +122,10 @@ class ConfigurationEnginnering:
             else:
                 raise TypeError("Don't you specified encoder for data?")
 
-    def run_encoder_target(self, encoder_type, my_encoder=None, force=False):
-        if self.encoder_enable & (self.encoder_y is None) | force:
+    def run_encoder_target(self, encoder_type=0, my_encoder=None, force=False):
+        if (self.encoder_enable & (self.encoder_y is None)) | force:
             if encoder_type == 0:
-                self.encoder_X = LabelEncoder()
+                self.encoder_y = LabelEncoder()
             elif encoder_type == 1:
                 self.encoder_y = my_encoder
             else:
