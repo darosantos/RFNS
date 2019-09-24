@@ -79,10 +79,10 @@ class BaseEnginnering(ConfigurationEnginnering):
             for item in pair_blocks:
                 (yield (item))
 
-    def get_transform(self):
-        if self.encoder_enable & self.encoder_data & (self.encoder_flag[0] == 0):
-            self.run_encoder_data()
-            #self.train_X = self.encoder_X.fit_transform(self.train_X)
+    def get_transform(self, data_encoder_type=1, target_encoder_type=0):
+        start = self.encoder_enable & self.encoder_data
+        if start & (self.encoder_flag[0] == 0):
+            self.run_encoder_data(data_encoder_type)
             encoder_df = DataFrame(index=self.train_X.index)
             for col in self.train_X.columns:
                 if type(self.train_X[col][0]) in self.encoder_not_type:
@@ -98,7 +98,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                     if (len(df_tmp.shape) == 1):
                         col_name = '{0}_all'.format(col)
                         encoder_df.insert(loc=encoder_df.shape[1],
-                                          column= col_name,
+                                          column=col_name,
                                           value=df_tmp)
                         self.encoder_categorical_columns.append(col_name)
                     else:
@@ -106,35 +106,36 @@ class BaseEnginnering(ConfigurationEnginnering):
                         for i, c in zip(index_shape, unique_categories):
                             col_name = '{0}_{1}'.format(col, c)
                             encoder_df.insert(loc=encoder_df.shape[1],
-                                              column=col_name, 
-                                              value=df_tmp[:,i])
+                                              column=col_name,
+                                              value=df_tmp[:, i])
                             self.encoder_categorical_columns.append(col_name)
             del self.train_X
             self.train_X = encoder_df.copy()
             del encoder_df
             self.encoder_flag[0] = 1
 
-            
-        if self.encoder_enable & self.encoder_target & (self.encoder_flag[1] == 0):
-            self.run_encoder_target()
+        start = self.encoder_enable & self.encoder_target
+        if start & (self.encoder_flag[1] == 0):
+            self.run_encoder_target(target_encoder_type)
             encoder_index = self.train_y.index
             encoder_values = self.encoder_y.fit_transform(self.train_y)
             self.train_y = Series(data=encoder_values, index=encoder_index)
             self.encoder_flag[1] = 1
 
-    def get_normalize(self):
+    def get_normalize(self, scaler_type=0):
         if self.normalize_enable & (self.normalize_flag == 0):
-            # estrai somente os atributos numéricos
             column_numerical = [col for col in self.train_X
                                 if col not in self.encoder_categorical_columns]
             df_tmp = self.train_X.loc[:, column_numerical]
-            self.run_scaler_data()
+            self.run_scaler_data(scaler_type)
             normal_values = self.normalize_scaler.fit_transform(df_tmp)
-            index_shape = range(normal_values.shape[1]) 
+            index_shape = range(normal_values.shape[1])
             for i, c in zip(index_shape, column_numerical):
                 self.train_X[c] = normal_values[:, i]
             self.normalize_flag = 1
 
-# Adicionar na etapa de preprocessamento um código que verifica a integridade do dataset
     def get_preprocessing(self):
-        pass
+        if self.preprocessing_enable:
+            self.run_preprocessing()
+            self.get_transform()
+            self.get_normalize()

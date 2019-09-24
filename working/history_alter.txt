@@ -90,3 +90,4 @@ COD		Title		DESCRIÇÃO
 #d240919008    Altera a classe EnginneringForest   Altera o métoddo get_normalize para colocar em escala somente as colunas que não foram codificadas; inclui o o uso do atributo encoder_categorical_columns no método get_transform para a medida que as classes forem codificadas o nome da coluna seja guardado
 #d240919009    Altera a classe EnginneringForest   Remove código de comentário
 #d240919010    Altera a classe ConfigurationEnginnering    Implementa o método run_preprocessing
+#d240919011    Altera a classe EnginneringForest    Implementa o método get_preprocessing, adiciona parâmetros default aos métodos get_normalize e get_transform
