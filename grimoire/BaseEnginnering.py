@@ -96,15 +96,19 @@ class BaseEnginnering(ConfigurationEnginnering):
                     self.encoder_feature[col] = unique_categories
                     df_tmp = self.encoder_X.fit_transform(df_col)
                     if (len(df_tmp.shape) == 1):
+                        col_name = '{0}_all'.format(col)
                         encoder_df.insert(loc=encoder_df.shape[1],
-                                          column='{0}_all'.format(col), 
+                                          column= col_name,
                                           value=df_tmp)
+                        self.encoder_categorical_columns.append(col_name)
                     else:
                         index_shape = range(df_tmp.shape[1])
                         for i, c in zip(index_shape, unique_categories):
+                            col_name = '{0}_{1}'.format(col, c)
                             encoder_df.insert(loc=encoder_df.shape[1],
-                                              column='{0}_{1}'.format(col, c), 
+                                              column=col_name, 
                                               value=df_tmp[:,i])
+                            self.encoder_categorical_columns.append(col_name)
             del self.train_X
             self.train_X = encoder_df.copy()
             del encoder_df
@@ -120,13 +124,24 @@ class BaseEnginnering(ConfigurationEnginnering):
 
     def get_normalize(self):
         if self.normalize_enable & (self.normalize_flag == 0):
+            # estrai somente os atributos numéricos
+            column_numerical = [col for col in self.train_X
+                                if col not in self.encoder_categorical_columns]
+            df_tmp = self.train_X.loc[:, column_numerical]
             self.run_scaler_data()
-            normal_index = self.train_X.index
-            normal_values = self.normalize_scaler.fit_transform(self.train_X)
-            normal_columns = self.train_X.columns
-            self.train_X = DataFrame(data=normal_values,
-                                     index=normal_index,
-                                     columns=normal_columns)
+            normal_values = self.normalize_scaler.fit_transform(df_tmp)
+            index_shape = range(normal_values.shape[1]) 
+            for i, c in zip(index_shape, column_numerical):
+                self.train_X[c] = normal_values[:, i]
+            self.normalize_flag = 1
+        #if self.normalize_enable & (self.normalize_flag == 0):
+        #    self.run_scaler_data()
+        #    normal_index = self.train_X.index
+        #    normal_values = self.normalize_scaler.fit_transform(self.train_X)
+        #    normal_columns = self.train_X.columns
+        #    self.train_X = DataFrame(data=normal_values,
+        #                             index=normal_index,
+        #                             columns=normal_columns)
 
 # Adicionar na etapa de preprocessamento um código que verifica a integridade do dataset
     def get_preprocessing(self):
