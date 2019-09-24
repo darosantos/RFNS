@@ -158,19 +158,9 @@ class ConfigurationEnginnering:
             else:
                 raise TypeError("Don't you specified scaler?")
 
-    def run_preprocessing(self):
-        if self.preprocessing_data & (self.enconder_X is None):
-            self.encoder_X = OneHotEncoder(categories='auto',
-                                           drop=None,
-                                           sparse=False,
-                                           dtype=np.float64,
-                                           handle_unknown='ignore',
-                                           n_values='auto')
-
-        if self.preprocessing_target & (self.enconder_y is None):
-            self.encoder_y = LabelEncoder()
-
-        if self.preprocessing_scaler & (self.scaler is None):
-            self.scaler = StandardScaler(copy=True,
-                                         with_mean=True,
-                                         with_std=True)
+    def run_preprocessing(self, data_encoder_type=1,
+                          target_encoder_type=0, scaler_type=0):
+        if self.preprocessing_enable:
+            self.run_encoder_data(data_encoder_type)
+            self.run_encoder_target(target_encoder_type)
+            self.run_scaler_data(scaler_type=0)
