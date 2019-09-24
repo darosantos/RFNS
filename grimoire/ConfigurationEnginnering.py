@@ -12,9 +12,8 @@ class ConfigurationEnginnering:
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'encoder_enable', 'encoder_data',
                  'encoder_target', 'encoder_not_type', 'encoder_feature',
-                 'encoder_flag',
-                 'preprocessing_scaler',
-                 'encoder_X', 'encoder_y', 'normalize_enable', 'scaler',
+                 'encoder_flag', 'normalize_enable', 'normalize_flag',
+                 'encoder_X', 'encoder_y', 'normalize_scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
                  'format_data_predict', 'delimit_data_predict',
                  'start_logging', 'name_file_log', 'drop_old_log', 'logger')
@@ -32,20 +31,24 @@ class ConfigurationEnginnering:
         self.encoder_data = False
         # Usado para codificar os rótulos
         self.encoder_target = False
-        #
+        # Usado para definir os tipos de dados que não são codificados
         self.encoder_not_type = [int, float, complex,
                                  np.int8, np.int16, np.int32, np.int64,
                                  np.float, np.float64, np.complex64]
-        #
+        # Usado para armazenar os atributos e valores codificados
         self.encoder_feature = {}
-        #
+        # Usado para contorlar se X ou y foram codificados
         self.encoder_flag = [0, 0]
-
-        self.preprocessing_scaler = False
+        # Usado para habilitar a normalização
+        self.normalize_enable = False
+        # Usado para controle da normalização caso feita ou não
+        self.normalize_flag = 0
+        # Objeto usado para codificar X
         self.encoder_X = None
+        # Objeto para codificar y
         self.encoder_y = None
-        self.normalize_enable = False # deprecated
-        self.scaler = None
+        # Objeto para normalziar os dados em X
+        self.normalize_scaler = None
 
         # Configuration for save data predict
         self.save_matrix_prediction = True
@@ -63,18 +66,25 @@ class ConfigurationEnginnering:
         del self.chunck
         del self.autoclean
         del self.str_data_format
+
         del self.preprocessing_enable
-        del self.preprocessing_data
-        del self.preprocessing_target
-        del self.preprocessing_scaler
+        del self.encoder_enable
+        del self.encoder_data
+        del self.encoder_target
+        del self.encoder_not_type
+        del self.encoder_feature
+        del self.encoder_flag
+        del self.normalize_enable
+        del self.normalize_flag
         del self.encoder_X
         del self.encoder_y
-        del self.normalize_enable
-        del self.scaler
+        del self.normalize_scaler
+
         del self.save_matrix_prediction
         del self.file_name_matrix_prediction
         del self.format_data_predict
         del self.delimit_data_predict
+
         del self.start_logging
         del self.name_file_log
         del self.drop_old_log
@@ -127,20 +137,22 @@ class ConfigurationEnginnering:
             else:
                 raise TypeError("Don't you specified encoder for target?")
 
-    def run_scaler_data(self, scaler_type, my_scaler=None):
-        if scaler_type == 0:
-            self.scaler = StandardScaler(copy=True,
-                                         with_mean=True,
-                                         with_std=True)
-        elif scaler_type == 1:
-            self.scaler = RobustScaler(with_centering=True,
-                                       with_scaling=True,
-                                       quantile_range=(25.0, 75.0),
-                                       copy=True)
-        elif scaler_type == 2:
-            self.scaler = my_scaler
-        else:
-            raise TypeError("Don't you specified scaler?")
+    def run_scaler_data(self, scaler_type=0, my_scaler=None, force=False):
+        if (self.normalize_enable & (self.normalize_scaler is None)) | force:
+            if scaler_type == 0:
+                self.normalize_scaler = StandardScaler(copy=True,
+                                                       with_mean=True,
+                                                       with_std=True)
+            elif scaler_type == 1:
+                p_qr = (25.0, 75.0)
+                self.normalize_scaler = RobustScaler(with_centering=True,
+                                                     with_scaling=True,
+                                                     quantile_range=p_qr,
+                                                     copy=True)
+            elif scaler_type == 2:
+                self.normalize_scaler = my_scaler
+            else:
+                raise TypeError("Don't you specified scaler?")
 
     def run_preprocessing(self):
         if self.preprocessing_data & (self.enconder_X is None):
