@@ -81,7 +81,7 @@ class BaseEnginnering(ConfigurationEnginnering):
 
 # Implementar no método para que a transformação sejap progressiva
     def get_transform(self):
-        if self.encoder_enable & self.encoder_data:
+        if self.encoder_enable & self.encoder_data & (self.encoder_flag[0] == 0):
             self.run_encoder_data()
             #self.train_X = self.encoder_X.fit_transform(self.train_X)
             encoder_df = DataFrame(index=self.train_X.index)
@@ -109,13 +109,15 @@ class BaseEnginnering(ConfigurationEnginnering):
             del self.train_X
             self.train_X = encoder_df.copy()
             del encoder_df
+            self.encoder_flag[0] = 1
 
             
-        if self.encoder_enable & self.encoder_target:
+        if self.encoder_enable & self.encoder_target & (self.encoder_flag[1] == 0):
             self.run_encoder_target()
             encoder_index = self.train_y.index
             encoder_values = self.encoder_y.fit_transform(self.train_y)
             self.train_y = Series(data=encoder_values, index=encoder_index)
+            self.encoder_flag[1] = 1
 
     def get_normalize(self):
         pass
