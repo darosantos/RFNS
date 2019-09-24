@@ -134,14 +134,6 @@ class BaseEnginnering(ConfigurationEnginnering):
             for i, c in zip(index_shape, column_numerical):
                 self.train_X[c] = normal_values[:, i]
             self.normalize_flag = 1
-        #if self.normalize_enable & (self.normalize_flag == 0):
-        #    self.run_scaler_data()
-        #    normal_index = self.train_X.index
-        #    normal_values = self.normalize_scaler.fit_transform(self.train_X)
-        #    normal_columns = self.train_X.columns
-        #    self.train_X = DataFrame(data=normal_values,
-        #                             index=normal_index,
-        #                             columns=normal_columns)
 
 # Adicionar na etapa de preprocessamento um código que verifica a integridade do dataset
     def get_preprocessing(self):

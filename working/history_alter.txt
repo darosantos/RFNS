@@ -88,3 +88,4 @@ COD		Title		DESCRIÇÃO
 #d240919006    Altera a classe ConfigurationEnginnering    Remove atributos não usados, reestrutura os atributos em __slots__, altera o método run_scaler_data para não ocorrer o problema relatado em #d240919004; adiciona comentários no código para faciliar o entendimento dos atributos
 #d240919007    Altera a classe ConfigurationEnginnering    Adiciona o atributo encoder_categorical_columns para guardar o nome das colunas que foram codificadas
 #d240919008    Altera a classe EnginneringForest   Altera o métoddo get_normalize para colocar em escala somente as colunas que não foram codificadas; inclui o o uso do atributo encoder_categorical_columns no método get_transform para a medida que as classes forem codificadas o nome da coluna seja guardado
+#d240919009    Altera a classe EnginneringForest   Remove código de comentário
