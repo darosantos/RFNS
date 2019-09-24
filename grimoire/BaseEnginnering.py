@@ -1,5 +1,8 @@
 from grimoire.ConfigurationEnginnering import ConfigurationEnginnering
 
+from pandas import DataFrame, Series
+
+
 class BaseEnginnering(ConfigurationEnginnering):
 
     __slots__ = ('train_X', 'train_y', 'predict_X')
@@ -79,13 +82,14 @@ class BaseEnginnering(ConfigurationEnginnering):
 # Implementar no método para que a transformação sejap progressiva
     def get_transform(self):
         if self.encoder_enable & self.encoder_data:
-            self.run_encoder_data(1)
+            self.run_encoder_data()
             #self.train_X = self.encoder_X.fit_transform(self.train_X)
+            encoder_df = DataFrame(index=self.train_X.index)
             for col in self.train_X.columns:
                 if type(self.train_X[col][0]) in self.encoder_not_type:
-                    self.encoder_df.insert(loc=self.encoder_df.shape[1],
-                                           column=col,
-                                           value=self.train_X[col])
+                    encoder_df.insert(loc=encoder_df.shape[1],
+                                      column=col,
+                                      value=self.train_X[col])
                 else:
                     df_col = self.train_X.loc[:, [col]]
                     # reverse list of unique values
@@ -93,23 +97,25 @@ class BaseEnginnering(ConfigurationEnginnering):
                     self.encoder_feature[col] = unique_categories
                     df_tmp = self.encoder_X.fit_transform(df_col)
                     if (len(df_tmp.shape) == 1):
-                        self.encoder_df.insert(loc=self.encoder_df.shape[1],
-                                               column='{0}_all'.format(col), 
-                                               value=df_tmp)
+                        encoder_df.insert(loc=encoder_df.shape[1],
+                                          column='{0}_all'.format(col), 
+                                          value=df_tmp)
                     else:
                         index_shape = range(df_tmp.shape[1])
                         for i, c in zip(index_shape, unique_categories):
-                            self.encoder_df.insert(loc=self.encoder_df.shape[1],
-                                                   column='{0}_{1}'.format(col, c), 
-                                                   value=df_tmp[:,i])
+                            encoder_df.insert(loc=encoder_df.shape[1],
+                                              column='{0}_{1}'.format(col, c), 
+                                              value=df_tmp[:,i])
             del self.train_X
-            self.train_X = self.encoder_df
-            self.encoder_df = None
+            self.train_X = encoder_df.copy()
+            del encoder_df
 
             
         if self.encoder_enable & self.encoder_target:
-            self.run_encoder_target(0)
-            self.train_y = self.encoder_y.fit_transform(self.train_y)
+            self.run_encoder_target()
+            encoder_index = self.train_y.index
+            encoder_values = self.encoder_y.fit_transform(self.train_y)
+            self.train_y = Series(data=encoder_values, index=encoder_index)
 
     def get_normalize(self):
         pass
