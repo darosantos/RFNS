@@ -12,6 +12,7 @@ class ConfigurationEnginnering:
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'encoder_enable', 'encoder_data',
                  'encoder_target', 'encoder_not_type', 'encoder_feature',
+                 'encoder_flag',
                  'preprocessing_scaler',
                  'encoder_X', 'encoder_y', 'normalize_enable', 'scaler',
                  'save_matrix_prediction',  'file_name_matrix_prediction',
@@ -37,6 +38,8 @@ class ConfigurationEnginnering:
                                  np.float, np.float64, np.complex64]
         #
         self.encoder_feature = {}
+        #
+        self.encoder_flag = [0, 0]
 
         self.preprocessing_scaler = False
         self.encoder_X = None
