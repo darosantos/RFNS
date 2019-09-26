@@ -134,8 +134,14 @@ class BaseEnginnering(ConfigurationEnginnering):
                 self.train_X[c] = normal_values[:, i]
             self.normalize_flag = 1
 
-    def get_preprocessing(self):
+    def get_preprocessing(self, data_encoder_type=1,
+                          target_encoder_type=0, scaler_type=0):
         if self.preprocessing_enable:
-            self.run_preprocessing()
+            self.encoder_enable = True
+            self.encoder_data = True
+            self.encoder_target = True
+            self.normalize_enable = True
+            self.run_preprocessing(data_encoder_type, target_encoder_type,
+                                   scaler_type)
             self.get_transform()
             self.get_normalize()
