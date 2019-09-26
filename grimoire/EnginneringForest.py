@@ -1,4 +1,6 @@
 from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
+from grimoire.ConstantsEnginnering import ConstantsEnginnering as ce
+
 from pandas import DataFrame, Series
 from numpy import matrix, unique
 import time
@@ -8,7 +10,8 @@ class EnginneringForest(ClassifierEnginneringForest):
 
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'vector_predict_', 'n_features_', 'n_samples_', 
-                 'name_features_', 'classes_')
+                 'name_features_', 'classes_', 'estrategy_trainning',
+                 'is_data_categorical')
 
     def __init__(self, select_features: int):
         if type(select_features) != int:
@@ -22,6 +25,8 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_samples_ = 0
         self.name_features_ = []
         self.classes_ = []
+        self.estrategy_trainning = ce.ESTRATEGY_TRAINNING_SINGLE.value
+        self.is_data_categorical = False
 
         super().__init__()
 
@@ -33,6 +38,8 @@ class EnginneringForest(ClassifierEnginneringForest):
         del self.n_features_
         del self.n_samples_
         del self.name_features_
+        del self.classes_
+        del self.estrategy_trainning
 
     def build(self, features_set: list) -> None:
         """ Cria um vetor com o número de árvores igual ao número de 
@@ -64,17 +71,35 @@ class EnginneringForest(ClassifierEnginneringForest):
         if not isinstance(y, Series):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
 
-        self.n_samples_, self.n_features_ = X.shape
-        self.name_features_ = X.columns
         self.train_X = X
         self.train_y = y
-
-        if self.auto_coded_target:
-            self.classes_ = unique(y)
+        # Define os parâmetros de acordo com a estratégia de treinamento
+        # Somente em caso de dados categóricos presentes
+        if self.is_data_categorical is False:
+            self.n_samples_, self.n_features_ = X.shape
+            self.name_features_ = X.columns
         else:
-            self.classes_ = list(set(y))
+            # Normaliza e transforma os dados
+            self.get_transform()
+            self.get_normalize()
+            # Prepara o número de amostra de acordo com a estratégia
+            mode_train = self.estrategy_trainning
+            if mode_train == ce.ESTRATEGY_TRAINNING_SINGLE.value:
+                self.n_samples_, self.n_features_ = self.train_X.shape
+                self.name_features_ = self.train_X.columns
+            elif mode_train == ce.ESTRATEGY_TRAINNING_BLOCK.value:
+                pass
+            else:
+                raise TypeError('Expected estrategy trainning value')
+
+        #if self.auto_coded_target:
+        #    self.classes_ = unique(y)
+        #else:
+        #    self.classes_ = list(set(y))
 
         self.build(features_set=self.name_features_)
+        
+        return True
 
         self.estimators_ = [self.train(subset_feature, estimator) 
                             for subset_feature, 
