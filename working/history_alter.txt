@@ -95,3 +95,4 @@ COD		Title		DESCRIÇÃO
 #d260919002    Altera a classe ClassifierEnginneringForest    Adequa a escrita do código para as orientações PEP
 #d260919003    Altera a classe LoggerEnginnering    Adequa a escrita do código para as orientações PEP
 #d260919004    Altera a classe EnginneringForest    Adequa a escrita do código para as orientações PEP
+#d260919005    Adiciona a classe ConstantsEnginnering    Esta classe contem as definições de valores que podem se usados como parâmetros no código
