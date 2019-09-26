@@ -94,3 +94,4 @@ COD		Title		DESCRIÇÃO
 #d260919001    Altera a classe BaseEnginnering    Correção de bugs no método get_preprocessing
 #d260919002    Altera a classe ClassifierEnginneringForest    Adequa a escrita do código para as orientações PEP
 #d260919003    Altera a classe LoggerEnginnering    Adequa a escrita do código para as orientações PEP
+#d260919004    Altera a classe EnginneringForest    Adequa a escrita do código para as orientações PEP

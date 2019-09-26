@@ -3,16 +3,17 @@ from pandas import DataFrame, Series
 from numpy import matrix, unique
 import time
 
+
 class EnginneringForest(ClassifierEnginneringForest):
-    
+
     __slots__ = ('estimators_', 'select_features_', 'group_features_', 
                  'vector_predict_', 'n_features_', 'n_samples_', 
                  'name_features_', 'classes_')
-    
+
     def __init__(self, select_features: int):
         if type(select_features) != int:
             raise TypeError('Expectd value int in select_features')
-        
+
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
@@ -21,9 +22,9 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_samples_ = 0
         self.name_features_ = []
         self.classes_ = []
-        
+
         super().__init__()
-        
+
     def __del__(self):
         del self.estimators_
         del self.select_features_
@@ -54,7 +55,7 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.logger.add('debug',msg.format(group_feature, 
                                            (end_train - start_train),
                                            self.get_size_estimator(fit_)))
-        
+
         return fit_
 
     def fit(self, X, y) -> None:
@@ -62,17 +63,17 @@ class EnginneringForest(ClassifierEnginneringForest):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
         if not isinstance(y, Series):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-            
+
         self.n_samples_, self.n_features_ = X.shape
         self.name_features_ = X.columns
         self.train_X = X
         self.train_y = y
-        
+
         if self.auto_coded_target:
             self.classes_ = unique(y)
         else:
             self.classes_ = list(set(y))
-        
+
         self.build(features_set=self.name_features_)
 
         self.estimators_ = [self.train(subset_feature, estimator) 
@@ -80,48 +81,48 @@ class EnginneringForest(ClassifierEnginneringForest):
                                 estimator in zip(self.group_features_, 
                                                  self.estimators_)]
         self.estimators_ = self.get_pack_nparray(self.estimators_)
-        
+
         if self.autoclean:
             del self.train_X
             del self.train_y
-    
+
     def predict(self, X) -> list:
         if not isinstance(X, DataFrame):
             raise TypeError('Expected value should descend from pandas.core.frame.DataFrame')
-        
+
         self.predict_X = X
-        
+
         self.logger.add('debug',
                         'Size predict = {0}, N estimators = {1}'.format(self.predict_X.shape, 
                                                                         len(self.estimators_)))
-        
+
         for x_, y_ in self.get_block_fit():
             self.logger.add('debug','Block Limit = ({}, {})'.format(x_, y_))
-            
+
             dfsub = self.predict_X.iloc[x_:y_]
             block_predict = []
-            
+
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
                 self.logger.add('debug', 'Subset predict = {0}'.format(subset_feature))
                 subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
-            
+
             block_predict = matrix(block_predict)
             self.run_save_predict(block_predict)
-            
+
             self.logger.add('debug', "Shape One = {0}".format(block_predict.shape))
-            
+
             block_predict = block_predict.T
             self.logger.add('debug', "Shape Two = {0}".format(block_predict.shape))
             self.logger.add('debug', "Block predict \n{0}".format(block_predict))
-            
+
             block_voting = self.voting(block_predict)
             self.logger.add('debug', "Block voting data \n{0}".format(str(block_voting)))
             self.logger.add('debug', "Block voting len {0}".format(len(block_voting)))
             self.vector_predict_.extend(block_voting)
-        
+
         return self.vector_predict_
-    
+
     def voting(self, data) -> list:
         final_predict = []
         for instance in data:
