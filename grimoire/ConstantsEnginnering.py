@@ -8,4 +8,5 @@ import enum
 
 
 class ConstantsEnginnering(enum.Enum):
-    
+    ESTRATEGY_TRAINNING_SINGLE = 0
+    ESTRATEGY_TRAINNING_BLOCK = 1
