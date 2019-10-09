@@ -79,8 +79,10 @@ class BaseEnginnering(ConfigurationEnginnering):
                 (yield (item))
 
     def get_transform(self, data_encoder_type=1, target_encoder_type=0):
-        start = self.encoder_enable & self.encoder_data
-        if start & (self.encoder_flag[0] == 0):
+        condition = [self.encoder_enable, 
+                     self.encoder_data,
+                     (self.encoder_flag[0] == 0)]
+        if all(condition):
             self.run_encoder_data(data_encoder_type)
             encoder_df = DataFrame(index=self.train_X.index)
             for col in self.train_X.columns:
@@ -115,8 +117,10 @@ class BaseEnginnering(ConfigurationEnginnering):
             del encoder_df
             self.encoder_flag[0] = 1
 
-        start = self.encoder_enable & self.encoder_target
-        if start & (self.encoder_flag[1] == 0):
+        condition = [self.encoder_enable,
+                     self.encoder_target,
+                     (self.encoder_flag[1] == 0)]
+        if all(condition):
             self.run_encoder_target(target_encoder_type)
             encoder_index = self.train_y.index
             encoder_values = self.encoder_y.fit_transform(self.train_y)
