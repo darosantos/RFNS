@@ -8,11 +8,10 @@ class BaseEnginnering(ConfigurationEnginnering):
     __slots__ = ('train_X', 'train_y', 'predict_X')
 
     def __init__(self):
+        super().__init__()
         self.train_X = []
         self.train_y = []
         self.predict_X = []
-
-        super().__init__()
 
     def __del__(self):
         del self.train_X
@@ -89,10 +88,12 @@ class BaseEnginnering(ConfigurationEnginnering):
                     encoder_df.insert(loc=encoder_df.shape[1],
                                       column=col,
                                       value=self.train_X[col])
+                    self.encoder_feature[col] = type(self.train_X[col][0])
                 else:
                     df_col = self.train_X.loc[:, [col]]
                     # reverse list of unique values
-                    unique_categories = df_col[col].unique()[::-1]
+                    # convertendo para um list para facilitar nos próximos procedimentos
+                    unique_categories = list(df_col[col].unique()[::-1])
                     self.encoder_feature[col] = unique_categories
                     df_tmp = self.encoder_X.fit_transform(df_col)
                     if (len(df_tmp.shape) == 1):
