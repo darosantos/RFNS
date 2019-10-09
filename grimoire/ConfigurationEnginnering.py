@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler, RobustScaler
 import numpy as np
 
 
-class ConfigurationEnginnering:
+class ConfigurationEnginnering(object):
 
     __slots__ = ('chunck', 'autoclean', 'str_data_format',
                  'preprocessing_enable', 'encoder_enable', 'encoder_data',
@@ -20,6 +20,7 @@ class ConfigurationEnginnering:
                  'start_logging', 'name_file_log', 'drop_old_log', 'logger')
 
     def __init__(self):
+        super().__init__()
         self.chunck = 32
         self.autoclean = False
         self.str_data_format = "%%d-%B-%Y_%H-%M-%S"
@@ -164,3 +165,10 @@ class ConfigurationEnginnering:
             self.run_encoder_data(data_encoder_type)
             self.run_encoder_target(target_encoder_type)
             self.run_scaler_data(scaler_type=0)
+
+    def run_enable_preprocessing(self):
+        self.encoder_data = True
+        self.encoder_enable = True
+        self.encoder_target = True
+        self.preprocessing_enable = True
+        self.normalize_enable = True

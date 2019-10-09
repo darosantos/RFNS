@@ -1,5 +1,4 @@
 from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
-from grimoire.ConstantsEnginnering import ConstantsEnginnering as ce
 
 from pandas import DataFrame, Series
 from numpy import matrix, unique
@@ -13,10 +12,15 @@ class EnginneringForest(ClassifierEnginneringForest):
                  'name_features_', 'classes_', 'estrategy_trainning',
                  'is_data_categorical')
 
+    # Const values - don't modify
+    ESTRATEGY_TRAINNING_SINGLE = 0
+    ESTRATEGY_TRAINNING_BLOCK = 1
+
+
     def __init__(self, select_features: int):
         if type(select_features) != int:
             raise TypeError('Expectd value int in select_features')
-
+        super().__init__()
         self.estimators_ = []
         self.select_features_ = select_features
         self.group_features_ = []
@@ -25,10 +29,9 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_samples_ = 0
         self.name_features_ = []
         self.classes_ = []
-        self.estrategy_trainning = ce.ESTRATEGY_TRAINNING_SINGLE.value
+        self.estrategy_trainning = self.ESTRATEGY_TRAINNING_SINGLE
         self.is_data_categorical = False
 
-        super().__init__()
 
     def __del__(self):
         del self.estimators_
@@ -84,11 +87,18 @@ class EnginneringForest(ClassifierEnginneringForest):
             self.get_normalize()
             # Prepara o número de amostra de acordo com a estratégia
             mode_train = self.estrategy_trainning
-            if mode_train == ce.ESTRATEGY_TRAINNING_SINGLE.value:
+            if mode_train == self.ESTRATEGY_TRAINNING_SINGLE:
                 self.n_samples_, self.n_features_ = self.train_X.shape
                 self.name_features_ = self.train_X.columns
-            elif mode_train == ce.ESTRATEGY_TRAINNING_BLOCK.value:
-                pass
+            elif mode_train == self.ESTRATEGY_TRAINNING_BLOCK:
+                self.n_samples_ = self.train_X.shape[0]
+                for key_ef in self.encoder_feature:
+                    if self.encoder_feature[key_ef] in self.encoder_not_type:
+                        self.name_features_.append(key_ef)
+                    else:
+                        block = ['{0}_{1}'.format(key_ef, value)
+                                 for value in self.encoder_feature[key_ef]]
+                        self.name_features_.append(tuple(block))
             else:
                 raise TypeError('Expected estrategy trainning value')
 

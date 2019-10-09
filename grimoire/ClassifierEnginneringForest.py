@@ -9,6 +9,7 @@ class ClassifierEnginneringForest(BaseEnginnering):
                  'class_weight', 'presort')
 
     def __init__(self):
+        super().__init__()
         self.criterion = 'entropy'
         self.splitter = 'best'
         self.max_depth = None
@@ -20,7 +21,6 @@ class ClassifierEnginneringForest(BaseEnginnering):
         self.max_leaf_nodes = None
         self.class_weight = None
         self.presort = False
-        super().__init__()
 
     def __del__(self):
         del self.criterion
