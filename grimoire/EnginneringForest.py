@@ -93,12 +93,12 @@ class EnginneringForest(ClassifierEnginneringForest):
             elif mode_train == self.ESTRATEGY_TRAINNING_BLOCK:
                 self.n_samples_ = self.train_X.shape[0]
                 for key_ef in self.encoder_feature:
-                    if self.encoder_feature[key_ef] in self.encoder_not_type:
-                        self.name_features_.append(key_ef)
-                    else:
+                    if type(self.encoder_feature[key_ef]) is list:
                         block = ['{0}_{1}'.format(key_ef, value)
                                  for value in self.encoder_feature[key_ef]]
                         self.name_features_.append(tuple(block))
+                    else:
+                        self.name_features_.append(key_ef)
             else:
                 raise TypeError('Expected estrategy trainning value')
 
