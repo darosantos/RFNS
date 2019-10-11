@@ -150,3 +150,12 @@ class BaseEnginnering(ConfigurationEnginnering):
                                    scaler_type)
             self.get_transform()
             self.get_normalize()
+
+    def get_in_list(self, l):
+        my_result = []
+        for i in l:
+            if type(i) is tuple:
+                my_result.extend(i)
+            else:
+                my_result.append(i)
+        return my_result

@@ -100,3 +100,4 @@ COD		Title		DESCRIÇÃO
 #d091019001    Altera a classe BaseEnginnering    Altera o método get_transform para armazenar no dicionário encoder_feature usando tipos buitin do python para facilitar a troca com outros métodos
 #d091019002    Altera a classe BaseEnginnering    Altera o método get_transform para usar a função all() nas estruturas de condições longas
 #d091019003    Altera a classe EnginneringForest    Altera o método fit para lidar com dados categóricos de acordo com a estratégia de treino
+#d101019001    Altera a classe BaseEnginnering    Adiciona o método get_in_list
