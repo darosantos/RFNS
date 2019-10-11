@@ -57,10 +57,11 @@ class EnginneringForest(ClassifierEnginneringForest):
     def train(self, group_feature: list, estimator):
         msg = 'Training subset = {0}, Timing = {1}, Size (Kb) = {2}'
         start_train = time.time()
-        
-        subset_xdata, subset_ydata = self.get_subset(group_feature)
+
+        features_list = self.get_in_list(group_feature)
+        subset_xdata, subset_ydata = self.get_subset(features_list)
         fit_ = estimator.fit(subset_xdata, subset_ydata)
-        
+
         end_train = time.time()
         self.logger.add('debug',msg.format(group_feature, 
                                            (end_train - start_train),
@@ -102,14 +103,7 @@ class EnginneringForest(ClassifierEnginneringForest):
             else:
                 raise TypeError('Expected estrategy trainning value')
 
-        #if self.auto_coded_target:
-        #    self.classes_ = unique(y)
-        #else:
-        #    self.classes_ = list(set(y))
-
         self.build(features_set=self.name_features_)
-        
-        return True
 
         self.estimators_ = [self.train(subset_feature, estimator) 
                             for subset_feature, 
