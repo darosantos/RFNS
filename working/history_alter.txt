@@ -103,3 +103,4 @@ COD		Title		DESCRIÇÃO
 #d101019001    Altera a classe BaseEnginnering    Adiciona o método get_in_list
 #d101019002    Altera a classe EnginneringForest    Altera o método train para usar o método get_in_list, este método coloca em uma única lista as tuplas que são geradas após a codificação dos dados
 #d121019001    Altera a classe EnginneringForest    Inicia as alterações no método predict para que ele possa lidar comos dados categóricos quando is_data_categorical for true.
+#d121019002    Altera a classe BaseEnginnering    Adiciona os métodos get_transform_predict e get_normalize_predict para serem usados nos dados de X_test quando o is_data_categorical for true.
