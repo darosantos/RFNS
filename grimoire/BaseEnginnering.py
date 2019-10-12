@@ -144,27 +144,23 @@ class BaseEnginnering(ConfigurationEnginnering):
                      self.encoder_data,
                      (self.encoder_flag[0] == 1)]
         if all(condition):
-            self.run_encoder_data(data_encoder_type)
             encoder_df = DataFrame(index=self.predict_X.index)
             for col in self.predict_X.columns:
                 if type(self.predict_X[col][0]) in self.encoder_not_type:
                     encoder_df.insert(loc=encoder_df.shape[1],
                                       column=col,
                                       value=self.predict_X[col])
-                    self.encoder_feature[col] = type(self.predict_X[col][0])
                 else:
                     df_col = self.predict_X.loc[:, [col]]
+                    unique_categories = list(df_col[col].unique()[::-1])
                     # reverse list of unique values
                     # convertendo para um list para facilitar nos próximos procedimentos
-                    unique_categories = list(df_col[col].unique()[::-1])
-                    self.encoder_feature[col] = unique_categories
-                    df_tmp = self.encoder_X.fit_transform(df_col)
+                    df_tmp = self.encoder_X.transform(df_col)
                     if (len(df_tmp.shape) == 1):
                         col_name = '{0}_all'.format(col)
                         encoder_df.insert(loc=encoder_df.shape[1],
                                           column=col_name,
                                           value=df_tmp)
-                        self.encoder_categorical_columns.append(col_name)
                     else:
                         index_shape = range(df_tmp.shape[1])
                         for i, c in zip(index_shape, unique_categories):
@@ -172,11 +168,9 @@ class BaseEnginnering(ConfigurationEnginnering):
                             encoder_df.insert(loc=encoder_df.shape[1],
                                               column=col_name,
                                               value=df_tmp[:, i])
-                            self.encoder_categorical_columns.append(col_name)
             del self.predict_X
             self.predict_X = encoder_df.copy()
             del encoder_df
-            self.encoder_flag[0] = 1
 
     def get_normalize_predict(self, scaler_type=0):
         if self.normalize_enable & (self.normalize_flag == 0):
