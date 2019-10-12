@@ -173,16 +173,14 @@ class BaseEnginnering(ConfigurationEnginnering):
             del encoder_df
 
     def get_normalize_predict(self, scaler_type=0):
-        if self.normalize_enable & (self.normalize_flag == 0):
-            column_numerical = [col for col in self.train_X
+        if self.normalize_enable & (self.normalize_flag == 1):
+            column_numerical = [col for col in self.predict_X
                                 if col not in self.encoder_categorical_columns]
-            df_tmp = self.train_X.loc[:, column_numerical]
-            self.run_scaler_data(scaler_type)
-            normal_values = self.normalize_scaler.fit_transform(df_tmp)
+            df_tmp = self.predict_X.loc[:, column_numerical]
+            normal_values = self.normalize_scaler.transform(df_tmp)
             index_shape = range(normal_values.shape[1])
             for i, c in zip(index_shape, column_numerical):
-                self.train_X[c] = normal_values[:, i]
-            self.normalize_flag = 1
+                self.predict_X[c] = normal_values[:, i]
 
     def get_preprocessing(self, data_encoder_type=1,
                           target_encoder_type=0, scaler_type=0):
