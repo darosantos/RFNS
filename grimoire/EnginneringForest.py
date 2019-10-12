@@ -123,7 +123,10 @@ class EnginneringForest(ClassifierEnginneringForest):
 
         # Codifica o X_test
         if self.is_data_categorical is True:
-            pass
+            self.get_transform_predict()
+            self.get_normalize_predict()
+
+        return True
 
         self.logger.add('debug',
                         'Size predict = {0}, N estimators = {1}'.format(self.predict_X.shape, 
