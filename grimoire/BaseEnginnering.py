@@ -139,7 +139,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                 self.train_X[c] = normal_values[:, i]
             self.normalize_flag = 1
 
-    def get_transform_predict(self, data_encoder_type=1):
+    def get_transform_predict(self):
         condition = [self.encoder_enable, 
                      self.encoder_data,
                      (self.encoder_flag[0] == 1)]
@@ -172,7 +172,7 @@ class BaseEnginnering(ConfigurationEnginnering):
             self.predict_X = encoder_df.copy()
             del encoder_df
 
-    def get_normalize_predict(self, scaler_type=0):
+    def get_normalize_predict(self):
         if self.normalize_enable & (self.normalize_flag == 1):
             column_numerical = [col for col in self.predict_X
                                 if col not in self.encoder_categorical_columns]
