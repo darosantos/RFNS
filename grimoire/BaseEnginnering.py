@@ -86,11 +86,13 @@ class BaseEnginnering(ConfigurationEnginnering):
             self.run_encoder_data(data_encoder_type)
             encoder_df = DataFrame(index=self.train_X.index)
             for col in self.train_X.columns:
-                if type(self.train_X[col][0]) in self.encoder_not_type:
+                index_first_element = self.train_X.index[0]
+                first_element = self.train_X[col][index_first_element]
+                if type(first_element) in self.encoder_not_type:
                     encoder_df.insert(loc=encoder_df.shape[1],
                                       column=col,
                                       value=self.train_X[col])
-                    self.encoder_feature[col] = type(self.train_X[col][0])
+                    self.encoder_feature[col] = type(first_element)
                 else:
                     df_col = self.train_X.loc[:, [col]]
                     # reverse list of unique values
@@ -146,7 +148,9 @@ class BaseEnginnering(ConfigurationEnginnering):
         if all(condition):
             encoder_df = DataFrame(index=self.predict_X.index)
             for col in self.predict_X.columns:
-                if type(self.predict_X[col][0]) in self.encoder_not_type:
+                index_first_element = self.predict_X.index[0]
+                first_element = self.predict_X[col][index_first_element]
+                if type(first_element) in self.encoder_not_type:
                     encoder_df.insert(loc=encoder_df.shape[1],
                                       column=col,
                                       value=self.predict_X[col])
