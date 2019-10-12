@@ -126,8 +126,6 @@ class EnginneringForest(ClassifierEnginneringForest):
             self.get_transform_predict()
             self.get_normalize_predict()
 
-        return True
-
         self.logger.add('debug',
                         'Size predict = {0}, N estimators = {1}'.format(self.predict_X.shape, 
                                                                         len(self.estimators_)))
