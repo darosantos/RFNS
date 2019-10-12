@@ -1,7 +1,7 @@
 from grimoire.ClassifierEnginneringForest import ClassifierEnginneringForest
 
 from pandas import DataFrame, Series
-from numpy import matrix, unique
+from numpy import matrix
 import time
 
 
@@ -121,6 +121,10 @@ class EnginneringForest(ClassifierEnginneringForest):
 
         self.predict_X = X
 
+        # Codifica o X_test
+        if self.is_data_categorical is True:
+            pass
+
         self.logger.add('debug',
                         'Size predict = {0}, N estimators = {1}'.format(self.predict_X.shape, 
                                                                         len(self.estimators_)))
@@ -133,6 +137,9 @@ class EnginneringForest(ClassifierEnginneringForest):
 
             for subset_feature, estimator in zip(self.group_features_, self.estimators_):
                 self.logger.add('debug', 'Subset predict = {0}'.format(subset_feature))
+                subset_feature = self.get_in_list(subset_feature)
+                # Aqui deve ser inserido a mostragem nos dados
+                # Por enquanto está usando o conjunto todo
                 subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
 
