@@ -12,6 +12,7 @@ class BaseEnginnering(ConfigurationEnginnering):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
+        self.classes_ = {}
 
     def __del__(self):
         del self.train_X
@@ -206,3 +207,10 @@ class BaseEnginnering(ConfigurationEnginnering):
             else:
                 my_result.append(i)
         return my_result
+
+    def get_classes(self):
+        condition = [self.encoder_enable,
+                     self.encoder_target,
+                     (self.encoder_flag[1] == 1)]
+        if all(condition):
+            pass

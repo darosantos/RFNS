@@ -28,7 +28,6 @@ class EnginneringForest(ClassifierEnginneringForest):
         self.n_features_ = 0
         self.n_samples_ = 0
         self.name_features_ = []
-        self.classes_ = []
         self.estrategy_trainning = self.ESTRATEGY_TRAINNING_SINGLE
         self.is_data_categorical = False
 
