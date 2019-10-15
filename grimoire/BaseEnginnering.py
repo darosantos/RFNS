@@ -12,7 +12,7 @@ class BaseEnginnering(ConfigurationEnginnering):
         self.train_X = []
         self.train_y = []
         self.predict_X = []
-        self.classes_ = {}
+        self.classes_ = []
 
     def __del__(self):
         del self.train_X
@@ -213,9 +213,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                      self.encoder_target,
                      (self.encoder_flag[1] == 1)]
         if all(condition):
-            for i, c in enumerate(self.encoder_y.classes_):
-                self.classes_[i] = c
+                self.classes_ = self.encoder_y.classes_
         else:
-            for i, c in enumerate(set(self.train_y)):
-                self.classes_[i] = c
+                self.classes_ = set(self.train_y)
 
