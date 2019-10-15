@@ -102,6 +102,8 @@ class EnginneringForest(ClassifierEnginneringForest):
             else:
                 raise TypeError('Expected estrategy trainning value')
 
+        self.get_classes()
+
         self.build(features_set=self.name_features_)
 
         self.estimators_ = [self.train(subset_feature, estimator) 
