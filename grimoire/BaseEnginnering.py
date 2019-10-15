@@ -213,4 +213,9 @@ class BaseEnginnering(ConfigurationEnginnering):
                      self.encoder_target,
                      (self.encoder_flag[1] == 1)]
         if all(condition):
-            pass
+            for i, c in enumerate(self.encoder_y.classes_):
+                self.classes_[i] = c
+        else:
+            for i, c in enumerate(set(self.train_y)):
+                self.classes_[i] = c
+
