@@ -6,7 +6,7 @@ from pandas import DataFrame, Series
 
 class BaseEnginnering(ConfigurationEnginnering):
 
-    __slots__ = ('train_X', 'train_y', 'predict_X')
+    __slots__ = ('train_X', 'train_y', 'predict_X', 'classes_')
 
     def __init__(self):
         super().__init__()
@@ -19,6 +19,7 @@ class BaseEnginnering(ConfigurationEnginnering):
         del self.train_X
         del self.train_y
         del self.predict_X
+        del self.classes_
 
     def get_subset(self, columns) -> tuple:
         df_subset_x = self.train_X.loc[:, columns]
@@ -161,7 +162,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                     df_col = self.predict_X.loc[:, [col]]
                     unique_categories = list(df_col[col].unique()[::-1])
                     # reverse list of unique values
-                    # convertendo para um list para facilitar nos 
+                    # convertendo para um list para facilitar nos
                     # próximos procedimentos
                     df_tmp = self.encoder_X.transform(df_col)
                     if (len(df_tmp.shape) == 1):
