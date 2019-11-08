@@ -42,16 +42,18 @@ def reset_logger(name):
 
 
 reset_logger('logger_spell_0x00000010_eg.log')
+reset_logger('logger_spell_0x00000010_ea.log')
 reset_logger('logger_spell_0x00000010_rf.log')
 reset_logger('logger_spell_0x00000010_gd.log')
 logger_eg = setup_logger('logger_eg', 'logger_spell_0x00000010_eg.log')
+logger_es = setup_logger('logger_eg', 'logger_spell_0x00000010_es.log')
 logger_rf = setup_logger('logger_rf', 'logger_spell_0x00000010_rf.log')
 logger_gb = setup_logger('logger_gd', 'logger_spell_0x00000010_gd.log')
 
 print("Ambiente de logs criado")
 print(">> Carregando o dataset")
 
-df_acute = pd.read_csv('../datasets/diagnosis.csv',
+df_acute = pd.read_csv('../datasets/acute/diagnosis.csv',
                        engine='c',
                        memory_map=True,
                        low_memory=True)
@@ -82,6 +84,7 @@ numero_atributos_selecao = [1, 2, 3, 4]
 numero_random_state = [0, 20, 40, 60, 80, 100, 120]
 numero_interacoes = 5
 dados_execucao_eg = []
+dados_execucao_es = []
 dados_execucao_rf = []
 dados_execucao_gb = []
 
@@ -89,6 +92,7 @@ print(">> Inicia os loops para testar o código")
 
 for na, ns in zip(numero_arvores, numero_atributos_selecao):
     tmp_execucao_eg = []
+    tmp_execucao_es = []
     tmp_execucao_rf = []
     tmp_execucao_gb = []
     for rs in numero_random_state:
@@ -99,6 +103,8 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
                                                             stratify=y)
         tmp_execucao_eg.append(na)
         tmp_execucao_eg.append(rs)
+        tmp_execucao_es.append(na)
+        tmp_execucao_es.append(rs)
         tmp_execucao_rf.append(na)
         tmp_execucao_rf.append(rs)
         tmp_execucao_gb.append(na)
@@ -116,6 +122,23 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
             y_pred = model_eg.predict(X_test)
             mac = accuracy_score(y_test, y_pred)
             tmp_execucao_eg.append(mac)
+            
+            del model_eg
+            
+            # Execução do EG com dados categóricos e estratégia single
+            model_es= EnginneringForest(select_features=ns)
+            model_es.encoder_enable = True
+            model_es.encoder_target = True
+            model_es.encoder_data = True
+            model_es.estrategy_trainning = 0
+            model_es.is_data_categorical = True
+
+            model_es.fit(X_train, y_train)
+            y_pred = model_es.predict(X_test)
+            mac = accuracy_score(y_test, y_pred)
+            tmp_execucao_es.append(mac)
+            
+            del model_es
 
             # Execução do Random Forest
             model_rf = RandomForestClassifier(n_estimators=na,
@@ -124,6 +147,8 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
             y_pred = model_rf.predict(X_test)
             mac = accuracy_score(y_test, y_pred)
             tmp_execucao_rf.append(mac)
+            
+            del model_rf
 
             # Execução do Gradient Boosting
             model_gb = GradientBoostingClassifier(n_estimators=na)
@@ -131,15 +156,20 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
             y_pred = model_gb.predict(X_test)
             mac = accuracy_score(y_test, y_pred)
             tmp_execucao_gb.append(mac)
+            
+            del model_gb
 
         # salva os dados de teste
         dados_execucao_eg.append(tmp_execucao_eg)
         tmp_execucao_eg.clear()
+        dados_execucao_es.append(tmp_execucao_es)
+        tmp_execucao_es.clear()
         dados_execucao_rf.append(tmp_execucao_rf)
         tmp_execucao_rf.clear()
         dados_execucao_gb.append(tmp_execucao_gb)
         tmp_execucao_gb.clear()
 
 logger_eg.info(dados_execucao_eg)
+logger_es.info(dados_execucao_es)
 logger_rf.info(dados_execucao_rf)
 logger_gb.info(dados_execucao_gb)
