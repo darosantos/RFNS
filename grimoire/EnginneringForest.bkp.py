@@ -149,6 +149,18 @@ class EnginneringForest(ClassifierEnginneringForest):
                 subset_test = dfsub.loc[:, subset_feature]
                 block_predict.append(estimator.predict(subset_test))
 
+            block_predict = matrix(block_predict)
+            self.run_save_predict(block_predict)
+
+            msg = "Shape One = {0}"
+            self.logger.add('debug', msg.format(block_predict.shape))
+
+            block_predict = block_predict.T
+            msg = "Shape Two = {0}"
+            self.logger.add('debug', msg.format(block_predict.shape))
+            msg = "Block predict \n{0}"
+            self.logger.add('debug', msg.format(block_predict))
+
             block_voting = self.voting(block_predict)
             msg = "Block voting data \n{0}"
             self.logger.add('debug', msg.format(str(block_voting)))

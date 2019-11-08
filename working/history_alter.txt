@@ -63,4 +63,53 @@ COD		Title		DESCRIÇÃO
 #d300819003     Altera a classe EnginneringForest   Remover as instruções del do método train e fit; Removido código de comentários; Removido atributos desnecessários; Adicionado o parâmetro de configuração para eliminar os dados de treinamento após o treino
 #d300819004     Altera a classe EnginneringForest   Remover as instruções del do método train e fit; Removido código de comentários; Removido o reset dos indices do parâmetro X; Otimizado as mensagens de log; Alterado o uso de loc para iloc para separar o dataset X em um subset de tamanho definido por get_block_fit(); Removido código desnecessário
 #d300819005     Altera a classe EnginneringForest   Alterado o método voting para corresponder as necessidadeis atuais
-#d300819005     Altera a classe EnginneringForest   Alterado o método predict para manter logs dos dados de predição
+#d300819006     Altera a classe EnginneringForest   Alterado o método predict para manter logs dos dados de predição
+#d070919001     Altera o projeto                    Adiciona a classe ConfigurationEnginnering e coloca nela todos os utilitários do projeto
+#d090919001     Altera a classe LoggerEnginnering   Altera o método run e add para "silenciar" erro de alerta caso o ambiente de logging não esteja criado, assim não afetando as classes que usam LoggerEnginnering, mas não ativam o logging de imediato
+#d090919002     Adiciona ConfigurationEnginnering   Adiciona a classe ConfigurationEnginnering responsável por conter todas as configurações do projeto que não estejam relacionados aos algoritmos de aprendizado de máquina
+#d140919001     Altera a classe ConfigurationEnginnering   Correção de bugs
+#d140919001     Altera o projeto                    Altera o código para funcionar com mais de uma classe alvo
+#d190919001     Altera a classe ConfigurationEnginnering   Adequa a escrita do código para as orientações PEP
+#d190919002     Altera a classe ConfigurationEnginnering   Adiciona o método run_encoder_data para que o usuário possa especificar qual codificador será usado nos dados (X)
+#d190919003     Altera a classe ConfigurationEnginnering   Adiciona o método run_transformer que inicializa os codificadores default a serem usados nos dados (X,y), este método só faz sentido em ser usado caso o método run_encoder_data não tenha sido chamado anteriormente.
+#d190919004     Altera a classe ConfigurationEnginnering   Adiciona o método run_scaler_data para que o usuário possa especificar qual classe de escala a ser usado nos dados (X)
+#d190919005     Altera a classe ConfigurationEnginnering   Altera o método run_transformer para incluir a inicialização de uma classe para colcoar em escalar os dados (X)
+#d190919006     Altera a classe ConfigurationEnginnering   Altera o método run_transformer renomeando-o para run_encoder; adiciona as novas propriedades em __slots__; corrige o método __del__
+#d190919007     Altera a classe ConfigurationEnginnering   Inclui o atributo normalize_enable para que o pré-profecessamento com a transformação dos dados possa ser executada separadamente da normalização
+#d190919008     Altera a classe BaseEnginnering   Adiciona a definição das funções get_transform, get_normalize e get_preprocessing
+#d190919009     Altera a classe BaseEnginnering   Adequa a escrita do código para as orientações PEP
+#d230919001     Altera a classe ConfigurationEnginnering   Adiciona novos atributos e alteram outros para que a classe fique mais simples de gerenciar o pré-processamento e para que a classe fique encarregada somente de manter os métodos para inicialização das instâncias para encoder e normalize dos dados.
+#d230919002    Altera a classe BaseEnginnering   Altera o método get_transform que implementa o novo algoritmo para aplicar a codificação aos dados, codificando somente as colunas que são "consideradas" categóricas, e nomeando cada coluna gerada após a codificação com o nome do atributo seguido do valor codificado. Considera também o caso de apenas uma coluna ser gerada e nomeia a coluna com o nome antigo da coluna seguido do termo 'all'.
+#d2409190016     Altera a classe ConfigurationEnginnering   Correção de bugs nos métodos run_encoder_data e run_encoder_target
+#d240919002     Altera a classe ConfigurationEnginnering    Remove código desnecessário e retira da classe a responsabilidade das variáveis temporárias com os dados a serem condificados
+#d240919003    Altera a classe BaseEnginnering   Altera o método get_transform para que as variáveis temporárias com os dados condificados sejam craidas dentro do próprio método. Isto foi feito para que ao criar a variável os indices dos dados de treinamento (x, y) possam ser preservados, mesmo após a codificação. Isto também foi alocado aqui, pois com o fluxo de trabalho esperado com o código final, só se conhece os dados de treinamento (X, y) no momento de treinar o modelo.
+#d240919004    Altera a classe ConfigurationEnginnering    Adiciona o atributo encoder_flag para controlar quando os dados de X e y são codificados, este atributo funciona como um flag para informar se os dados (X, y) foram codificados, assim em caso de chamadas sucessivas não se tem um efeito de looping no código... caso o efeito de looping seja o desejado então o programador deve resetar este atributo explicitamente.
+#d240919005    Altera a classe BaseEnginnering   Altera o métoddo get_transform para usar a flag definida em #d240919004 e evirar o problema levantado
+#d240919006    Altera a classe ConfigurationEnginnering    Remove atributos não usados, reestrutura os atributos em __slots__, altera o método run_scaler_data para não ocorrer o problema relatado em #d240919004; adiciona comentários no código para faciliar o entendimento dos atributos
+#d240919007    Altera a classe ConfigurationEnginnering    Adiciona o atributo encoder_categorical_columns para guardar o nome das colunas que foram codificadas
+#d240919008    Altera a classe BaseEnginnering   Altera o métoddo get_normalize para colocar em escala somente as colunas que não foram codificadas; inclui o o uso do atributo encoder_categorical_columns no método get_transform para a medida que as classes forem codificadas o nome da coluna seja guardado
+#d240919009    Altera a classe BaseEnginnering   Remove código de comentário
+#d240919010    Altera a classe ConfigurationEnginnering    Implementa o método run_preprocessing
+#d240919011    Altera a classe BaseEnginnering    Implementa o método get_preprocessing, adiciona parâmetros default aos métodos get_normalize e get_transform
+#d260919001    Altera a classe BaseEnginnering    Correção de bugs no método get_preprocessing
+#d260919002    Altera a classe ClassifierEnginneringForest    Adequa a escrita do código para as orientações PEP
+#d260919003    Altera a classe LoggerEnginnering    Adequa a escrita do código para as orientações PEP
+#d260919004    Altera a classe EnginneringForest    Adequa a escrita do código para as orientações PEP
+#d260919005    Adiciona a classe ConstantsEnginnering    Esta classe contem as definições de valores que podem se usados como parâmetros no código
+#d260919006    Altera a classe ConstantsEnginnering    Adiciona as constantes para as estratégias de treinamento com dados categóricos
+#d091019001    Altera a classe BaseEnginnering    Altera o método get_transform para armazenar no dicionário encoder_feature usando tipos buitin do python para facilitar a troca com outros métodos
+#d091019002    Altera a classe BaseEnginnering    Altera o método get_transform para usar a função all() nas estruturas de condições longas
+#d091019003    Altera a classe EnginneringForest    Altera o método fit para lidar com dados categóricos de acordo com a estratégia de treino
+#d101019001    Altera a classe BaseEnginnering    Adiciona o método get_in_list
+#d101019002    Altera a classe EnginneringForest    Altera o método train para usar o método get_in_list, este método coloca em uma única lista as tuplas que são geradas após a codificação dos dados
+#d121019001    Altera a classe EnginneringForest    Inicia as alterações no método predict para que ele possa lidar comos dados categóricos quando is_data_categorical for true.
+#d121019002    Altera a classe BaseEnginnering    Adiciona os métodos get_transform_predict e get_normalize_predict para serem usados nos dados de X_test quando o is_data_categorical for true.
+#d121019003    Altera a classe BaseEnginnering    Finalizado o método get_transform_predict, que funciona similar ao método get_transform, a diferença que aqui o método só se iniciar se as flags de dados categóricos estiverem setadas com True e que já exista uma instância dos codificadores controlada por encoder_flag[0] == 1, além disto este método não retreina os codificadores com o método fit e não altera os outros atributos que mantem informações dos dados codificados.
+#d121019003    Altera a classe BaseEnginnering    Finalizado o método get_normalize_predict, que funciona similar ao método get_normalize, a diferença que aqui o método só se iniciar se as flags de dados normalizados estiverem setadas com True e que já exista uma instância dos normalizadores controlada por normalize_flag == 1, além disto este método não retreina os normalizadores com o método fit.
+#d121019004    Altera a classe BaseEnginnering    Corrigido bugs nos métodos get_normalize_predict e get_transform_predict
+#d121019005    Altera a classe EnginneringForest    Modifica o método predict para codificar os dados categóricos para predição se is_data_categorical for True.
+#d121019006    Altera a classe BaseEnginnering    Correção de bugs nos métodos get_transform e get_transform_predict, pois estes métodos se baseia em verificar o  tipo de dados do primeiro elemento de cada coluna, porém ao tentar acessar o primeiro elemento com acesso direto [0] gera um erro de indice, já que o objeto é do tipo DataFrame ou Series e não separação dos dados de treino e teste os indices originais são preservados, assim usando o hack a posição original do primeiro elemento é capturada e em seguida com ela é acessado o elemento em questão para verificação de tipagem.
+#d121019007    Altera a classe EnginneringForest    Testado o código do predict e removido os códigos de validação
+#d141019001    Altera o projeto para suporte a multiclasse    Remove o atributo classes de EnginneringForest e passa a iplementar o código para listar as classes dos dados em BaseEnginnering
+#d141019002    Altera a classe EnginneringForest    Adiciona o método get_classes
+#d141019003    Altera a classe EnginneringForest    Altera o método fit para usar o método get_classes, assim quando os dados de treinmaneto são conhecidos então as classes são determiandas

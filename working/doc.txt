@@ -21,3 +21,10 @@ adicionar numpy nos vetores*
 %lprun -f DecisionTreeClassifier.fit clf.fit(X, y)
 python -m cProfile -o profile.prof script.py
 gprof2dot -f pstats profile.prof -o graph.dot
+
+Blaze
+Numba
+Sympy https://www.sympy.org/pt/index.html
+
+https://github.com/biosustain/optlang
+
