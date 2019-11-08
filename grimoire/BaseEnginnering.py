@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from grimoire.ConfigurationEnginnering import ConfigurationEnginnering
 
 from pandas import DataFrame, Series
@@ -80,7 +81,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                 (yield (item))
 
     def get_transform(self, data_encoder_type=1, target_encoder_type=0):
-        condition = [self.encoder_enable, 
+        condition = [self.encoder_enable,
                      self.encoder_data,
                      (self.encoder_flag[0] == 0)]
         if all(condition):
@@ -97,7 +98,8 @@ class BaseEnginnering(ConfigurationEnginnering):
                 else:
                     df_col = self.train_X.loc[:, [col]]
                     # reverse list of unique values
-                    # convertendo para um list para facilitar nos próximos procedimentos
+                    # convertendo para um list para facilitar nos
+                    # próximos procedimentos
                     unique_categories = list(df_col[col].unique()[::-1])
                     self.encoder_feature[col] = unique_categories
                     df_tmp = self.encoder_X.fit_transform(df_col)
@@ -143,7 +145,7 @@ class BaseEnginnering(ConfigurationEnginnering):
             self.normalize_flag = 1
 
     def get_transform_predict(self):
-        condition = [self.encoder_enable, 
+        condition = [self.encoder_enable,
                      self.encoder_data,
                      (self.encoder_flag[0] == 1)]
         if all(condition):
@@ -159,7 +161,8 @@ class BaseEnginnering(ConfigurationEnginnering):
                     df_col = self.predict_X.loc[:, [col]]
                     unique_categories = list(df_col[col].unique()[::-1])
                     # reverse list of unique values
-                    # convertendo para um list para facilitar nos próximos procedimentos
+                    # convertendo para um list para facilitar nos 
+                    # próximos procedimentos
                     df_tmp = self.encoder_X.transform(df_col)
                     if (len(df_tmp.shape) == 1):
                         col_name = '{0}_all'.format(col)

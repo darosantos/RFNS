@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import py_compile as pyc
 
 pyc.compile('ConfigurationEnginnering.py')

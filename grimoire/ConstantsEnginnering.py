@@ -12,7 +12,7 @@ class ConstantsEnginnering(enum.Enum):
     ESTRATEGY_TRAINNING_BLOCK = 1
 
     __const__ = ('ESTRATEGY_TRAINNING_SINGLE', 'ESTRATEGY_TRAINNING_BLOCK')
-    
+
     __slots__ = ()
 
     def __setattr__(self, name, value):

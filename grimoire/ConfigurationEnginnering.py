@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from grimoire.LoggerEnginnering import LoggerEnginnering
 
 from time import gmtime, strftime
