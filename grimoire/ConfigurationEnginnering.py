@@ -24,7 +24,7 @@ class ConfigurationEnginnering(object):
         super().__init__()
         self.chunck = 32
         self.autoclean = False
-        self.str_data_format = "%%d-%B-%Y_%H-%M-%S"
+        self.str_data_format = "%d-%B-%Y_%H-%M-%S"
 
         # Configuration for prepossing
         self.preprocessing_enable = False
@@ -56,7 +56,7 @@ class ConfigurationEnginnering(object):
         self.normalize_scaler = None
 
         # Configuration for save data predict
-        self.save_matrix_prediction = True
+        self.save_matrix_prediction = False
         self.file_name_matrix_prediction = ''
         self.format_data_predict = '%d'
         self.delimit_data_predict = ','
@@ -99,7 +99,7 @@ class ConfigurationEnginnering(object):
         if self.start_logging:
             if self.name_file_log == '':
                 local_time = strftime(self.str_data_format, gmtime())
-                self.name_file_log = 'enginnering_{0}'.format(local_time)
+                self.name_file_log = 'enginnering_{0}.log'.format(local_time)
 
             self.logger = LoggerEnginnering(log_file=self.name_file_log,
                                             drop_old=self.drop_old_log)
@@ -108,7 +108,7 @@ class ConfigurationEnginnering(object):
         if self.save_matrix_prediction:
             if self.file_name_matrix_prediction == '':
                 local_time = strftime(self.str_data_format, gmtime())
-                self.file_name_matrix_prediction = 'matrix_prediction_{0}.txt'
+                self.file_name_matrix_prediction = 'matrix_prediction_{0}.log'
                 self.file_name_matrix_prediction.format(local_time)
 
             np.savetxt(fname=self.file_name_matrix_prediction, X=data_predict,

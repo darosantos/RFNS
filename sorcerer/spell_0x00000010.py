@@ -4,6 +4,9 @@ Created on Thu Nov  7 11:05:50 2019
 
 @author: Danilo Santos
 """
+import sys
+sys.path.append('C:\\Users\\Danilo Santos\\Desktop\\Qualificação PPGCC\\abordagem\\RFNS')
+
 import pandas as pd
 
 import logging
@@ -51,7 +54,7 @@ logger_gb = setup_logger('logger_gd', 'logger_spell_0x00000010_gd.log')
 print("Ambiente de logs criado")
 print(">> Carregando o dataset")
 
-df_acute = pd.read_csv('../datasets/diagnosis.csv',
+df_acute = pd.read_csv('C:\\Users\\Danilo Santos\\Desktop\\Qualificação PPGCC\\abordagem\\RFNS\\datasets\\acute\\diagnosis.csv',
                        engine='c',
                        memory_map=True,
                        low_memory=True)

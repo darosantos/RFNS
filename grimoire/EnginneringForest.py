@@ -14,7 +14,7 @@ class EnginneringForest(ClassifierEnginneringForest):
                  'is_data_categorical')
 
     # Const values - don't modify
-    ESTRATEGY_TRAINNING_SINGLE = 0 #defautl
+    ESTRATEGY_TRAINNING_SINGLE = 0
     ESTRATEGY_TRAINNING_BLOCK = 1
 
     def __init__(self, select_features: int):
