@@ -1,0 +1,153 @@
+2019-11-11 16:15:44,366 DEBUG Training subset = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('dorlombar_no', 'dorlombar_yes')], Timing = 0.008005619049072266, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,375 DEBUG Training subset = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('urinepushing_no', 'urinepushing_yes')], Timing = 0.007032155990600586, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,386 DEBUG Training subset = ['temperatura' ('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')], Timing = 0.011006593704223633, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,395 DEBUG Training subset = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.008014202117919922, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,403 DEBUG Training subset = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.008004903793334961, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,412 DEBUG Training subset = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('urinepushing_no', 'urinepushing_yes')], Timing = 0.007004261016845703, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,420 DEBUG Training subset = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('miccao_no', 'miccao_yes')], Timing = 0.00800633430480957, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,428 DEBUG Training subset = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.00800466537475586, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,436 DEBUG Training subset = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.008005380630493164, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,444 DEBUG Training subset = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,452 DEBUG Training subset = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,460 DEBUG Training subset = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.0070040225982666016, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,468 DEBUG Training subset = ['temperatura' ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.007005214691162109, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,476 DEBUG Training subset = ['temperatura' ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.007004261016845703, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,484 DEBUG Training subset = ['temperatura' ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.0070035457611083984, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,491 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('urinepushing_no', 'urinepushing_yes')], Timing = 0.007004737854003906, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,499 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('miccao_no', 'miccao_yes')], Timing = 0.007004737854003906, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,508 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.007004261016845703, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,516 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,523 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')], Timing = 0.007004737854003906, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,533 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.008025884628295898, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,543 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.009984731674194336, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,553 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.008978843688964844, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,562 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.0070002079010009766, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,570 DEBUG Training subset = [('nausea_no', 'nausea_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.008011817932128906, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,578 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')], Timing = 0.007004499435424805, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,586 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.00700831413269043, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,594 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.008006095886230469, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,602 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.0070040225982666016, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,611 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.008000373840332031, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,624 DEBUG Training subset = [('dorlombar_no', 'dorlombar_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.013010501861572266, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,633 DEBUG Training subset = [('urinepushing_no', 'urinepushing_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')], Timing = 0.00803232192993164, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,641 DEBUG Training subset = [('urinepushing_no', 'urinepushing_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,649 DEBUG Training subset = [('urinepushing_no', 'urinepushing_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.007005453109741211, Size (Kb) = 0.0546875
+2019-11-11 16:15:44,657 DEBUG Training subset = [('miccao_no', 'miccao_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')], Timing = 0.007004976272583008, Size (Kb) = 0.0546875
+2019-11-11 16:16:31,188 DEBUG Size predict = (36, 13), N estimators = 35
+2019-11-11 16:16:31,200 DEBUG Block Limit = (0, 36)
+2019-11-11 16:16:31,202 DEBUG Subset predict = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('dorlombar_no', 'dorlombar_yes')]
+2019-11-11 16:16:31,211 DEBUG Subset predict = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('urinepushing_no', 'urinepushing_yes')]
+2019-11-11 16:16:31,220 DEBUG Subset predict = ['temperatura' ('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,229 DEBUG Subset predict = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,237 DEBUG Subset predict = ['temperatura' ('nausea_no', 'nausea_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,244 DEBUG Subset predict = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('urinepushing_no', 'urinepushing_yes')]
+2019-11-11 16:16:31,250 DEBUG Subset predict = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,258 DEBUG Subset predict = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,265 DEBUG Subset predict = ['temperatura' ('dorlombar_no', 'dorlombar_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,272 DEBUG Subset predict = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,278 DEBUG Subset predict = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,284 DEBUG Subset predict = ['temperatura' ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,290 DEBUG Subset predict = ['temperatura' ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,296 DEBUG Subset predict = ['temperatura' ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,302 DEBUG Subset predict = ['temperatura' ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,308 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('urinepushing_no', 'urinepushing_yes')]
+2019-11-11 16:16:31,314 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,320 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,326 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('dorlombar_no', 'dorlombar_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,332 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,339 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,345 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,351 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,357 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,363 DEBUG Subset predict = [('nausea_no', 'nausea_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,369 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('miccao_no', 'miccao_yes')]
+2019-11-11 16:16:31,375 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,381 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('urinepushing_no', 'urinepushing_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,387 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,394 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,400 DEBUG Subset predict = [('dorlombar_no', 'dorlombar_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,426 DEBUG Subset predict = [('urinepushing_no', 'urinepushing_yes') ('miccao_no', 'miccao_yes')
+ ('queimacao_yes', 'queimacao_no')]
+2019-11-11 16:16:31,433 DEBUG Subset predict = [('urinepushing_no', 'urinepushing_yes') ('miccao_no', 'miccao_yes')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,439 DEBUG Subset predict = [('urinepushing_no', 'urinepushing_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,450 DEBUG Subset predict = [('miccao_no', 'miccao_yes') ('queimacao_yes', 'queimacao_no')
+ ('inflamacao_no', 'inflamacao_yes')]
+2019-11-11 16:16:31,470 DEBUG Shape One = (35, 36)
+2019-11-11 16:16:31,470 DEBUG Shape Two = (36, 35)
+2019-11-11 16:16:31,471 DEBUG Block predict 
+[[0 0 0 ... 0 1 1]
+ [0 1 1 ... 0 0 1]
+ [1 1 1 ... 0 0 0]
+ ...
+ [1 1 1 ... 0 1 1]
+ [0 0 0 ... 0 1 1]
+ [0 0 0 ... 0 0 0]]
+2019-11-11 16:16:31,473 DEBUG Block voting data 
+[0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0]
+2019-11-11 16:16:31,473 DEBUG Block voting len 36
