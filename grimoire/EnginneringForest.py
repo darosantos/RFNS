@@ -91,7 +91,6 @@ class EnginneringForest(ClassifierEnginneringForest):
                 self.n_samples_, self.n_features_ = self.train_X.shape
                 self.name_features_ = self.train_X.columns
             elif mode_train == self.ESTRATEGY_TRAINNING_BLOCK:
-                self.n_samples_ = self.train_X.shape[0]
                 for key_ef in self.encoder_feature:
                     if type(self.encoder_feature[key_ef]) is list:
                         block = ['{0}_{1}'.format(key_ef, value)
@@ -99,6 +98,8 @@ class EnginneringForest(ClassifierEnginneringForest):
                         self.name_features_.append(tuple(block))
                     else:
                         self.name_features_.append(key_ef)
+                self.n_samples_ = self.train_X.shape[0]
+                self.n_features_ = len(self.name_features_)
             else:
                 raise TypeError('Expected estrategy trainning value')
 
@@ -127,6 +128,8 @@ class EnginneringForest(ClassifierEnginneringForest):
         if self.is_data_categorical is True:
             self.get_transform_predict()
             self.get_normalize_predict()
+
+        return
 
         msg = 'Size predict = {0}, N estimators = {1}'
         self.logger.add('debug',
