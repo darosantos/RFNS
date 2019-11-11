@@ -114,3 +114,4 @@ COD		Title		DESCRIÇÃO
 #d141019002    Altera a classe EnginneringForest    Adiciona o método get_classes
 #d141019003    Altera a classe EnginneringForest    Altera o método fit para usar o método get_classes, assim quando os dados de treinmaneto são conhecidos então as classes são determiandas
 #d111119001    Altera a classe EnginneringForest    Corrige um bug no método fit que não estava atribuindo o valor de n_features_ para o caso de quando ESTRATEGY_TRAINNING_BLOCK é selecionado.
+#d111119002    Altera a classe BaseEnginnering    Corrige um bug no método get_transform_predict pois os dados categóricos após serem convertidos estavam sendo trocados e gerando erros na acurácia.

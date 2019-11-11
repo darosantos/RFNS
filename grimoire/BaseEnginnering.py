@@ -160,7 +160,7 @@ class BaseEnginnering(ConfigurationEnginnering):
                                       value=self.predict_X[col])
                 else:
                     df_col = self.predict_X.loc[:, [col]]
-                    unique_categories = list(df_col[col].unique()[::-1])
+                    unique_categories = list(df_col[col].unique())
                     # reverse list of unique values
                     # convertendo para um list para facilitar nos
                     # próximos procedimentos
