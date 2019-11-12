@@ -124,6 +124,11 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
             mac = accuracy_score(y_test_coded, y_pred)
             tmp_execucao_eg.append(mac)
 
+    	    # Separa os dados para os demais classificadores
+            x_train_coded = model_eg.train_X
+            y_train_coded = model_eg.train_y
+            x_test_coded = model_eg.predict_X
+
             # Execução do EG com dados categóricos e estratégia single
             model_es = EnginneringForest(select_features=ns)
             model_es.encoder_enable = True
@@ -141,29 +146,33 @@ for na, ns in zip(numero_arvores, numero_atributos_selecao):
             # Execução do Random Forest
             model_rf = RandomForestClassifier(n_estimators=na,
                                               criterion='entropy')
-            model_rf.fit(X_train, y_train)
-            y_pred = model_rf.predict(X_test)
-            mac = accuracy_score(y_test, y_pred)
+            model_rf.fit(x_train_coded, y_train_coded)
+            y_pred = model_rf.predict(x_test_coded)
+            mac = accuracy_score(y_test_coded, y_pred)
             tmp_execucao_rf.append(mac)
 
             # Execução do Gradient Boosting
             model_gb = GradientBoostingClassifier(n_estimators=na)
-            model_gb.fit(X_train, y_train)
-            y_pred = model_gb.predict(X_test)
-            mac = accuracy_score(y_test, y_pred)
+            model_gb.fit(x_train_coded, y_train_coded)
+            y_pred = model_gb.predict(x_test_coded)
+            mac = accuracy_score(y_test_coded, y_pred)
             tmp_execucao_gb.append(mac)
 
         # salva os dados de teste
-        dados_execucao_eg.append(tmp_execucao_eg)
+        # dados_execucao_eg.append(tmp_execucao_eg)
+        logger_eg.info(tmp_execucao_eg)
         tmp_execucao_eg.clear()
-        dados_execucao_es.append(tmp_execucao_es)
+        # dados_execucao_es.append(tmp_execucao_es)
+        logger_es.info(tmp_execucao_es)
         tmp_execucao_es.clear()
-        dados_execucao_rf.append(tmp_execucao_rf)
+        # dados_execucao_rf.append(tmp_execucao_rf)
+        logger_rf.info(tmp_execucao_rf)
         tmp_execucao_rf.clear()
-        dados_execucao_gb.append(tmp_execucao_gb)
+        # dados_execucao_gb.append(tmp_execucao_gb)
+        logger_gb.info(tmp_execucao_gb)
         tmp_execucao_gb.clear()
 
-logger_eg.info(dados_execucao_eg)
-logger_es.info(dados_execucao_es)
-logger_rf.info(dados_execucao_rf)
-logger_gb.info(dados_execucao_gb)
+# logger_eg.info(dados_execucao_eg)
+# logger_es.info(dados_execucao_es)
+# logger_rf.info(dados_execucao_rf)
+# logger_gb.info(dados_execucao_gb)

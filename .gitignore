@@ -108,3 +108,5 @@ excluded_git/
 
 # link simbolic
 sorcerer/grimoire
+
+sorcerer/datasets
